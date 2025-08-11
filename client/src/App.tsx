@@ -8,6 +8,10 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CookieConsent } from "@/components/ui/cookie-consent";
 import HomePage from "@/pages/home";
+import ProductsPage from "@/pages/products";
+import PricingPage from "@/pages/pricing";
+import AboutPage from "@/pages/about";
+import ContactPage from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 import { MessageCircle } from "lucide-react";
 
@@ -15,6 +19,10 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={HomePage} />
+      <Route path="/products" component={ProductsPage} />
+      <Route path="/pricing" component={PricingPage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />
     </Switch>
   );

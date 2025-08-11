@@ -178,7 +178,7 @@ export const translations = {
     footerDescription: "AI destekli iş büyütme ve dijital dönüşüm platformu. Girişimciler, işletmeler ve yatırımcılar için kişiselleştirilmiş çözümler.",
     
     // Footer Links
-    company: "Şirket",
+    companyFooter: "Şirket",
     careers: "Kariyer",
     blog: "Blog",
     legal: "Hukuki",
@@ -375,7 +375,7 @@ export const translations = {
     footerDescription: "AI-powered business growth and digital transformation platform. Personalized solutions for entrepreneurs, businesses, and investors.",
     
     // Footer Links
-    company: "Company",
+    companyFooter: "Company",
     careers: "Careers",
     blog: "Blog",
     legal: "Legal",

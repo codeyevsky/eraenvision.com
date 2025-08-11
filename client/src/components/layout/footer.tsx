@@ -49,19 +49,19 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">{t('products')}</h3>
             <ul className="space-y-3 text-gray-400">
-              <li><Link href="#launch" className="hover:text-white transition-colors">Launch</Link></li>
-              <li><Link href="#scale" className="hover:text-white transition-colors">Scale</Link></li>
-              <li><Link href="#invest" className="hover:text-white transition-colors">Invest</Link></li>
-              <li><Link href="#pricing" className="hover:text-white transition-colors">{t('pricing')}</Link></li>
+              <li><Link href="/products" className="hover:text-white transition-colors">Launch</Link></li>
+              <li><Link href="/products" className="hover:text-white transition-colors">Scale</Link></li>
+              <li><Link href="/products" className="hover:text-white transition-colors">Invest</Link></li>
+              <li><Link href="/pricing" className="hover:text-white transition-colors">{t('pricing')}</Link></li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4">{t('company')}</h3>
+            <h3 className="font-semibold mb-4">{t('companyFooter')}</h3>
             <ul className="space-y-3 text-gray-400">
-              <li><Link href="#about" className="hover:text-white transition-colors">{t('about')}</Link></li>
-              <li><Link href="#contact" className="hover:text-white transition-colors">{t('contact')}</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">{t('about')}</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">{t('contact')}</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">{t('careers')}</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">{t('blog')}</Link></li>
             </ul>

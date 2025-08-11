@@ -110,6 +110,7 @@
 }
 
 @layer components {
+  /* Brand Colors */
   .era-red {
     @apply bg-[hsl(var(--era-red))] text-white;
   }
@@ -123,48 +124,267 @@
   }
   
   .soft-paper {
-    @apply bg-[hsl(var(--soft-paper))] text-[hsl(var(--ink-black))];
-  }
-  
-  .graphite {
-    @apply bg-[hsl(var(--graphite))] text-white;
+    @apply bg-[hsl(var(--soft-paper))];
   }
   
   .accent-mint {
     @apply bg-[hsl(var(--accent-mint))] text-white;
   }
   
-  .accent-amber {
-    @apply bg-[hsl(var(--accent-amber))] text-white;
-  }
-  
   .accent-blue {
     @apply bg-[hsl(var(--accent-blue))] text-white;
   }
-
+  
+  /* Typography */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  
   .gradient-text {
-    @apply bg-gradient-to-r from-[hsl(var(--era-red))] to-[hsl(var(--era-red-dark))] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent;
+  }
+  
+  /* Interactive Elements */
+  .hover-lift {
+    @apply transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/20%)];
+  }
+  
+  .glass-effect {
+    @apply bg-background/80 backdrop-blur-md border border-border/50;
+  }
+  
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent-blue)), hsl(var(--accent-mint)));
+    padding: 2px;
+    border-radius: 1rem;
+  }
+  
+  .gradient-border > * {
+    @apply bg-background rounded-xl;
+  }
+  
+  /* Animations */
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .fade-in-scale {
+    animation: fadeInScale 0.5s ease-out forwards;
+  }
+  
+  .bounce-in {
+    animation: bounceIn 0.8s ease-out forwards;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+  
+  /* Button Variants */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-primary to-primary/90 text-primary-foreground font-semibold px-6 py-3 rounded-xl hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-outline-gradient {
+    @apply border-2 border-transparent bg-gradient-to-r from-primary to-accent-blue bg-clip-border text-transparent font-semibold px-6 py-3 rounded-xl hover:text-primary-foreground hover:bg-gradient-to-r hover:from-primary hover:to-accent-blue transition-all duration-300;
+    background-clip: padding-box;
+  }
+  
+  /* Cards */
+  .card-glow {
+    @apply bg-background/95 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg hover:shadow-xl hover:border-primary/20 transition-all duration-300;
+  }
+  
+  .card-hover-lift {
+    @apply transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+  
+  /* Text Effects */
+  .text-glow {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+  }
+  
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted-foreground)) 0%,
+      hsl(var(--primary)) 50%,
+      hsl(var(--muted-foreground)) 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 2s infinite;
   }
 
-  .hover-lift {
-    transition: all var(--duration-hover) var(--ease-out);
+  /* Loading States */
+  .skeleton {
+    @apply bg-gradient-to-r from-muted via-muted/50 to-muted bg-[length:200%_100%] animate-pulse;
+  }
+  
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  /* Scrollbar Styling */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-muted rounded-full;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full hover:bg-primary/50;
+  }
+  
+  /* Focus States */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+  }
+  
+  /* Responsive Text */
+  .text-responsive-xl {
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+  
+  .text-responsive-base {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.6), 0 0 30px hsl(var(--primary) / 0.4);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift,
+  .fade-in-up,
+  .fade-in-scale,
+  .bounce-in,
+  .slide-in-left,
+  .slide-in-right {
+    animation: none;
+    transition: none;
   }
   
   .hover-lift:hover {
-    @apply -translate-y-1;
-    box-shadow: var(--shadow-lg);
+    transform: none;
   }
+}
 
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
+/* Print Styles */
+@media print {
+  .hover-lift,
+  .card-hover-lift {
+    transform: none !important;
+    box-shadow: none !important;
   }
+}
 
-  .animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
-  }
-
-  .animate-scale-in {
-    animation: scaleIn 0.4s ease-out forwards;
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .gradient-text {
+    background: none;
+    color: hsl(var(--primary));
   }
 }
 
