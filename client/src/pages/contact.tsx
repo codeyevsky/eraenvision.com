@@ -7,16 +7,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useLanguage } from '@/hooks/use-language';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
-import { 
-  FloatingIcons, 
-  GeometricShapes, 
-  ParticleField, 
-  InteractiveDataVisualization,
-  AnimatedLogo,
-  ConnectedDots,
-  MorphingShape 
-} from '@/components/ui/advanced-illustrations';
-import { GlassCard, MorphingButton } from '@/components/ui/apple-widgets';
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -66,64 +56,31 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Ultra Advanced Background */}
-      <FloatingIcons />
-      <GeometricShapes />
-      <ParticleField />
-      
-      {/* Spectacular Hero Section */}
-      <section className="pt-32 pb-24 bg-gradient-to-br from-soft-paper via-background to-soft-paper relative overflow-hidden">
-        {/* Background Illustrations */}
-        <div className="absolute inset-0">
-          <ConnectedDots />
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 bg-gradient-to-br from-soft-paper to-background">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h1 className="font-heading font-bold text-4xl lg:text-6xl mb-6 tracking-wide">
+            {t('contactTitle')}
+          </h1>
+          <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+            {t('contactSubtitle')}
+          </p>
         </div>
-        
-        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-          <div className="animate-slide-in-top">
-            <h1 className="font-heading font-bold text-6xl lg:text-8xl mb-8 tracking-wide gradient-text-animated text-glow">
-              {t('contactTitle')}
-            </h1>
-            <p className="text-2xl lg:text-3xl text-muted-foreground mb-16 leading-relaxed">
-              {t('contactSubtitle')}
-            </p>
-            
-            {/* Animated Logo */}
-            <div className="flex justify-center">
-              <AnimatedLogo />
-            </div>
-          </div>
-        </div>
-        
-        {/* Floating morphing shape */}
-        <div className="absolute top-20 right-20 scale-75">
-          <MorphingShape />
-        </div>
-        
-        {/* Enhanced background effects */}
-        <div className="absolute top-32 left-32 w-48 h-48 bg-gradient-to-r from-primary/10 to-accent-blue/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-32 w-64 h-64 bg-gradient-to-r from-accent-mint/10 to-primary/10 rounded-full blur-2xl animate-pulse delay-300"></div>
       </section>
 
-      {/* Enhanced Contact Info Cards */}
-      <section className="py-24 bg-gradient-to-b from-background via-soft-paper to-background relative">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      {/* Contact Info Cards */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {contactInfo.map((info, index) => (
-              <div key={index} className="group animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
-                <GlassCard className="ultra-glass p-8 hover-3d magnetic-attraction h-full text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent-blue rounded-3xl flex items-center justify-center mx-auto mb-6 animate-morph-shape group-hover:scale-110 transition-transform duration-500">
-                    <info.icon className="h-8 w-8 text-white animate-pulse" />
-                  </div>
-                  <h3 className="font-bold text-xl mb-3 gradient-text group-hover:text-glow transition-all duration-300">{info.title}</h3>
-                  <p className="font-semibold text-primary mb-2 text-lg">{info.content}</p>
-                  <p className="text-sm text-muted-foreground">{info.description}</p>
-                  
-                  {/* Decorative elements */}
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <div className="w-3 h-3 bg-gradient-to-r from-primary to-accent-blue rounded-full animate-pulse"></div>
-                  </div>
-                </GlassCard>
+              <div key={index} className="bg-soft-paper p-6 rounded-2xl border border-border hover-lift text-center">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <info.icon className="h-6 w-6" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{info.title}</h3>
+                <p className="font-medium text-primary mb-1">{info.content}</p>
+                <p className="text-sm text-muted-foreground">{info.description}</p>
               </div>
             ))}
           </div>
