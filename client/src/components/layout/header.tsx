@@ -12,56 +12,30 @@ export function Header() {
   const { t } = useLanguage();
 
   return (
-    <header className="sticky top-0 bg-background/95 backdrop-blur-sm border-b border-border z-40">
+    <header className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-40">
       <nav className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 flex items-center justify-center text-primary">
+            <div className="w-8 h-8 flex items-center justify-center text-[#E1182E]">
               <Eye className="h-6 w-6" />
             </div>
-            <span className="font-heading font-bold text-xl tracking-wide">EraEnvision</span>
+            <span className="font-heading font-bold text-xl tracking-wide text-gray-900">EraEnvision</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <div 
-              className="relative group"
-              onMouseEnter={() => setIsProductsOpen(true)}
-              onMouseLeave={() => setIsProductsOpen(false)}
-            >
-              <Link href="/products" className="text-muted-foreground hover:text-primary transition-colors flex items-center py-2">
-                {t('products')} <ChevronDown className="ml-1 h-4 w-4" />
-              </Link>
-              <div className={cn(
-                "absolute top-full left-0 mt-2 w-64 bg-popover rounded-2xl shadow-lg border border-border opacity-0 invisible transition-all duration-200",
-                isProductsOpen && "opacity-100 visible"
-              )}>
-                <div className="p-2">
-                  <Link href="/products" className="block p-3 rounded-xl hover:bg-muted transition-colors">
-                    <div className="font-medium text-primary">Launch</div>
-                    <div className="text-sm text-muted-foreground">{t('forEntrepreneurs')}</div>
-                  </Link>
-                  <Link href="/products" className="block p-3 rounded-xl hover:bg-muted transition-colors">
-                    <div className="font-medium text-primary">Scale</div>
-                    <div className="text-sm text-muted-foreground">{t('forBusinesses')}</div>
-                  </Link>
-                  <Link href="/products" className="block p-3 rounded-xl hover:bg-muted transition-colors">
-                    <div className="font-medium text-primary">Invest</div>
-                    <div className="text-sm text-muted-foreground">{t('forInvestors')}</div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            
-            <Link href="/pricing" className="text-muted-foreground hover:text-primary transition-colors py-2">
-              {t('pricing')}
+            <Link href="/products" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
+              Ürünler
             </Link>
-            <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors py-2">
-              {t('about')}
+            <Link href="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
+              Fiyatlandırma
             </Link>
-            <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors py-2">
-              {t('contact')}
+            <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
+              Hakkımızda
+            </Link>
+            <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
+              İletişim
             </Link>
           </div>
 
@@ -70,13 +44,13 @@ export function Header() {
             <div className="hidden sm:block">
               <LanguageSwitcher />
             </div>
-            <Button className="hover-lift">
-              {t('startFree')}
+            <Button className="bg-[#E1182E] hover:bg-[#C51628] text-white font-semibold">
+              Ücretsiz Başla
             </Button>
             <Button
               variant="ghost"
               size="sm"
-              className="lg:hidden"
+              className="lg:hidden text-gray-600"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -86,37 +60,37 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-background border-t border-border">
+          <div className="lg:hidden bg-white border-t border-gray-200">
             <div className="px-6 py-4 space-y-4">
               <Link 
                 href="/products" 
-                className="block text-muted-foreground hover:text-primary transition-colors"
+                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('products')}
+                Ürünler
               </Link>
               <Link 
                 href="/pricing" 
-                className="block text-muted-foreground hover:text-primary transition-colors"
+                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('pricing')}
+                Fiyatlandırma
               </Link>
               <Link 
                 href="/about" 
-                className="block text-muted-foreground hover:text-primary transition-colors"
+                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('about')}
+                Hakkımızda
               </Link>
               <Link 
                 href="/contact" 
-                className="block text-muted-foreground hover:text-primary transition-colors"
+                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('contact')}
+                İletişim
               </Link>
-              <div className="pt-4 border-t border-border">
+              <div className="pt-4 border-t border-gray-200">
                 <LanguageSwitcher variant="mobile" />
               </div>
             </div>
