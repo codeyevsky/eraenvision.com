@@ -74,6 +74,9 @@ export function Header() {
             <Link href="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
               Fiyatlandırma
             </Link>
+            <Link href="/blog" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
+              Blog
+            </Link>
             <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
               Hakkımızda
             </Link>
@@ -152,6 +155,13 @@ export function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Fiyatlandırma
+              </Link>
+              <Link 
+                href="/blog" 
+                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Blog
               </Link>
               <Link 
                 href="/about" 

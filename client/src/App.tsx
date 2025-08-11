@@ -15,6 +15,8 @@ import InvestPage from "@/pages/invest";
 import PricingPage from "@/pages/pricing";
 import AboutPage from "@/pages/about";
 import ContactPage from "@/pages/contact";
+import BlogPage from "@/pages/blog";
+import BlogPostPage from "@/pages/blog-post";
 import NotFound from "@/pages/not-found";
 import { MessageCircle } from "lucide-react";
 
@@ -29,6 +31,8 @@ function Router() {
       <Route path="/pricing" component={PricingPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />
+      <Route path="/blog" component={BlogPage} />
+      <Route path="/blog/:slug" component={BlogPostPage} />
       <Route component={NotFound} />
     </Switch>
   );
