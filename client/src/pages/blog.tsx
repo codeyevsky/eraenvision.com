@@ -125,43 +125,51 @@ export default function BlogPage() {
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-soft-paper to-background">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h1 className="font-heading font-bold text-4xl lg:text-6xl mb-6 tracking-wide">
-            AI ve İş Dünyası Blog
-          </h1>
-          <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-            Yapay zeka, girişimcilik ve büyüme stratejileri hakkında güncel içerikler
-          </p>
-        </div>
-      </section>
+    <>
+      <title>Blog - EraEnvision | AI ve İş Büyütme İçerikleri</title>
+      <meta name="description" content="EraEnvision blog sayfası. AI, girişimcilik, iş büyütme ve dijital dönüşüm konularında uzman içerikler ve stratejiler." />
+      <meta property="og:title" content="EraEnvision Blog | AI ve İş Büyütme İçerikleri" />
+      <meta property="og:description" content="AI, girişimcilik, iş büyütme ve dijital dönüşüm konularında uzman içerikler." />
+      <meta property="og:type" content="website" />
+      <meta name="keywords" content="blog, AI blog, iş büyütme, girişimcilik, startup rehberi, dijital pazarlama, EraEnvision" />
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h1 className="font-heading font-bold text-3xl sm:text-4xl lg:text-6xl mb-6 tracking-wide">
+              AI ve İş Dünyası Blog
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-600 mb-12 leading-relaxed px-4 sm:px-0">
+              Yapay zeka, girişimcilik ve büyüme stratejileri hakkında güncel içerikler
+            </p>
+          </div>
+        </section>
 
       {/* Search and Filters */}
-      <section className="py-8 bg-background border-b">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+      <section className="py-8 bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col lg:flex-row gap-6 items-stretch lg:items-center justify-between">
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+            <div className="relative flex-1 max-w-md w-full">
+              <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
               <Input
                 placeholder="Blog yazılarında ara..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10"
+                className="pl-10 w-full"
               />
             </div>
 
             {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-end">
               {categories.map((category) => (
                 <Button
                   key={category}
                   variant={selectedCategory === category ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => setSelectedCategory(category)}
-                  className="rounded-full"
+                  className="rounded-full text-xs sm:text-sm px-3 sm:px-4"
                 >
                   {category === 'all' ? 'Tümü' : category}
                 </Button>
@@ -173,44 +181,44 @@ export default function BlogPage() {
 
       {/* Featured Post */}
       {featuredPost && selectedCategory === 'all' && !searchTerm && (
-        <section className="py-16 bg-background">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-3xl p-8 lg:p-12">
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="bg-gradient-to-r from-[#E1182E]/5 to-[#E1182E]/10 rounded-3xl p-6 sm:p-8 lg:p-12">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
-                  <Badge className="mb-4 bg-primary text-primary-foreground">
+                  <Badge className="mb-4 bg-[#E1182E] text-white">
                     Öne Çıkan Makale
                   </Badge>
-                  <h2 className="font-heading font-bold text-3xl lg:text-4xl mb-4">
+                  <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mb-4 leading-tight">
                     {featuredPost.title}
                   </h2>
-                  <p className="text-muted-foreground text-lg mb-6">
+                  <p className="text-gray-600 text-base sm:text-lg mb-6 leading-relaxed">
                     {featuredPost.excerpt}
                   </p>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-gray-500 mb-6">
                     <div className="flex items-center gap-2">
                       <User className="h-4 w-4" />
-                      {featuredPost.author}
+                      <span>{featuredPost.author}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4" />
-                      {new Date(featuredPost.date).toLocaleDateString('tr-TR')}
+                      <span>{new Date(featuredPost.date).toLocaleDateString('tr-TR')}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="h-4 w-4" />
-                      {featuredPost.readTime} dk okuma
+                      <span>{featuredPost.readTime} dk okuma</span>
                     </div>
                   </div>
                   <Link href={`/blog/${featuredPost.slug}`}>
-                    <Button size="lg" className="hover-lift">
+                    <Button size="lg" className="hover-lift bg-[#E1182E] hover:bg-[#C51628] text-white">
                       Makaleyi Oku <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
                 </div>
-                <div className="relative">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center">
-                    <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center">
-                      <Tag className="h-12 w-12 text-primary" />
+                <div className="relative hidden lg:block">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-[#E1182E]/20 to-[#E1182E]/5 rounded-2xl flex items-center justify-center">
+                    <div className="w-24 h-24 bg-[#E1182E]/20 rounded-full flex items-center justify-center">
+                      <Tag className="h-12 w-12 text-[#E1182E]" />
                     </div>
                   </div>
                 </div>
@@ -221,18 +229,18 @@ export default function BlogPage() {
       )}
 
       {/* Blog Posts Grid */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {filteredPosts.length === 0 ? (
             <div className="text-center py-12">
-              <p className="text-muted-foreground text-lg">
+              <p className="text-gray-600 text-lg">
                 Aradığınız kriterlere uygun makale bulunamadı.
               </p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {regularPosts.map((post) => (
-                <article key={post.id} className="bg-background border border-border rounded-3xl p-6 hover:shadow-lg transition-all hover-lift">
+                <article key={post.id} className="bg-white border border-gray-200 rounded-3xl p-6 hover:shadow-lg transition-all hover-lift">
                   <div className="mb-4">
                     <Badge variant="outline" className="mb-3">
                       {post.category}
@@ -306,6 +314,7 @@ export default function BlogPage() {
           </p>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

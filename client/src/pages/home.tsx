@@ -9,12 +9,19 @@ export default function HomePage() {
 
   return (
     <PageTransition>
+      <title>EraEnvision - AI İle İş Büyütme Platformu</title>
+      <meta name="description" content="EraEnvision ile işinizi AI destekli çözümlerle büyütün. Girişimciler, büyüyen şirketler ve yatırımcılar için özel yapay zeka danışmanlığı platformu." />
+      <meta property="og:title" content="EraEnvision - AI İle İş Büyütme Platformu" />
+      <meta property="og:description" content="AI destekli çözümlerle işinizi büyütün. Girişimciler, şirketler ve yatırımcılar için özel yapay zeka danışmanlığı." />
+      <meta property="og:type" content="website" />
+      <meta name="keywords" content="AI, yapay zeka, iş büyütme, girişimcilik, startup, yatırımcı, danışmanlık, EraEnvision" />
+      
       <div className="min-h-screen bg-white">
         {/* Hero Section - Glide Style */}
         <section className="pt-20 pb-16 bg-white">
-          <div className="max-w-6xl mx-auto px-6 text-center">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
             <FadeIn delay={100}>
-              <h1 className="font-heading font-bold text-5xl lg:text-7xl mb-8 text-gray-900 leading-tight">
+              <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl mb-8 text-gray-900 leading-tight">
                 AI ile iş büyütün,{' '}
                 <span className="bg-gradient-to-r from-[#E1182E] to-[#FF4757] bg-clip-text text-transparent">
                   gelecek kurun
@@ -22,7 +29,7 @@ export default function HomePage() {
               </h1>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl lg:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto px-4 sm:px-0">
                 EraEnvision ile işinizi AI destekli çözümlerle büyütün. Girişimciler, büyüyen şirketler ve yatırımcılar için özel yapay zeka danışmanlığı.
               </p>
             </FadeIn>
@@ -54,13 +61,13 @@ export default function HomePage() {
 
       {/* Key Features - Simple Cards */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <FadeIn>
-              <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-6 text-gray-900">
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
                 İşinizi büyüten AI çözümleri
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
                 Her büyüklükteki işletme için özel tasarlanmış yapay zeka araçları
               </p>
             </FadeIn>
@@ -117,13 +124,13 @@ export default function HomePage() {
 
       {/* Features Showcase */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <SlideIn direction="left">
-              <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-6 text-gray-900">
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
                 Verileriniz, nihayet sizin için çalışıyor
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-lg sm:text-xl text-gray-600 mb-8">
                 Dağınık verileri birleştirin, öngörüler elde edin ve ekibinizi aynı hedef etrafında toplayın.
               </p>
               <StaggeredFadeIn className="space-y-6">
@@ -164,13 +171,13 @@ export default function HomePage() {
 
       {/* Use Cases */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <FadeIn>
-              <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-6 text-gray-900">
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
                 İşinizin her yanını hızlandırın
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-lg sm:text-xl text-gray-600 px-4 sm:px-0">
                 AI destekli uygulamalar oluşturun - takım, süreç veya karmaşıklık ne olursa olsun.
               </p>
             </FadeIn>
@@ -196,12 +203,12 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <FadeIn>
-            <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-6 text-gray-900">
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
               Bugün başlayın, yarın büyüyün
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-lg sm:text-xl text-gray-600 mb-8 px-4 sm:px-0">
               İşinizi bir sonraki seviyeye taşımak için gereken tüm AI araçları burada.
             </p>
           </FadeIn>

@@ -13,7 +13,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-40">
-      <nav className="max-w-7xl mx-auto px-6">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
@@ -90,7 +90,7 @@ export function Header() {
             <div className="hidden sm:block">
               <LanguageSwitcher />
             </div>
-            <Button className="bg-[#E1182E] hover:bg-[#C51628] text-white font-semibold">
+            <Button className="bg-[#E1182E] hover:bg-[#C51628] text-white font-semibold hidden sm:block">
               Ücretsiz Başla
             </Button>
             <Button
@@ -107,7 +107,7 @@ export function Header() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-200">
-            <div className="px-6 py-4 space-y-4">
+            <div className="px-4 sm:px-6 py-4 space-y-4">
               <Link 
                 href="/products" 
                 className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
@@ -177,8 +177,11 @@ export function Header() {
               >
                 İletişim
               </Link>
-              <div className="pt-4 border-t border-gray-200">
+              <div className="pt-4 border-t border-gray-200 space-y-4">
                 <LanguageSwitcher variant="mobile" />
+                <Button className="w-full bg-[#E1182E] hover:bg-[#C51628] text-white font-semibold">
+                  Ücretsiz Başla
+                </Button>
               </div>
             </div>
           </div>
