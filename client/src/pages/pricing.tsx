@@ -44,7 +44,7 @@ export default function PricingPage() {
 
   const plans: Plan[] = [
     {
-      name: t('starter'),
+      name: 'Starter',
       icon: Star,
       description: "Girişimciler için temel araçlar",
       prices: {
@@ -53,20 +53,20 @@ export default function PricingPage() {
         eur: { monthly: 0, yearly: 0 },
       },
       features: [
-        { text: `5 ${t('roadmapsPerMonth')}`, included: true },
-        { text: t('basicAiConsultant'), included: true },
-        { text: t('emailSupport'), included: true },
+        { text: '5 yol haritası/ay', included: true },
+        { text: 'Temel AI danışman', included: true },
+        { text: 'E-posta desteği', included: true },
         { text: "Temel şablonlar", included: true },
         { text: "Mobil erişim", included: true },
-        { text: t('seoAnalysis'), included: false },
-        { text: t('crmIntegration'), included: false },
-        { text: t('prioritySupport'), included: false },
+        { text: 'SEO analizi', included: false },
+        { text: 'CRM entegrasyonu', included: false },
+        { text: 'Öncelikli destek', included: false },
       ],
-      buttonText: t('startFree'),
+      buttonText: 'Ücretsiz Başla',
       buttonVariant: 'outline',
     },
     {
-      name: t('pro'),
+      name: 'Pro',
       icon: Zap,
       popular: true,
       description: "Büyüyen işletmeler için",
@@ -77,20 +77,20 @@ export default function PricingPage() {
         eur: { monthly: 26, yearly: 208 },
       },
       features: [
-        { text: `50 ${t('roadmapsPerMonth')}`, included: true },
-        { text: t('advancedAiConsultant'), included: true },
-        { text: t('seoAnalysis'), included: true },
-        { text: t('prioritySupport'), included: true },
+        { text: '50 yol haritası/ay', included: true },
+        { text: 'Gelişmiş AI danışman', included: true },
+        { text: 'SEO analizi', included: true },
+        { text: 'Öncelikli destek', included: true },
         { text: "Gelişmiş raporlama", included: true },
         { text: "API erişimi", included: true },
         { text: "Özel entegrasyonlar", included: true },
-        { text: t('crmIntegration'), included: false },
+        { text: 'CRM entegrasyonu', included: false },
       ],
-      buttonText: t('startPro'),
+      buttonText: 'Pro\'ya Başla',
       buttonVariant: 'default',
     },
     {
-      name: t('business'),
+      name: 'Business',
       icon: Building,
       description: "Ölçeklenen şirketler için",
       prices: {
@@ -99,20 +99,20 @@ export default function PricingPage() {
         eur: { monthly: 52, yearly: 416 },
       },
       features: [
-        { text: t('unlimitedRoadmaps'), included: true },
-        { text: t('allModularTools'), included: true },
-        { text: t('crmIntegration'), included: true },
-        { text: t('support24_7'), included: true },
+        { text: 'Sınırsız yol haritası', included: true },
+        { text: 'Tüm modüler araçlar', included: true },
+        { text: 'CRM entegrasyonu', included: true },
+        { text: '7/24 destek', included: true },
         { text: "Beyaz etiket çözümü", included: true },
         { text: "Özel analitik", included: true },
         { text: "Çoklu kullanıcı", included: true },
         { text: "SSO entegrasyonu", included: true },
       ],
-      buttonText: t('startBusiness'),
+      buttonText: 'Business\'a Başla',
       buttonVariant: 'default',
     },
     {
-      name: t('enterprise'),
+      name: 'Enterprise',
       icon: Crown,
       enterprise: true,
       description: "Kurumsal çözümler",
@@ -122,23 +122,23 @@ export default function PricingPage() {
         eur: { monthly: 0, yearly: 0 },
       },
       features: [
-        { text: t('customSolutions'), included: true },
-        { text: t('customIntegrations'), included: true },
-        { text: t('customTraining'), included: true },
-        { text: t('dedicatedSupport'), included: true },
+        { text: 'Özel çözümler', included: true },
+        { text: 'Özel entegrasyonlar', included: true },
+        { text: 'Özel eğitim', included: true },
+        { text: 'Özel destek', included: true },
         { text: "SLA garantisi", included: true },
         { text: "On-premise kurulum", included: true },
         { text: "Gelişmiş güvenlik", included: true },
         { text: "Özel geliştirme", included: true },
       ],
-      buttonText: t('contactSales'),
+      buttonText: 'Satışla Görüş',
       buttonVariant: 'outline',
     },
   ];
 
   const formatPrice = (plan: Plan) => {
     if (plan.enterprise) {
-      return t('custom');
+      return 'Özel';
     }
     
     const price = plan.prices[currency][billingPeriod];
@@ -148,7 +148,7 @@ export default function PricingPage() {
   };
 
   const getPeriodText = () => {
-    return billingPeriod === 'monthly' ? `/${t('monthly').toLowerCase()}` : `/${t('yearly').toLowerCase()}`;
+    return billingPeriod === 'monthly' ? '/aylık' : '/yıllık';
   };
 
   const getSavings = () => {
@@ -161,16 +161,16 @@ export default function PricingPage() {
       <section className="pt-24 pb-16 bg-gradient-to-br from-soft-paper to-background">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="font-heading font-bold text-4xl lg:text-6xl mb-6 tracking-wide">
-            {t('pricingTitle')}
+            Basit ve Şeffaf Fiyatlandırma
           </h1>
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-            {t('pricingSubtitle')}
+            İhtiyacına göre ölçeklenebilir planlar
           </p>
           
           {/* Currency & Billing Toggle */}
           <div className="bg-background p-6 rounded-3xl shadow-lg border border-border inline-flex flex-col sm:flex-row items-center gap-6">
             <div className="flex items-center space-x-3">
-              <label className="text-sm font-medium text-muted-foreground">{t('currency')}</label>
+              <label className="text-sm font-medium text-muted-foreground">Para Birimi:</label>
               <Select value={currency} onValueChange={(value: Currency) => setCurrency(value)}>
                 <SelectTrigger className="w-32 rounded-xl">
                   <SelectValue />
@@ -184,16 +184,16 @@ export default function PricingPage() {
             </div>
             
             <div className="flex items-center space-x-4 bg-soft-paper p-2 rounded-2xl">
-              <span className={cn("text-sm font-medium px-3 py-2 rounded-xl transition-colors", billingPeriod === 'monthly' ? "bg-background text-foreground shadow-sm" : "text-muted-foreground")}>{t('monthly')}</span>
+              <span className={cn("text-sm font-medium px-3 py-2 rounded-xl transition-colors", billingPeriod === 'monthly' ? "bg-background text-foreground shadow-sm" : "text-muted-foreground")}>Aylık</span>
               <Switch
                 checked={billingPeriod === 'yearly'}
                 onCheckedChange={(checked) => setBillingPeriod(checked ? 'yearly' : 'monthly')}
               />
               <div className="flex items-center space-x-2">
-                <span className={cn("text-sm font-medium px-3 py-2 rounded-xl transition-colors", billingPeriod === 'yearly' ? "bg-background text-foreground shadow-sm" : "text-muted-foreground")}>{t('yearly')}</span>
+                <span className={cn("text-sm font-medium px-3 py-2 rounded-xl transition-colors", billingPeriod === 'yearly' ? "bg-background text-foreground shadow-sm" : "text-muted-foreground")}>Yıllık</span>
                 {billingPeriod === 'yearly' && (
                   <Badge className="bg-accent-mint text-white text-xs">
-                    {t('discount20')}
+                    %20 İndirim
                   </Badge>
                 )}
               </div>
@@ -353,7 +353,7 @@ export default function PricingPage() {
               size="lg" 
               className="bg-background text-primary hover:bg-background/90 px-8 py-4 text-lg font-semibold hover-lift"
             >
-              {t('startFree')}
+              Ücretsiz Başla
             </Button>
             <Button 
               variant="outline" 
@@ -365,7 +365,7 @@ export default function PricingPage() {
           </div>
           
           <div className="mt-8 text-sm opacity-75">
-            {t('pricingDisclaimer')}
+            Tüm planlar 14 gün ücretsiz deneme ile gelir. İstediğin zaman iptal edebilirsin.
           </div>
         </div>
       </section>
