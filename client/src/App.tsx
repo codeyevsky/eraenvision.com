@@ -9,6 +9,9 @@ import { Footer } from "@/components/layout/footer";
 import { CookieConsent } from "@/components/ui/cookie-consent";
 import HomePage from "@/pages/home";
 import ProductsPage from "@/pages/products";
+import LaunchPage from "@/pages/launch";
+import ScalePage from "@/pages/scale";
+import InvestPage from "@/pages/invest";
 import PricingPage from "@/pages/pricing";
 import AboutPage from "@/pages/about";
 import ContactPage from "@/pages/contact";
@@ -20,6 +23,9 @@ function Router() {
     <Switch>
       <Route path="/" component={HomePage} />
       <Route path="/products" component={ProductsPage} />
+      <Route path="/launch" component={LaunchPage} />
+      <Route path="/scale" component={ScalePage} />
+      <Route path="/invest" component={InvestPage} />
       <Route path="/pricing" component={PricingPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />

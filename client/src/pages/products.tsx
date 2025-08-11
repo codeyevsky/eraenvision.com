@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
 import { Check, ArrowRight, Sparkles, TrendingUp, Target, Zap, Users, BarChart3 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'wouter';
 
 export default function ProductsPage() {
   const [activeTab, setActiveTab] = useState('launch');
@@ -26,8 +27,8 @@ export default function ProductsPage() {
         'Yatırımcı pitch deck hazırlama',
         'İlk müşteri bulma stratejileri'
       ],
-      cta: 'Ücretsiz Başla',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      cta: 'Detayları Gör',
+      link: '/launch'
     },
     {
       id: 'scale',
@@ -46,8 +47,8 @@ export default function ProductsPage() {
         'Takım performans analitiği',
         'Büyüme metrik takibi'
       ],
-      cta: 'Demo Talep Et',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      cta: 'Detayları Gör',
+      link: '/scale'
     },
     {
       id: 'invest',
@@ -66,8 +67,8 @@ export default function ProductsPage() {
         'Exit stratejisi planlama',
         'Pazar trend analitiği'
       ],
-      cta: 'Erken Erişim',
-      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      cta: 'Detayları Gör',
+      link: '/invest'
     }
   ];
 
@@ -147,12 +148,14 @@ export default function ProductsPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className={cn("font-semibold text-white", activeProduct.color)}
-                >
-                  {activeProduct.cta} <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link href={activeProduct.link}>
+                  <Button 
+                    size="lg" 
+                    className={cn("font-semibold text-white", activeProduct.color)}
+                  >
+                    {activeProduct.cta} <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
                 <Button 
                   variant="outline" 
                   size="lg"
@@ -215,15 +218,13 @@ export default function ProductsPage() {
                   ))}
                 </div>
                 
-                <Button 
-                  className={cn("w-full font-semibold text-white", product.color)}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setActiveTab(product.id);
-                  }}
-                >
-                  {product.cta}
-                </Button>
+                <Link href={product.link}>
+                  <Button 
+                    className={cn("w-full font-semibold text-white", product.color)}
+                  >
+                    {product.cta}
+                  </Button>
+                </Link>
               </div>
             ))}
           </div>
