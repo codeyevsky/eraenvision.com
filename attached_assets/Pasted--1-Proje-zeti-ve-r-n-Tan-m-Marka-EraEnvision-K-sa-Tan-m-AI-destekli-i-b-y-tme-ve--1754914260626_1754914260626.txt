@@ -1,0 +1,434 @@
+## 1) Proje Özeti ve Ürün Tanımı
+
+**Marka:** EraEnvision
+
+**Kısa Tanım:** AI destekli iş büyütme ve dijital dönüşüm platformu. Üç ana segment: **Launch** (Girişimciler), **Scale**(İşletmeler), **Invest** (Yatırımcılar).
+
+**Değer Önermesi:** Kişiselleştirilmiş AI danışmanı ile yol haritaları, fikir/doğrulama, e‑ticaret optimizasyonu, operasyon otomasyonu ve yatırım analitiği sunar. Web üzerinden SaaS olarak çalışır.
+
+**Konumlandırma:** Vizyoner, yalın, sonuç odaklı; gereksiz karmaşayı keser.
+
+**Segment Özeti**
+
+- **Launch (Girişimciler):** Fikir üretimi/doğrulama, pazar analizi, MVP roadmap, bütçe/riske göre aksiyon planı, pitch içgörüleri.
+- **Scale (İşletmeler/KOBİ’ler):** E‑ticaret ve satış hunisi optimizasyonu, SEO/ads önerileri, otomasyon ve CRM entegrasyon haritaları, operasyonel KPI panelleri.
+- **Invest (Yatırımcılar):** Startup ve işletme profilleri, AI destekli puanlama, sinyal/gürültü filtrasyonu, tez‑odaklı keşif ve takip listeleri.
+
+**Ana Özellikler**
+
+- AI danışman sohbeti (kişiselleştirilmiş bağlam).
+- Dijital olgunluk değerlendirmesi ve **kişisel yol haritası**.
+- Modüler (token tabanlı) araç seti; yakında SEO analizi, sosyal medya yönetimi, pazarlama otomasyonu.
+- Veri gizliliği ve mevzuata (KVKK/GDPR) uyum odaklı altyapı.
+
+**Amaç:** Mevcut tanıtım sitesini yeni **kırmızı ağırlıklı** marka estetiği, zengin illüstrasyonlar ve güçlü widget’larla baştan kurmak.
+
+---
+
+## 2) Marka Kimliği ve Görsel Dil
+
+**Renk Paleti (HEX)**
+
+- **Era Red (Primary):** #E1182E
+- **Era Red Dark:** #B01426
+- **Ink Black:** #0A0A0B
+- **Soft Paper:** #F7F7F7
+- **Graphite:** #1C1C1E
+- **Accent Mint (başarı):** #23C483
+- **Accent Amber (uyarı):** #F5A524
+- **Accent Blue (bilgi):** #2F80ED
+
+**Tipografi**
+
+- **Başlık:** Space Grotesk (700/600) — geniş harf aralığı, sıkı satır aralığı.
+- **Gövde/UI:** Inter (400/500/600).
+- **Sayı/Metric:** Satoshi veya Inter Mono (opsiyonel).
+
+**Logo/İkonografi**
+
+- Minimal **göz sembolü** (tek çizgi form, keskin kıvrım).
+- Kırmızı‑siyah monokrom; hover’da kırmızıdan koyuya geçiş.
+- İkon seti: strok ağırlığı tutarlı (1.5px), yuvarlatılmış köşeler.
+
+**İllüstrasyon Stili**
+
+- Yüksek kontrastlı, **kırmızı‑siyah‑beyaz** temalı, hafif isometrik ve geometrik.
+- Az detaylı, “editorial” tarz; kalın şekil blokları + ince çizgi vurgular.
+- Hareketli mikro‑animasyonlar (paralaks, hafif yüzen efekt).
+- Her segment için 1 kahraman illüstrasyon: Launch → kıvılcım/çekirdek; Scale → yükselen merdiven/ok; Invest → radar/gözlem kulesi.
+
+**Bileşen Tasarım Kuralları**
+
+- Border radius: 16–20px (2xl).
+- Shadow: yumuşak, düşük blur, opaklık %10–14.
+- Spacing ölçeği: 8px çarpan (8/16/24/32/48/64).
+- Hız/Animasyon: ease‑out 220ms (hover), 420ms (in‑view).
+- Grid: 12 kolon; content max‑width 1200–1280px; section padding 80–120px.
+
+---
+
+## 3) Bilgi Mimarisi (Site Haritası)
+
+1. **Home (Ana Sayfa)**
+2. **Products (Ürünler)**
+    - Launch
+    - Scale
+    - Invest
+3. **How It Works (Nasıl Çalışır)**
+4. **Pricing (Fiyatlandırma)**
+5. **About (Hakkımızda)**
+6. **Resources**
+    - Blog
+    - Case Studies
+    - Guides / Playbooks
+    - FAQ
+7. **Contact (İletişim)**
+8. **Legal**
+    - Privacy Policy (KVKK & GDPR uyumlu)
+    - Terms of Service
+    - Data Processing Addendum
+    - AI Usage Disclaimer
+    - Cookie Policy
+
+**Global Öğeler**
+
+- Sticky üst menü, segment dropdown, **CTA: “Start Free / Ücretsiz Başla”**.
+- Alt menüde (footer) hızlı bağlantılar + sosyal/link ikonları (LinkedIn, X, GitHub opsiyonel).
+- **Dil seçici:** TR | EN (varsayılan TR).
+
+---
+
+## 4) Sayfa Bazlı İçerik ve Kopya (TR → EN varyantları üret)
+
+### 4.1 Home
+
+**Hero**
+
+- H1: “Tek bir AI ile büyümeyi basitleştir.”
+- Alt başlık: “EraEnvision; girişimciler, işletmeler ve yatırımcılar için kişiselleştirilmiş AI danışmanıyla fikirden ölçeğe uzanan net yol haritaları çıkarır.”
+- CTA primary: “Ücretsiz Başla”
+- CTA secondary: “Demoyu İzle”
+- Görsel: kırmızı‑siyah göz sembolü + segment illüstrasyonları karışımı.
+
+**Trust & Metrics**
+
+- Kısa madde: “Dakikalar içinde kişisel yol haritası” — “E‑ticaret ROI artışı” — “Yatırım teziyle uyumlu keşif”.
+- Sayılar (dummy): “+120 yol haritası”, “%28 ortalama dönüşüm artışı”, “3 segment, tek platform”.
+
+**Features Grid (3×)**
+
+- “AI Danışman” — “Modüler Araçlar” — “Otomasyon Odaklı”.
+- Her kutuda kısa bir fayda cümlesi ve mikro‑ikon.
+
+**Segments Preview**
+
+- Launch/Scale/Invest kartları, her birinde 1 cümle USP + “Daha Fazla”.
+
+**Workflow Timeline**
+
+- 
+    1. Profilini tanı 2) Yol haritanı al 3) Aksiyonları uygula 4) Sonuçları izle.
+- Her adım için mini illüstrasyon ve 1 satır.
+
+**Testimonials/Logos**
+
+- 3–5 alıntı (placeholder).
+- Carousel; otomatık duruş süresi 5sn.
+
+**Final CTA Banner**
+
+- “Gürültüyü kes. Büyümeyi hızlandır.” + CTA’lar.
+
+### 4.2 Products / Launch
+
+- H1: “Launch — Fikrini hızla doğrula, yol haritanı netleştir.”
+- Açıklama: “Pazar boyutu, rakipler, riskler ve MVP adımlarını AI ile saniyeler içinde gör. Tek ekranda uygulanabilir plan.”
+- Özellikler: Fikir jenerasyonu → Pazar/doğrulama skorları → MVP planı → Pitch özetleri.
+- Widget: **“AI‑Canvas”** (madde madde yol haritası kartları).
+- CTA: “Ücretsiz Başla” / “Örnek Yol Haritası Gör”.
+
+### 4.3 Products / Scale
+
+- H1: “Scale — E‑ticaret ve operasyonlarını akıllıca büyüt.”
+- Açıklama: “Huniler, SEO/ads ve otomasyonlar için veri‑temelli öneriler. ROI’yi artıran tekrarlanabilir planlar.”
+- Özellikler: Huni denetimi → A/B önerileri → SEO & reklam reçeteleri → CRM/Ops entegrasyon haritası.
+- Widget: **“Optimization Radar”** (skor + öneri listeleri).
+- CTA: “Demo Talep Et” / “Audit Örneğini Gör”.
+
+### 4.4 Products / Invest
+
+- H1: “Invest — Gürültüyü filtrele, sinyalin peşinden git.”
+- Açıklama: “Yatırım tezinle eşleşen girişimleri AI ile puanla, listeni yönet, uyarılar al.”
+- Özellikler: Profil keşfi → Tez eşleşmesi → Skor kartları → İzleme listeleri.
+- Widget: **“Deal Signal Board”** (kart bazlı pipeline).
+- CTA: “Erken Erişim” / “Örnek Skor Kartı”.
+
+### 4.5 How It Works
+
+- 4 adımlık detaylı akış; her adımda kısa video/animasyon: Onboarding → Değerlendirme → Plan → İcra & İzleme.
+- SSS mini bölümü (5–7 soru).
+- CTA: “Hemen Deneyimle”.
+
+### 4.6 Pricing
+
+- Para birimi anahtarı: **TRY / USD / EUR** (varsayılan: TRY).
+- 4 plan: **Starter**, **Pro**, **Business**, **Enterprise** (fiyat placeholder + özellik matrisi).
+- Plan notları: Aylık/yıllık toggle (%20 indirim).
+- Hukuki mikro‑metin: deneme, iade, faturalandırma, vergi.
+- CTA’lar: “Ücretsiz Başla” (Starter/Pro) — “Satışla Görüş” (Enterprise).
+- **Ödeme:** Şimdilik dış link/checkout yönlendirmesi (iyzico/Stripe hazır olduğunda güncelle).
+
+### 4.7 About
+
+- “Neden Varız?” — gürültüyü kesmek, net planlar üretmek.
+- Kurucu notu (vizyoner ama kısa).
+- Zaman çizelgesi (milestones).
+- Değerler: Dürüstlük, hız, ölçülebilirlik.
+- Mini ekip kartları (Emirhan — Founder, vb.).
+
+### 4.8 Resources
+
+- **Blog** (CMS)
+- **Case Studies** (CMS) — problem → yaklaşım → sonuç KPI’ları
+- **Guides/Playbooks** — PDF indirme (e‑posta toplayan kapı).
+- **FAQ** — akordeon (kategori: genel, ürün, faturalama, güvenlik).
+
+### 4.9 Contact
+
+- Form alanları: Ad‑Soyad, E‑posta, Şirket, Ülke, Segment İlgi (Launch/Scale/Invest), Bütçe aralığı, Mesaj.
+- Onay kutuları: KVKK/GDPR rızası, İletişim izni.
+- Alternatif: takvim linki/Toplantı isteği.
+- Başarılı gönderim ekranı + otomatik teşekkür e‑postası şablonu.
+
+### 4.10 Legal (Şablonlar, CMS değil)
+
+- **Privacy Policy (KVKK/GDPR)** — veri işleme amaçları, saklama, üçüncü taraflar, haklar.
+- **Terms of Service** — kullanım koşulları, sınırlamalar.
+- **Data Processing Addendum** — veri sorumlusu/işleyen.
+- **AI Usage Disclaimer** — “AI çıktıları hatalı olabilir; nihai karar kullanıcıya aittir.”
+- **Cookie Policy** — açık rıza, yönetim paneli.
+
+---
+
+## 5) İçerik Üretim Kuralları ve Ton
+
+**Ses Tonu:** Dobra, net, veri‑odaklı; gereksiz övgü yok.
+
+**Stil:** Kısa cümleler, aktif fiil, ölçülebilir fayda.
+
+**Mikro‑metin:** Butonlar → tek fiil + sonuç (“Keşfet”, “İndir”, “Başla”).
+
+**Yerelleştirme:** Tüm metinleri TR ve EN üret; aynı sayfada i18n anahtarı kullan.
+
+**Örnek Mikro‑Kopyalar**
+
+- CTA: “Gürültüyü Kes ve Başla”
+- Form placeholder: “Şirket adınız (opsiyonel)”
+- Hata mesajı: “Lütfen e‑posta formatını kontrol edin.”
+- Boş durum: “Henüz içerik yok. İlk rehberi ekleyin.”
+
+---
+
+## 6) Bileşen Kütüphanesi (Widget’lar)
+
+- **Hero Section** (video/gif destekli)
+- **Feature Cards** (3–6 adet, ikonlu)
+- **Segment Tabs** (Launch/Scale/Invest)
+- **Stats/Numbers** (3 büyük metrik)
+- **Timeline/Stepper**
+- **Pricing Table** (aylık/yıllık toggle, plan vurgusu)
+- **Testimonial Carousel**
+- **Logo Strip**
+- **CTA Banner**
+- **FAQ Accordion**
+- **Contact Form**
+- **Newsletter / Lead Magnet**
+- **Blog List/Grid** (CMS)
+- **Case Study Template** (CMS)
+- **Guide/Playbook Download Gate**
+- **Cookie Consent Bar** (KVKK/GDPR uyumlu)
+- **Floating Help/Contact** butonu
+
+---
+
+## 7) CMS Şemaları
+
+**Blog Post**
+
+- title, slug, excerpt, coverImage, author{name, title, avatar}, publishDate, tags[], readTime, body (rich), ogImage, locale.
+
+**Case Study**
+
+- title, slug, sector, companySize, problem, approach, solution, kpis[{name,value,delta}], images[], publishDate, locale.
+
+**Guide/Playbook**
+
+- title, slug, summary, fileURL, gated(boolean), formFields[], thumbnail, locale.
+
+**FAQ**
+
+- category, question, answer, locale.
+
+---
+
+## 8) SEO, Yapısal Veri ve Sosyal
+
+- Her sayfa için **unique meta title (50–60)** ve **meta description (140–160)** üret.
+- **Open Graph / Twitter Cards** görselleri otomatik şablonla oluştur (kırmızı arka plan + göz ikonu + sayfa başlığı).
+- **JSON‑LD**: Organization, WebSite + SearchAction, Article (blog), FAQPage (FAQ), BreadcrumbList.
+- **robots.txt** ve **sitemap.xml** üret.
+- **/llms.txt** (opsiyonel): İçerik kullanım ilkeleri ve kaynak gösterimi yönergeleri.
+
+**Örnek Meta (Home)**
+
+- Title: “EraEnvision — Tek Bir AI ile Büyümeyi Basitleştir”
+- Description: “Girişimci, işletme ve yatırımcılar için kişiselleştirilmiş AI danışman. Yol haritası, optimizasyon ve yatırım içgörüleri tek platformda.”
+
+---
+
+## 9) Performans, Erişilebilirlik ve Uyum
+
+**Performans Hedefleri**
+
+- LCP < 2.5s, CLS < 0.1, TTI < 3.5s (3G/orta cihaz).
+- Görseller: modern format (WebP/AVIF), lazy‑load, 1×/2× set.
+- Kod: minify, kritik CSS, font display swap, ikonlar için SVG sprite.
+
+**Erişilebilirlik**
+
+- Renk kontrastı WCAG AA.
+- Tüm görsellere alt metin.
+- Klavye ile tam gezinme, odak halkaları.
+- ARIA etiketleri ve landmark’lar.
+
+**Uyumluluk**
+
+- **KVKK & GDPR** metinleri; çerez yönetim paneli (zorunlu/opsiyonel ayrımı).
+- **AI Sorumluluk Reddi**: “AI çıktıları bilgilendiricidir; kararlar kullanıcı sorumluluğundadır.”
+- Hukuki linkler footer’da.
+
+---
+
+## 10) Entegrasyonlar ve İzleme
+
+- **Analytics:** GA4, LinkedIn Insight Tag, Meta Pixel (consent‑gate üzerinden).
+- **Formlar:** e‑posta bildirimi + CRM webhook (Zapier/Make opsiyonel).
+- **Ödeme (gelecek):** iyzico/Stripe link yönlendirmesi (Pricing CTA).
+- **Harita (iletişim):** gömülü harita (opsiyonel, gizlilik rızalı).
+
+---
+
+## 11) Tema Değişkenleri (Design Tokens)
+
+```json
+{
+  "colors": {
+    "primary": "#E1182E",
+    "primaryDark": "#B01426",
+    "bg": "#FFFFFF",
+    "text": "#0A0A0B",
+    "muted": "#1C1C1E",
+    "surface": "#F7F7F7",
+    "success": "#23C483",
+    "warning": "#F5A524",
+    "info": "#2F80ED"
+  },
+  "radius": {"sm": 8, "md": 12, "lg": 16, "xl": 20},
+  "shadow": {"sm": "0 2px 8px rgba(0,0,0,0.10)", "md": "0 8px 24px rgba(0,0,0,0.12)"},
+  "spacing": [8,12,16,24,32,48,64,96,120],
+  "container": {"max": 1240, "gutter": 24},
+  "animation": {"hover": 0.22, "inView": 0.42}
+}
+
+```
+
+---
+
+## 12) Örnek Fiyatlandırma Matrisi (Yer Tutucu)
+
+| Plan | Kime | Ana Özellikler | Fiyat (TRY) | Fiyat (USD) |
+| --- | --- | --- | --- | --- |
+| Starter | Solo kurucu/KOBİ | AI danışman, temel yol haritası, 3 proje | 0–**₺** / 490 | 0–**$** / 19 |
+| Pro | Ekipler | Gelişmiş öneriler, export, 10 proje | 1.490 | 49 |
+| Business | Büyüyen işletme | E‑ticaret modülleri, çoklu ekip, SSO | 4.490 | 149 |
+| Enterprise | Kurumsal/Yatırımcı | Özel modüller, güvenlik/uyum, SLA | Teklif | Custom |
+
+> Not: Fiyatlar örnek. Para birimi anahtarı ve yıllık indirim (%20) desteği zorunludur.
+> 
+
+---
+
+## 13) Illustration/Asset Üretim Yönergesi (AI Görsel Prompt Örnekleri)
+
+- **Genel Stil:** “high‑contrast editorial vector, red/black/white, geometric blocks, subtle isometric, thin line highlights, minimal shadows, clean negative space, tech‑futuristic.”
+- **Launch illüstrasyonu:** “spark/seed igniting into a roadmap, red gradients, black background accents, vector, minimal.”
+- **Scale illüstrasyonu:** “ascending staircase/arrow built from product cards, subtle motion blur lines, red primary.”
+- **Invest illüstrasyonu:** “radar/observation tower scanning cards, signal waves, eye motif, editorial vector.”
+
+Export: SVG + WebP (1×/2×). OG görseller için otomatik şablon.
+
+---
+
+## 14) QA ve Yayın Kontrol Listesi
+
+- [ ]  Tüm CTA’lar çalışır, internal linkler doğru.
+- [ ]  Mobil (360w), tablet (768w), masaüstü (1440w) düzenleri test edildi.
+- [ ]  LCP/CLS hedefleri Lighthouse’ta sağlandı.
+- [ ]  Tüm görsellerde alt metin var.
+- [ ]  Dil anahtarı TR/EN içerikleri doğru çekiyor.
+- [ ]  Çerez banner’ı ve rıza kayıtları çalışıyor.
+- [ ]  Sitemap/robots güncel, 404/500 sayfaları özelleştirildi.
+- [ ]  Form teslim e‑postaları ve CRM webhook test edildi.
+- [ ]  Hukuki sayfalar ve footer linkleri aktif.
+- [ ]  OG/Twitter kartları doğru görünüyor.
+
+---
+
+## 15) Üretim Çıktısı Beklentisi (No‑Code Aracı için)
+
+1. Sayfalar, bölümler ve bileşenler **otomatik oluşturulsun** (yukarıdaki hiyerarşiyle).
+2. **TR/EN içerikleri** i18n anahtarlarıyla üret ve tüm metinleri doldur (yer tutucular hariç).
+3. Tema değişkenlerini/tokens’ı ayarla; global stilleri uygula.
+4. İllüstrasyonlar için yer tutucular + export yönergeleri ekle.
+5. CMS koleksiyonlarını tanımla ve örnek 3 içerik tohumla (Blog/Case/FAQ).
+6. SEO meta ve JSON‑LD verilerini her sayfa için üret.
+7. Consent yönetimli GA4/Meta/LinkedIn etiketlerini ekle.
+8. Performans optimizasyonlarını uygula (lazy‑load, minify, font swap).
+9. Tüm sayfalara **üst/alt navigasyon** ve **sticky global CTA** ekle.
+10. Yayın öncesi QA kontrol listesini otomatik raporla.
+
+---
+
+## 16) Ek: Örnek TR/EN Kısa Kopyalar
+
+**Launch kartı**
+
+- TR: “Fikrini bugün doğrula. Yarın inşa et.”
+- EN: “Validate today. Build tomorrow.”
+
+**Scale kartı**
+
+- TR: “Hunini sadeleştir, ROI’yi büyüt.”
+- EN: “Simplify the funnel, grow ROI.”
+
+**Invest kartı**
+
+- TR: “Sinyali yakala, gürültüyü bırak.”
+- EN: “Catch the signal, drop the noise.”
+
+**Footer kısa misyon**
+
+- TR: “EraEnvision, büyümeyi basitleştirir.”
+- EN: “EraEnvision simplifies growth.”
+
+---
+
+## 17) Hukuki Mikro‑Metin Şablonları (Yer Tutucu)
+
+- **AI Uyarı Pop‑up:** “AI önerileri bilgilendiricidir; sonuçlar bağlama göre değişebilir. Nihai karar ve sorumluluk kullanıcıya aittir.”
+- **KVKK/GDPR Form Metni:** “Bu formu göndererek kişisel verilerimin [Amaç] doğrultusunda işlenmesini ve iletişim için benimle irtibata geçilmesini kabul ediyorum.”
+- **İade/Abonelik Notu (Pricing altında):** “Abonelikler dönem sonunda yenilenir. İptal politikası ve iade koşulları için bkz. [link].”
+
+---
+
+**Teslim formatı:** Yayına hazır sahne + tek tıkla export (HTML/CSS/JS) ve site haritası. Tüm metinler ve görseller yerleştirilmiş, CMS ve SEO yapılandırılmış olmalıdır. platformu yaparken html, css, mui, react, tsx ve nextjs kullanmalısın. bu teknolojiler dışına asla çıkmamalısın.
