@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* EraEnvision Brand Colors */
+  --era-red: hsl(347, 83%, 49%);
+  --era-red-dark: hsl(347, 79%, 42%);
+  --ink-black: hsl(240, 5%, 4%);
+  --soft-paper: hsl(0, 0%, 97%);
+  --graphite: hsl(240, 5%, 11%);
+  --accent-mint: hsl(147, 69%, 46%);
+  --accent-amber: hsl(42, 90%, 56%);
+  --accent-blue: hsl(213, 73%, 56%);
+
+  /* Base Design System */
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 5%, 4%);
+  --card: hsl(0, 0%, 97%);
+  --card-foreground: hsl(240, 5%, 4%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 5%, 4%);
+  --primary: hsl(347, 83%, 49%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 5%, 11%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 97%);
+  --muted-foreground: hsl(240, 5%, 4%);
+  --accent: hsl(0, 0%, 97%);
+  --accent-foreground: hsl(347, 83%, 49%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(220, 13%, 91%);
+  --input: hsl(220, 13%, 91%);
+  --ring: hsl(347, 83%, 49%);
+  --chart-1: hsl(347, 83%, 49%);
+  --chart-2: hsl(147, 69%, 46%);
+  --chart-3: hsl(42, 90%, 56%);
+  --chart-4: hsl(213, 73%, 56%);
+  --chart-5: hsl(283, 89%, 50%);
+  --sidebar: hsl(0, 0%, 97%);
+  --sidebar-foreground: hsl(240, 5%, 4%);
+  --sidebar-primary: hsl(347, 83%, 49%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(0, 0%, 97%);
+  --sidebar-accent-foreground: hsl(347, 83%, 49%);
+  --sidebar-border: hsl(220, 13%, 91%);
+  --sidebar-ring: hsl(347, 83%, 49%);
+  
+  /* Typography */
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-mono: 'Menlo', monospace;
+  
+  /* Design Tokens */
+  --radius: 1rem;
+  --shadow-sm: 0 2px 8px hsl(347, 83%, 49%, 0.10);
+  --shadow-md: 0 8px 24px hsl(347, 83%, 49%, 0.12);
+  --shadow-lg: 0 16px 40px hsl(347, 83%, 49%, 0.14);
+  
+  /* Animation Timing */
+  --duration-hover: 220ms;
+  --duration-in-view: 420ms;
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dark {
+  --background: hsl(240, 5%, 4%);
+  --foreground: hsl(0, 0%, 95%);
+  --card: hsl(240, 5%, 11%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --popover: hsl(240, 5%, 4%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --primary: hsl(347, 83%, 49%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(0, 0%, 95%);
+  --secondary-foreground: hsl(240, 5%, 4%);
+  --muted: hsl(240, 5%, 11%);
+  --muted-foreground: hsl(240, 3%, 46%);
+  --accent: hsl(240, 5%, 11%);
+  --accent-foreground: hsl(347, 83%, 49%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(240, 5%, 15%);
+  --input: hsl(240, 5%, 15%);
+  --ring: hsl(347, 83%, 49%);
+  --sidebar: hsl(240, 5%, 11%);
+  --sidebar-foreground: hsl(0, 0%, 95%);
+  --sidebar-primary: hsl(347, 83%, 49%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(240, 5%, 11%);
+  --sidebar-accent-foreground: hsl(347, 83%, 49%);
+  --sidebar-border: hsl(240, 5%, 15%);
+  --sidebar-ring: hsl(347, 83%, 49%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .era-red {
+    @apply bg-[hsl(var(--era-red))] text-white;
+  }
+  
+  .era-red-dark {
+    @apply bg-[hsl(var(--era-red-dark))] text-white;
+  }
+  
+  .ink-black {
+    @apply bg-[hsl(var(--ink-black))] text-white;
+  }
+  
+  .soft-paper {
+    @apply bg-[hsl(var(--soft-paper))] text-[hsl(var(--ink-black))];
+  }
+  
+  .graphite {
+    @apply bg-[hsl(var(--graphite))] text-white;
+  }
+  
+  .accent-mint {
+    @apply bg-[hsl(var(--accent-mint))] text-white;
+  }
+  
+  .accent-amber {
+    @apply bg-[hsl(var(--accent-amber))] text-white;
+  }
+  
+  .accent-blue {
+    @apply bg-[hsl(var(--accent-blue))] text-white;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-[hsl(var(--era-red))] to-[hsl(var(--era-red-dark))] bg-clip-text text-transparent;
+  }
+
+  .hover-lift {
+    transition: all var(--duration-hover) var(--ease-out);
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/80;
+}
