@@ -6,20 +6,23 @@ import { TrendingUp, Zap, Target, Sparkles, ArrowRight, Star } from 'lucide-reac
 interface AppleWidgetProps {
   className?: string;
   children?: React.ReactNode;
+  onClick?: () => void;
 }
 
-export function GlassCard({ className, children }: AppleWidgetProps) {
+export function GlassCard({ className, children, onClick }: AppleWidgetProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div 
       className={cn(
         "frosted-glass rounded-3xl p-8 transition-all duration-700 group relative overflow-hidden",
-        "hover:scale-105 hover:-rotate-1 cursor-pointer",
+        "hover:scale-105 hover:-rotate-1",
+        onClick && "cursor-pointer",
         className
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
       {/* Animated gradient overlay */}
       <div className={cn(

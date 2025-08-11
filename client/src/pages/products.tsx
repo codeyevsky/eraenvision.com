@@ -5,6 +5,15 @@ import { Check, ArrowRight, Sparkles, TrendingUp, Target } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { AnimatedBlobs, FloatingElements, InteractiveOrb } from '@/components/ui/animated-blobs';
 import { GlassCard, MorphingButton, FloatingActionButton } from '@/components/ui/apple-widgets';
+import { 
+  FloatingIcons, 
+  GeometricShapes, 
+  ParticleField, 
+  InteractiveDataVisualization,
+  AnimatedLogo,
+  ConnectedDots,
+  MorphingShape 
+} from '@/components/ui/advanced-illustrations';
 
 export default function ProductsPage() {
   const [activeSegment, setActiveSegment] = useState('launch');
@@ -71,25 +80,71 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Animated Background */}
+      {/* Ultra Advanced Animated Background */}
       <AnimatedBlobs />
       <FloatingElements />
+      <FloatingIcons />
+      <GeometricShapes />
+      <ParticleField />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-soft-paper via-background to-soft-paper relative">
+      {/* Spectacular Hero Section */}
+      <section className="pt-40 pb-32 bg-gradient-to-br from-soft-paper via-background to-soft-paper relative overflow-hidden">
+        {/* Background Illustrations */}
+        <div className="absolute inset-0">
+          <ConnectedDots />
+        </div>
+        
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
-            <h1 className="font-heading font-bold text-5xl lg:text-7xl mb-8 tracking-wide relative">
-              <span className="gradient-text">{t('threeSegmentsOnePlatform')}</span>
-              <div className="absolute -top-6 -right-6">
-                <InteractiveOrb className="scale-75" />
+          <div className="text-center max-w-5xl mx-auto">
+            <div className="animate-slide-in-top">
+              <h1 className="font-heading font-bold text-6xl lg:text-9xl mb-12 tracking-wide relative">
+                <span className="gradient-text-animated text-glow">{t('threeSegmentsOnePlatform')}</span>
+                <div className="absolute -top-12 -right-12">
+                  <InteractiveOrb className="scale-90" />
+                </div>
+              </h1>
+              
+              <p className="text-2xl lg:text-3xl text-muted-foreground mb-16 leading-relaxed">
+                {t('customizedSolutions')}
+              </p>
+              
+              {/* Animated Logo */}
+              <div className="flex justify-center mb-16">
+                <AnimatedLogo />
               </div>
-            </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground mb-16 leading-relaxed animate-fade-in-up delay-300">
-              {t('customizedSolutions')}
-            </p>
+            </div>
+            
+            {/* Enhanced feature highlights */}
+            <div className="grid md:grid-cols-3 gap-8 animate-fade-in-up delay-500">
+              <GlassCard className="text-center hover-3d">
+                <Sparkles className="w-12 h-12 text-primary mx-auto mb-4 animate-pulse" />
+                <h3 className="font-bold text-xl mb-2 gradient-text">Launch</h3>
+                <p className="text-sm text-muted-foreground">Girişimciler için</p>
+              </GlassCard>
+              
+              <GlassCard className="text-center hover-3d">
+                <TrendingUp className="w-12 h-12 text-accent-blue mx-auto mb-4 animate-pulse" />
+                <h3 className="font-bold text-xl mb-2 gradient-text">Scale</h3>
+                <p className="text-sm text-muted-foreground">İşletmeler için</p>
+              </GlassCard>
+              
+              <GlassCard className="text-center hover-3d">
+                <Target className="w-12 h-12 text-accent-mint mx-auto mb-4 animate-pulse" />
+                <h3 className="font-bold text-xl mb-2 gradient-text">Invest</h3>
+                <p className="text-sm text-muted-foreground">Yatırımcılar için</p>
+              </GlassCard>
+            </div>
           </div>
         </div>
+        
+        {/* Floating morphing shape */}
+        <div className="absolute top-20 left-20 scale-75">
+          <MorphingShape />
+        </div>
+        
+        {/* Enhanced background effects */}
+        <div className="absolute top-32 right-32 w-64 h-64 bg-gradient-to-r from-primary/10 to-accent-blue/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-32 left-32 w-48 h-48 bg-gradient-to-r from-accent-mint/10 to-primary/10 rounded-full blur-2xl animate-pulse delay-300"></div>
       </section>
 
       {/* Apple-style Segment Navigation */}
