@@ -63,139 +63,201 @@ export default function MindMapWidget() {
   const [hoveredSegment, setHoveredSegment] = useState<string | null>(null);
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto h-[500px] bg-gradient-to-br from-gray-50 to-purple-50/30 rounded-3xl border border-gray-100 overflow-hidden">
-      {/* Background subtle pattern */}
-      <div className="absolute inset-0 opacity-3">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 50% 50%, #8B5CF6 1px, transparent 1px)`,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
+    <div className="relative w-full max-w-6xl mx-auto">
+      {/* Desktop Version */}
+      <div className="hidden md:block relative h-[600px] bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-3xl border border-gray-200 shadow-sm">
+        {/* Central DealBridge Hub */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+          <Link href="/dealbridge">
+            <div className="w-28 h-28 rounded-full bg-gradient-to-br from-purple-600 to-purple-700 flex flex-col items-center justify-center shadow-xl border-4 border-white cursor-pointer group hover:scale-110 transition-all duration-300">
+              <Link2 className="w-7 h-7 text-white mb-1 group-hover:rotate-12 transition-transform duration-300" />
+              <div className="text-xs font-semibold text-white">DealBridge</div>
+              <div className="text-xs text-white/80">İş Birliği Merkezi</div>
+            </div>
+          </Link>
+        </div>
 
-      {/* Central DealBridge Hub */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-        <Link href="/dealbridge">
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center shadow-xl border-4 border-white cursor-pointer group hover:scale-110 transition-all duration-300">
-            <Link2 className="w-6 h-6 text-white group-hover:rotate-12 transition-transform duration-300" />
+        {/* Connection Lines */}
+        <svg className="absolute inset-0 w-full h-full z-10" viewBox="0 0 600 600">
+          {/* Line to LAUNCH (bottom left) */}
+          <line 
+            x1="300" y1="300" 
+            x2="150" y2="450" 
+            stroke="#E1182E" 
+            strokeWidth="3" 
+            opacity="0.4"
+            strokeDasharray="5,5"
+            className={cn("transition-all duration-300", hoveredSegment === 'launch' && "opacity-80 stroke-[4]")}
+          />
+          {/* Line to SCALE (top center) */}
+          <line 
+            x1="300" y1="300" 
+            x2="300" y2="100" 
+            stroke="#3B82F6" 
+            strokeWidth="3" 
+            opacity="0.4"
+            strokeDasharray="5,5"
+            className={cn("transition-all duration-300", hoveredSegment === 'scale' && "opacity-80 stroke-[4]")}
+          />
+          {/* Line to INVEST (bottom right) */}
+          <line 
+            x1="300" y1="300" 
+            x2="450" y2="450" 
+            stroke="#10B981" 
+            strokeWidth="3" 
+            opacity="0.4"
+            strokeDasharray="5,5"
+            className={cn("transition-all duration-300", hoveredSegment === 'invest' && "opacity-80 stroke-[4]")}
+          />
+        </svg>
+
+        {/* LAUNCH - Bottom Left */}
+        <div className="absolute bottom-16 left-16">
+          <div 
+            className="w-48 p-5 rounded-2xl bg-white border-2 border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+            onMouseEnter={() => setHoveredSegment('launch')}
+            onMouseLeave={() => setHoveredSegment(null)}
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-8 h-8 rounded-xl bg-red-100 flex items-center justify-center">
+                <Target className="w-4 h-4 text-[#E1182E]" />
+              </div>
+              <div>
+                <h3 className="font-bold text-sm text-[#E1182E]">LAUNCH</h3>
+                <p className="text-xs text-gray-500">Girişimciler için</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600 mb-4 leading-relaxed">AI destekli iş planlama ve strateji geliştirme</p>
+            <Link href="/launch">
+              <Button size="sm" className="w-full text-xs bg-red-50 text-[#E1182E] hover:bg-red-100 border border-red-200">
+                Keşfet
+              </Button>
+            </Link>
           </div>
-        </Link>
-        {/* Central label */}
-        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-          <div className="text-sm font-semibold text-purple-700">DealBridge</div>
-          <div className="text-xs text-gray-500">İş Birliği Merkezi</div>
+        </div>
+
+        {/* SCALE - Top Center */}
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2">
+          <div 
+            className="w-48 p-5 rounded-2xl bg-white border-2 border-blue-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+            onMouseEnter={() => setHoveredSegment('scale')}
+            onMouseLeave={() => setHoveredSegment(null)}
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-8 h-8 rounded-xl bg-blue-100 flex items-center justify-center">
+                <TrendingUp className="w-4 h-4 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-bold text-sm text-blue-600">SCALE</h3>
+                <p className="text-xs text-gray-500">Büyüyen şirketler için</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600 mb-4 leading-relaxed">Operasyonel optimizasyon ve sürdürülebilir büyüme</p>
+            <Link href="/scale">
+              <Button size="sm" className="w-full text-xs bg-blue-50 text-blue-600 hover:bg-blue-100 border border-blue-200">
+                Keşfet
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        {/* INVEST - Bottom Right */}
+        <div className="absolute bottom-16 right-16">
+          <div 
+            className="w-48 p-5 rounded-2xl bg-white border-2 border-green-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+            onMouseEnter={() => setHoveredSegment('invest')}
+            onMouseLeave={() => setHoveredSegment(null)}
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-8 h-8 rounded-xl bg-green-100 flex items-center justify-center">
+                <BarChart className="w-4 h-4 text-green-600" />
+              </div>
+              <div>
+                <h3 className="font-bold text-sm text-green-600">INVEST</h3>
+                <p className="text-xs text-gray-500">Yatırımcılar için</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600 mb-4 leading-relaxed">AI destekli yatırım analizi ve portföy yönetimi</p>
+            <Link href="/invest">
+              <Button size="sm" className="w-full text-xs bg-green-50 text-green-600 hover:bg-green-100 border border-green-200">
+                Keşfet
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom description */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-gray-200 shadow-sm">
+            <p className="text-sm font-medium text-gray-700">3 segment, tek platform - DealBridge'de birleşiyor</p>
+          </div>
         </div>
       </div>
 
-      {/* Connection Lines */}
-      <svg className="absolute inset-0 w-full h-full z-10" viewBox="0 0 400 400">
-        {/* Line to LAUNCH (left) */}
-        <line 
-          x1="200" y1="200" 
-          x2="80" y2="200" 
-          stroke="#EF4444" 
-          strokeWidth="2" 
-          opacity="0.3"
-          className={cn("transition-opacity duration-300", hoveredSegment === 'launch' && "opacity-70")}
-        />
-        {/* Line to SCALE (top) */}
-        <line 
-          x1="200" y1="200" 
-          x2="200" y2="80" 
-          stroke="#3B82F6" 
-          strokeWidth="2" 
-          opacity="0.3"
-          className={cn("transition-opacity duration-300", hoveredSegment === 'scale' && "opacity-70")}
-        />
-        {/* Line to INVEST (right) */}
-        <line 
-          x1="200" y1="200" 
-          x2="320" y2="200" 
-          stroke="#10B981" 
-          strokeWidth="2" 
-          opacity="0.3"
-          className={cn("transition-opacity duration-300", hoveredSegment === 'invest' && "opacity-70")}
-        />
-      </svg>
+      {/* Mobile Version */}
+      <div className="block md:hidden bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-2xl border border-gray-200 p-6">
+        {/* Central Hub */}
+        <div className="text-center mb-8">
+          <Link href="/dealbridge">
+            <div className="inline-flex w-24 h-24 rounded-full bg-gradient-to-br from-purple-600 to-purple-700 flex-col items-center justify-center shadow-lg border-4 border-white cursor-pointer group active:scale-95 transition-all duration-200">
+              <Link2 className="w-5 h-5 text-white mb-1 group-active:rotate-12 transition-transform duration-200" />
+              <div className="text-xs font-semibold text-white">DealBridge</div>
+            </div>
+          </Link>
+          <p className="text-sm text-gray-600 mt-3 font-medium">İş Birliği Merkezi</p>
+          <div className="w-16 h-0.5 bg-purple-200 mx-auto mt-2 rounded-full"></div>
+        </div>
 
-      {/* LAUNCH - Left */}
-      <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
-        <div 
-          className="w-40 p-4 rounded-2xl bg-white border border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-          onMouseEnter={() => setHoveredSegment('launch')}
-          onMouseLeave={() => setHoveredSegment(null)}
-        >
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-6 h-6 rounded-lg bg-red-100 flex items-center justify-center">
-              <Target className="w-3 h-3 text-[#E1182E]" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-xs text-[#E1182E]">LAUNCH</h3>
-              <p className="text-xs text-gray-500">Girişimciler</p>
-            </div>
-          </div>
-          <p className="text-xs text-gray-600 mb-3 leading-relaxed">AI destekli iş planlama ve strateji geliştirme</p>
+        {/* Mobile Segments Grid */}
+        <div className="space-y-4">
           <Link href="/launch">
-            <Button size="sm" className="w-full text-xs bg-red-50 text-[#E1182E] hover:bg-red-100 border-0">
-              Keşfet
-            </Button>
+            <div className="w-full p-4 rounded-xl bg-white border border-red-100 shadow-sm active:scale-98 transition-all duration-150">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
+                  <Target className="w-5 h-5 text-[#E1182E]" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-sm text-[#E1182E] mb-1">LAUNCH</h3>
+                  <p className="text-xs text-gray-500 mb-2">Girişimciler için</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">AI destekli iş planlama ve strateji geliştirme</p>
+                </div>
+              </div>
+            </div>
           </Link>
-        </div>
-      </div>
 
-      {/* SCALE - Top */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
-        <div 
-          className="w-40 p-4 rounded-2xl bg-white border border-blue-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-          onMouseEnter={() => setHoveredSegment('scale')}
-          onMouseLeave={() => setHoveredSegment(null)}
-        >
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-6 h-6 rounded-lg bg-blue-100 flex items-center justify-center">
-              <TrendingUp className="w-3 h-3 text-blue-600" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-xs text-blue-600">SCALE</h3>
-              <p className="text-xs text-gray-500">Büyüyen şirketler</p>
-            </div>
-          </div>
-          <p className="text-xs text-gray-600 mb-3 leading-relaxed">Operasyonel optimizasyon ve büyüme</p>
           <Link href="/scale">
-            <Button size="sm" className="w-full text-xs bg-blue-50 text-blue-600 hover:bg-blue-100 border-0">
-              Keşfet
-            </Button>
+            <div className="w-full p-4 rounded-xl bg-white border border-blue-100 shadow-sm active:scale-98 transition-all duration-150">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                  <TrendingUp className="w-5 h-5 text-blue-600" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-sm text-blue-600 mb-1">SCALE</h3>
+                  <p className="text-xs text-gray-500 mb-2">Büyüyen şirketler için</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">Operasyonel optimizasyon ve sürdürülebilir büyüme</p>
+                </div>
+              </div>
+            </div>
           </Link>
-        </div>
-      </div>
 
-      {/* INVEST - Right */}
-      <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-        <div 
-          className="w-40 p-4 rounded-2xl bg-white border border-green-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-          onMouseEnter={() => setHoveredSegment('invest')}
-          onMouseLeave={() => setHoveredSegment(null)}
-        >
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-6 h-6 rounded-lg bg-green-100 flex items-center justify-center">
-              <BarChart className="w-3 h-3 text-green-600" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-xs text-green-600">INVEST</h3>
-              <p className="text-xs text-gray-500">Yatırımcılar</p>
-            </div>
-          </div>
-          <p className="text-xs text-gray-600 mb-3 leading-relaxed">AI destekli yatırım analizi ve portföy yönetimi</p>
           <Link href="/invest">
-            <Button size="sm" className="w-full text-xs bg-green-50 text-green-600 hover:bg-green-100 border-0">
-              Keşfet
-            </Button>
+            <div className="w-full p-4 rounded-xl bg-white border border-green-100 shadow-sm active:scale-98 transition-all duration-150">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <BarChart className="w-5 h-5 text-green-600" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-sm text-green-600 mb-1">INVEST</h3>
+                  <p className="text-xs text-gray-500 mb-2">Yatırımcılar için</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">AI destekli yatırım analizi ve portföy yönetimi</p>
+                </div>
+              </div>
+            </div>
           </Link>
         </div>
-      </div>
 
-      {/* Bottom description */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-        <div className="text-center">
-          <p className="text-xs text-gray-500">3 segment, tek platform - DealBridge'de birleşiyor</p>
+        <div className="text-center mt-6 pt-4 border-t border-gray-200">
+          <p className="text-xs text-gray-500">Tüm segmentler DealBridge platformunda birleşir</p>
         </div>
       </div>
     </div>
