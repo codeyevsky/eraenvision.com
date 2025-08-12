@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
 import { BarChart, TrendingUp, Target, ArrowRight, CheckCircle, Link2 } from 'lucide-react';
 import { PageTransition, FadeIn, SlideIn, StaggeredFadeIn } from '@/components/ui/page-transition';
+import MindMapWidget from '@/components/ui/mindmap-widget';
 import { Link } from 'wouter';
 
 export default function HomePage() {
@@ -134,6 +135,26 @@ export default function HomePage() {
               </Link>
             </div>
           </StaggeredFadeIn>
+        </div>
+      </section>
+
+      {/* Mind Map Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16">
+            <FadeIn>
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
+                EraEnvision Ekosistemi
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
+                3 ana segment ve DealBridge ile birleşen kapsamlı AI çözümlerimizi keşfedin
+              </p>
+            </FadeIn>
+          </div>
+          
+          <FadeIn delay={200}>
+            <MindMapWidget />
+          </FadeIn>
         </div>
       </section>
 
