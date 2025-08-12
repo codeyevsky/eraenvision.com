@@ -30,7 +30,7 @@ const segments: Segment[] = [
     color: 'text-[#E1182E]',
     bgColor: 'bg-gradient-to-br from-red-50 to-red-100 hover:from-red-100 hover:to-red-200',
     link: '/launch',
-    position: { x: '-translate-x-56 sm:-translate-x-80 -translate-y-4', y: 'top-1/2 left-1/2' },
+    position: { x: '-translate-x-72 sm:-translate-x-96 translate-y-8 sm:translate-y-12', y: 'top-1/2 left-1/2' },
     benefits: ['İş fikri geliştirme', 'MVP stratejisi', 'Yatırımcı hazırlığı']
   },
   {
@@ -42,7 +42,7 @@ const segments: Segment[] = [
     color: 'text-blue-600',
     bgColor: 'bg-gradient-to-br from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200',
     link: '/scale',
-    position: { x: '-translate-x-4 -translate-y-56 sm:-translate-y-80', y: 'top-1/2 left-1/2' },
+    position: { x: 'translate-x-8 sm:translate-x-12 -translate-y-72 sm:-translate-y-96', y: 'top-1/2 left-1/2' },
     benefits: ['Süreç optimizasyonu', 'Satış artışı', 'Takım verimliliği']
   },
   {
@@ -54,7 +54,7 @@ const segments: Segment[] = [
     color: 'text-green-600',
     bgColor: 'bg-gradient-to-br from-green-50 to-green-100 hover:from-green-100 hover:to-green-200',
     link: '/invest',
-    position: { x: 'translate-x-52 sm:translate-x-80 -translate-y-4', y: 'top-1/2 left-1/2' },
+    position: { x: 'translate-x-68 sm:translate-x-96 translate-y-8 sm:translate-y-12', y: 'top-1/2 left-1/2' },
     benefits: ['Startup analizi', 'Risk değerlendirmesi', 'Portföy takibi']
   }
 ];
@@ -64,16 +64,16 @@ export default function MindMapWidget() {
   const [selectedSegment, setSelectedSegment] = useState<string | null>(null);
 
   const renderConnectionLine = (segment: Segment, index: number) => {
-    const angles = [-120, -30, 60]; // Sol, üst, sağ pozisyonlar için açılar
+    const angles = [-150, 90, 30]; // Sol alt, üst, sağ alt pozisyonlar için açılar
     const angle = angles[index];
-    const length = 60;
+    const length = 80;
     
     return (
       <div
         className={cn(
-          "absolute h-0.5 bg-gradient-to-r opacity-30 transition-all duration-700 rounded-full",
+          "absolute h-1 bg-gradient-to-r opacity-25 transition-all duration-700 rounded-full",
           "from-gray-400 to-transparent",
-          hoveredSegment === segment.id && "opacity-70 shadow-lg",
+          hoveredSegment === segment.id && "opacity-60 shadow-lg scale-y-150",
           segment.color === 'text-[#E1182E]' && "from-red-400",
           segment.color === 'text-blue-600' && "from-blue-400", 
           segment.color === 'text-green-600' && "from-green-400"
@@ -90,7 +90,7 @@ export default function MindMapWidget() {
   };
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto h-[500px] sm:h-[600px] bg-gradient-to-br from-slate-50 via-gray-50 to-purple-50 rounded-3xl overflow-hidden border border-gray-200 shadow-lg">
+    <div className="relative w-full max-w-6xl mx-auto h-[550px] sm:h-[650px] bg-gradient-to-br from-slate-50 via-gray-50 to-purple-50 rounded-3xl overflow-hidden border border-gray-200 shadow-lg">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -144,25 +144,25 @@ export default function MindMapWidget() {
             onClick={() => setSelectedSegment(selectedSegment === segment.id ? null : segment.id)}
           >
             <div className={cn(
-              "w-40 sm:w-52 p-5 sm:p-7 rounded-3xl border-2 border-white shadow-lg transition-all duration-500 backdrop-blur-sm",
+              "w-36 sm:w-44 p-4 sm:p-5 rounded-3xl border-2 border-white shadow-lg transition-all duration-500 backdrop-blur-sm",
               segment.bgColor,
               "group-hover:shadow-xl group-hover:scale-105 group-hover:border-gray-100"
             )}>
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-2 mb-3">
                 <div className={cn(
-                  "w-8 h-8 rounded-lg flex items-center justify-center",
+                  "w-7 h-7 rounded-lg flex items-center justify-center",
                   segment.color,
-                  segment.bgColor.replace('hover:', '').replace('/20', '/30')
+                  segment.bgColor.replace('hover:', '').replace('to-red-200', 'to-red-300').replace('to-blue-200', 'to-blue-300').replace('to-green-200', 'to-green-300')
                 )}>
-                  <Icon className="h-4 w-4" />
+                  <Icon className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <h3 className={cn("font-semibold text-sm", segment.color)}>{segment.name}</h3>
+                  <h3 className={cn("font-semibold text-xs sm:text-sm", segment.color)}>{segment.name}</h3>
                   <p className="text-xs text-gray-500">{segment.subtitle}</p>
                 </div>
               </div>
               
-              <p className="text-sm text-gray-600 mb-4">{segment.description}</p>
+              <p className="text-xs sm:text-sm text-gray-600 mb-4">{segment.description}</p>
               
               {/* Benefits List */}
               {selectedSegment === segment.id && (
