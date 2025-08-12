@@ -12,6 +12,7 @@ import ProductsPage from "@/pages/products";
 import LaunchPage from "@/pages/launch";
 import ScalePage from "@/pages/scale";
 import InvestPage from "@/pages/invest";
+import DealBridgePage from "@/pages/dealbridge";
 import PricingPage from "@/pages/pricing";
 import AboutPage from "@/pages/about";
 import ContactPage from "@/pages/contact";
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/launch" component={LaunchPage} />
       <Route path="/scale" component={ScalePage} />
       <Route path="/invest" component={InvestPage} />
+      <Route path="/dealbridge" component={DealBridgePage} />
       <Route path="/pricing" component={PricingPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />

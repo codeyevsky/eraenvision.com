@@ -71,6 +71,9 @@ export function Header() {
               )}
             </div>
             
+            <Link href="/dealbridge" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
+              DealBridge
+            </Link>
             <Link href="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
               Fiyatlandırma
             </Link>
@@ -149,6 +152,13 @@ export function Header() {
                 </Link>
               </div>
               
+              <Link 
+                href="/dealbridge" 
+                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                DealBridge
+              </Link>
               <Link 
                 href="/pricing" 
                 className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"

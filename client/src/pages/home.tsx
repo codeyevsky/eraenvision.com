@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
-import { BarChart, TrendingUp, Target, ArrowRight, CheckCircle } from 'lucide-react';
+import { BarChart, TrendingUp, Target, ArrowRight, CheckCircle, Link2 } from 'lucide-react';
 import { PageTransition, FadeIn, SlideIn, StaggeredFadeIn } from '@/components/ui/page-transition';
 import { Link } from 'wouter';
 
@@ -73,7 +73,7 @@ export default function HomePage() {
             </FadeIn>
           </div>
 
-          <StaggeredFadeIn className="grid md:grid-cols-3 gap-8">
+          <StaggeredFadeIn className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover-lift">
               <div className="w-12 h-12 bg-[#E1182E]/10 text-[#E1182E] rounded-xl flex items-center justify-center mb-6">
                 <Target className="h-6 w-6" />
@@ -113,6 +113,21 @@ export default function HomePage() {
                 Yatırımcılar için AI destekli pazar analizi ve değerlendirme
               </p>
               <Link href="/invest">
+                <Button variant="outline" className="w-full">
+                  Keşfet <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover-lift">
+              <div className="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center mb-6">
+                <Link2 className="h-6 w-6" />
+              </div>
+              <h3 className="font-semibold text-xl mb-4 text-gray-900">DealBridge</h3>
+              <p className="text-gray-600 mb-6">
+                İş birliği, yatırım ve B2B fırsatlarının merkezi
+              </p>
+              <Link href="/dealbridge">
                 <Button variant="outline" className="w-full">
                   Keşfet <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>

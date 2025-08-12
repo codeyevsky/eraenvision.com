@@ -1,0 +1,37 @@
+Mevcut EraEnvision tanıtım sitesini güncelle:
+
+1. Yeni Sayfa Ekle:
+   - Sayfa Adı: "DealBridge"
+   - Konum: Her segmentin (Girişimci / İşletme Sahibi / Yatırımcı) panelinde sol menüde yer alacak, ana navigasyon ile uyumlu görünecek.
+   - İkon: İş birliği / bağlantı odaklı minimalist bir ikon (ör. iki halka veya köprü sembolü).
+   - Tooltip: "İş birliği, yatırım ve B2B fırsatlarının merkezi"
+
+2. DealBridge Sayfa İçeriği:
+   - Hero Bölümü:
+     Başlık: "DealBridge — İş birliği ve yatırım fırsatlarını keşfet"
+     Alt Başlık: "Girişimciler, işletme sahipleri ve yatırımcılar için tek ekosistem. AI destekli önerilerle doğru bağlantıları kurun."
+     CTA: "Fırsatları Keşfet"
+   - Açıklama Bölümü:
+     "EraEnvision, sizi yalnızca AI destekli danışmanlıkla değil, aynı zamanda iş birliği ekosistemiyle de destekler. DealBridge sayesinde girişimciler yatırımcılarla tanışır, işletmeler B2B anlaşmalar yapar, yatırımcılar potansiyel girişimleri keşfeder."
+   - Özellik Kartları (3-4 adet):
+       1. AI Destekli Eşleşme → "İhtiyacınıza uygun girişim, işletme veya yatırımcıları bulun"
+       2. Profil Paylaşımı → "Profiliniz ekosistemde görünür, fırsatlar size gelir"
+       3. Anlaşma Takibi → "Görüşmeleri ve teklifleri tek ekrandan yönetin"
+       4. Filtreleme → "Sektör, bütçe, konum ve hedefe göre arama yapın"
+   - Kullanıcı Hikayeleri: 2-3 örnek “başarılı bağlantı” senaryosu (placeholder olarak bırakılabilir).
+   - Güven Unsurları: “Verileriniz KVKK & GDPR uyumlu şekilde korunur.”
+
+3. Tanıtım Sitesindeki Değişiklikler:
+   - Anasayfa’da “EraEnvision’un sundukları” bölümüne DealBridge’i ekle.
+     Kısa tanım: “DealBridge — İş birliği, yatırım ve B2B fırsatlarının merkezi.”
+   - “Products” sayfasında, DealBridge’i ayrı bir sekme olarak göstermeyin ama her segmentin altında bu özelliği kısaca tanıtın.
+   - Site genelinde “community” kelimesi geçiyorsa yerine “DealBridge” yazın.
+
+4. Tasarım ve Uyum:
+   - Marka renkleri (Era Red #E1182E) ile uyumlu.
+   - Responsive, mobil-öncelikli tasarım.
+   - Görsel olarak diğer sayfalarla tutarlı, illüstrasyon stili kırmızı-siyah-beyaz temalı.
+   - Sayfa meta başlığı: "DealBridge | EraEnvision"
+   - Meta açıklama: "EraEnvision'un yatırım, B2B ve iş birliği ekosistemi DealBridge ile doğru bağlantıları kurun."
+
+Kod ve içerik düzenlemeleri bittikten sonra tüm sayfalarda test et, navigasyon bağlantılarının çalıştığından emin ol.

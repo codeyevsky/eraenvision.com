@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
-import { Check, ArrowRight, Sparkles, TrendingUp, Target, Zap, Users, BarChart3 } from 'lucide-react';
+import { Check, ArrowRight, Sparkles, TrendingUp, Target, Zap, Users, BarChart3, Link2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Link } from 'wouter';
 
@@ -25,7 +25,8 @@ export default function ProductsPage() {
         'MVP yol haritası oluşturma',
         'Finansal projeksiyon ve planlama',
         'Yatırımcı pitch deck hazırlama',
-        'İlk müşteri bulma stratejileri'
+        'İlk müşteri bulma stratejileri',
+        'DealBridge ile yatırımcı eşleştirmesi'
       ],
       cta: 'Detayları Gör',
       link: '/launch'
@@ -45,7 +46,8 @@ export default function ProductsPage() {
         'Süreç otomasyonu ve entegrasyonu',
         'Müşteri deneyimi iyileştirme',
         'Takım performans analitiği',
-        'Büyüme metrik takibi'
+        'Büyüme metrik takibi',
+        'DealBridge ile B2B ortaklık fırsatları'
       ],
       cta: 'Detayları Gör',
       link: '/scale'
@@ -65,7 +67,8 @@ export default function ProductsPage() {
         'Risk değerlendirme modelleri',
         'Portföy izleme ve raporlama',
         'Exit stratejisi planlama',
-        'Pazar trend analitiği'
+        'Pazar trend analitiği',
+        'DealBridge ile girişim keşfi'
       ],
       cta: 'Detayları Gör',
       link: '/invest'
