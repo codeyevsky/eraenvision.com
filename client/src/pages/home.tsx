@@ -10,19 +10,13 @@ export default function HomePage() {
 
   return (
     <PageTransition>
-      <title>EraEnvision - AI İle İş Büyütme Platformu</title>
-      <meta name="description" content="EraEnvision ile işinizi AI destekli çözümlerle büyütün. Girişimciler, büyüyen şirketler ve yatırımcılar için özel yapay zeka danışmanlığı platformu." />
-      <meta property="og:title" content="EraEnvision - AI İle İş Büyütme Platformu" />
-      <meta property="og:description" content="AI destekli çözümlerle işinizi büyütün. Girişimciler, şirketler ve yatırımcılar için özel yapay zeka danışmanlığı." />
-      <meta property="og:type" content="website" />
-      <meta name="keywords" content="AI, yapay zeka, iş büyütme, girişimcilik, startup, yatırımcı, danışmanlık, EraEnvision" />
       
       <div className="min-h-screen bg-white">
         {/* Hero Section - Glide Style */}
         <section className="pt-20 pb-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
             <FadeIn delay={100}>
-              <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl mb-8 text-gray-900 leading-tight">
+              <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8 text-gray-900 leading-tight">
                 AI ile iş büyütün,{' '}
                 <span className="bg-gradient-to-r from-[#E1182E] to-[#FF4757] bg-clip-text text-transparent">
                   gelecek kurun
@@ -37,10 +31,10 @@ export default function HomePage() {
           
             <FadeIn delay={300}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <Button size="lg" className="bg-[#E1182E] hover:bg-[#C51628] text-white px-8 py-4 text-lg font-semibold hover-lift">
+                <Button size="lg" className="bg-[#E1182E] hover:bg-[#C51628] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover-lift w-full sm:w-auto">
                   Ücretsiz Başlayın
                 </Button>
-                <Button variant="outline" size="lg" className="border-gray-300 text-gray-700 px-8 py-4 text-lg font-semibold hover-lift">
+                <Button variant="outline" size="lg" className="border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover-lift w-full sm:w-auto">
                   Demo İzleyin
                 </Button>
               </div>
@@ -49,12 +43,12 @@ export default function HomePage() {
             {/* Trust Indicators */}
             <FadeIn delay={400}>
               <p className="text-sm text-gray-500 mb-8">100.000+ şirket tarafından güveniliyor</p>
-              <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-                <div className="text-gray-400 font-medium hover:text-gray-600 transition-colors">TechCorp</div>
-                <div className="text-gray-400 font-medium hover:text-gray-600 transition-colors">StartupHub</div>
-                <div className="text-gray-400 font-medium hover:text-gray-600 transition-colors">InnovateCo</div>
-                <div className="text-gray-400 font-medium hover:text-gray-600 transition-colors">GrowthLab</div>
-                <div className="text-gray-400 font-medium hover:text-gray-600 transition-colors">FutureWorks</div>
+              <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 opacity-60">
+                <div className="text-gray-400 font-medium hover:text-gray-600 transition-colors text-sm sm:text-base">TechCorp</div>
+                <div className="text-gray-400 font-medium hover:text-gray-600 transition-colors text-sm sm:text-base">StartupHub</div>
+                <div className="text-gray-400 font-medium hover:text-gray-600 transition-colors text-sm sm:text-base">InnovateCo</div>
+                <div className="text-gray-400 font-medium hover:text-gray-600 transition-colors text-sm sm:text-base">GrowthLab</div>
+                <div className="text-gray-400 font-medium hover:text-gray-600 transition-colors text-sm sm:text-base">FutureWorks</div>
               </div>
             </FadeIn>
         </div>

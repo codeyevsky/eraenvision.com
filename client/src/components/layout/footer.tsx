@@ -18,7 +18,7 @@ export function Footer() {
               <span className="font-heading font-bold text-xl tracking-wide">EraEnvision</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              {t('footerDescription')}
+              AI destekli iş büyütme platformu ile dijital dönüşümünüzü hızlandırın. Launch, Scale, Invest segmentleri ile kapsamlı çözümler sunuyoruz.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -47,41 +47,42 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="font-semibold mb-4">{t('products')}</h3>
+            <h3 className="font-semibold mb-4">Ürünler</h3>
             <ul className="space-y-3 text-gray-400">
-              <li><Link href="/products" className="hover:text-white transition-colors">Launch</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">Scale</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">Invest</Link></li>
-              <li><Link href="/pricing" className="hover:text-white transition-colors">{t('pricing')}</Link></li>
+              <li><Link href="/launch" className="hover:text-white transition-colors">Launch</Link></li>
+              <li><Link href="/scale" className="hover:text-white transition-colors">Scale</Link></li>
+              <li><Link href="/invest" className="hover:text-white transition-colors">Invest</Link></li>
+              <li><Link href="/dealbridge" className="hover:text-white transition-colors">DealBridge</Link></li>
+              <li><Link href="/pricing" className="hover:text-white transition-colors">Fiyatlandırma</Link></li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4">{t('companyFooter')}</h3>
+            <h3 className="font-semibold mb-4">Şirket</h3>
             <ul className="space-y-3 text-gray-400">
-              <li><Link href="/about" className="hover:text-white transition-colors">{t('about')}</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">{t('contact')}</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">{t('careers')}</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">{t('blog')}</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">Hakkımızda</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">İletişim</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Kariyer</Link></li>
+              <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>
 
           {/* Legal */}
           <div>
-            <h3 className="font-semibold mb-4">{t('legal')}</h3>
+            <h3 className="font-semibold mb-4">Yasal</h3>
             <ul className="space-y-3 text-gray-400">
-              <li><Link href="#" className="hover:text-white transition-colors">{t('privacyPolicy')}</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">{t('termsOfService')}</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">{t('cookiePolicy')}</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">{t('aiDisclaimer')}</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Gizlilik Politikası</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Kullanım Şartları</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Çerez Politikası</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">AI Sorumluluk Reddi</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">{t('footerCopyright')}</p>
-          <p className="text-gray-400 text-sm mt-4 md:mt-0">{t('footerDisclaimer')}</p>
+          <p className="text-gray-400 text-sm">© 2025 EraEnvision. Tüm hakları saklıdır.</p>
+          <p className="text-gray-400 text-sm mt-4 md:mt-0">AI destekli iş çözümlerinde güvenilir partner.</p>
         </div>
       </div>
     </footer>

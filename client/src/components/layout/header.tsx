@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from '@/components/ui/language-switcher';
 import { useLanguage } from '@/hooks/use-language';
 import { Eye, ChevronDown, Menu, X, Target, TrendingUp, BarChart3 } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -109,87 +108,103 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200">
-            <div className="px-4 sm:px-6 py-4 space-y-4">
-              <Link 
-                href="/products" 
-                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Tüm Ürünler
-              </Link>
+          <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
+            <div className="px-4 sm:px-6 py-6 space-y-6">
               
-              <div className="pl-4 space-y-3">
+              {/* Mobile Products Section */}
+              <div>
+                <div className="text-sm font-semibold text-gray-900 mb-4">Ürünler</div>
+                <div className="space-y-3">
+                  <Link 
+                    href="/launch" 
+                    className="flex items-center gap-3 py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <div className="w-8 h-8 bg-red-50 text-[#E1182E] rounded-lg flex items-center justify-center">
+                      <Target className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <div className="font-medium">LAUNCH</div>
+                      <div className="text-xs text-gray-500">Girişimciler için</div>
+                    </div>
+                  </Link>
+                  
+                  <Link 
+                    href="/scale" 
+                    className="flex items-center gap-3 py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <div className="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
+                      <TrendingUp className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <div className="font-medium">SCALE</div>
+                      <div className="text-xs text-gray-500">Büyüyen şirketler için</div>
+                    </div>
+                  </Link>
+                  
+                  <Link 
+                    href="/invest" 
+                    className="flex items-center gap-3 py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <div className="w-8 h-8 bg-green-50 text-green-600 rounded-lg flex items-center justify-center">
+                      <BarChart3 className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <div className="font-medium">INVEST</div>
+                      <div className="text-xs text-gray-500">Yatırımcılar için</div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Mobile Navigation Links */}
+              <div className="space-y-4 border-t border-gray-200 pt-4">
                 <Link 
-                  href="/launch" 
-                  className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors"
+                  href="/dealbridge" 
+                  className="block text-gray-600 hover:text-gray-900 transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <div className="w-6 h-6 bg-red-50 text-[#E1182E] rounded-lg flex items-center justify-center">
-                    <Target className="h-3 w-3" />
-                  </div>
-                  LAUNCH
+                  DealBridge
                 </Link>
                 <Link 
-                  href="/scale" 
-                  className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors"
+                  href="/pricing" 
+                  className="block text-gray-600 hover:text-gray-900 transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <div className="w-6 h-6 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
-                    <TrendingUp className="h-3 w-3" />
-                  </div>
-                  SCALE
+                  Fiyatlandırma
                 </Link>
                 <Link 
-                  href="/invest" 
-                  className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors"
+                  href="/blog" 
+                  className="block text-gray-600 hover:text-gray-900 transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <div className="w-6 h-6 bg-green-50 text-green-600 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="h-3 w-3" />
-                  </div>
-                  INVEST
+                  Blog
+                </Link>
+                <Link 
+                  href="/about" 
+                  className="block text-gray-600 hover:text-gray-900 transition-colors font-medium py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Hakkımızda
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="block text-gray-600 hover:text-gray-900 transition-colors font-medium py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  İletişim
                 </Link>
               </div>
               
-              <Link 
-                href="/dealbridge" 
-                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                DealBridge
-              </Link>
-              <Link 
-                href="/pricing" 
-                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Fiyatlandırma
-              </Link>
-              <Link 
-                href="/blog" 
-                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link 
-                href="/about" 
-                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Hakkımızda
-              </Link>
-              <Link 
-                href="/contact" 
-                className="block text-gray-600 hover:text-gray-900 transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                İletişim
-              </Link>
-              <div className="pt-4 border-t border-gray-200 space-y-4">
-                <LanguageSwitcher variant="mobile" />
-                <Button className="w-full bg-[#E1182E] hover:bg-[#C51628] text-white font-semibold">
+              {/* Mobile CTA & Language */}
+              <div className="border-t border-gray-200 pt-4 space-y-4">
+                <LanguageSwitcher />
+                <Button 
+                  className="w-full bg-[#E1182E] hover:bg-[#C51628] text-white font-semibold"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   Ücretsiz Başla
                 </Button>
               </div>

@@ -63,15 +63,7 @@ export default function DealBridgePage() {
   ];
 
   return (
-    <>
-      <title>DealBridge | EraEnvision</title>
-      <meta name="description" content="EraEnvision'un yatırım, B2B ve iş birliği ekosistemi DealBridge ile doğru bağlantıları kurun." />
-      <meta property="og:title" content="DealBridge | EraEnvision" />
-      <meta property="og:description" content="İş birliği, yatırım ve B2B fırsatlarının merkezi. AI destekli önerilerle doğru bağlantıları kurun." />
-      <meta property="og:type" content="website" />
-      <meta name="keywords" content="DealBridge, iş birliği, yatırım, B2B, girişimci, yatırımcı, EraEnvision" />
-
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="pt-24 pb-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
@@ -266,6 +258,5 @@ export default function DealBridgePage() {
           </div>
         </section>
       </div>
-    </>
   );
 }
