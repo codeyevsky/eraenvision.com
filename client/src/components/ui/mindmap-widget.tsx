@@ -65,56 +65,55 @@ export default function MindMapWidget() {
   return (
     <div className="relative w-full max-w-6xl mx-auto">
       {/* Desktop Version */}
-      <div className="hidden md:block relative h-[600px] bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-3xl border border-gray-200 shadow-sm">
+      <div className="hidden lg:block relative h-[700px] bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-3xl border border-gray-200 shadow-sm">
         {/* Central DealBridge Hub */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
           <Link href="/dealbridge">
-            <div className="w-28 h-28 rounded-full bg-gradient-to-br from-purple-600 to-purple-700 flex flex-col items-center justify-center shadow-xl border-4 border-white cursor-pointer group hover:scale-110 transition-all duration-300">
-              <Link2 className="w-7 h-7 text-white mb-1 group-hover:rotate-12 transition-transform duration-300" />
+            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-600 to-purple-700 flex flex-col items-center justify-center shadow-xl border-4 border-white cursor-pointer group hover:scale-110 transition-all duration-300">
+              <Link2 className="w-6 h-6 text-white mb-1 group-hover:rotate-12 transition-transform duration-300" />
               <div className="text-xs font-semibold text-white">DealBridge</div>
-              <div className="text-xs text-white/80">İş Birliği Merkezi</div>
             </div>
           </Link>
         </div>
 
         {/* Connection Lines */}
-        <svg className="absolute inset-0 w-full h-full z-10" viewBox="0 0 600 600">
-          {/* Line to LAUNCH (bottom left) */}
+        <svg className="absolute inset-0 w-full h-full z-10" viewBox="0 0 700 700">
+          {/* Line to LAUNCH (left) */}
           <line 
-            x1="300" y1="300" 
-            x2="150" y2="450" 
+            x1="350" y1="350" 
+            x2="120" y2="350" 
             stroke="#E1182E" 
             strokeWidth="3" 
             opacity="0.4"
-            strokeDasharray="5,5"
-            className={cn("transition-all duration-300", hoveredSegment === 'launch' && "opacity-80 stroke-[4]")}
+            strokeDasharray="8,8"
+            className={cn("transition-all duration-300", hoveredSegment === 'launch' && "opacity-80")}
           />
-          {/* Line to SCALE (top center) */}
+          {/* Line to SCALE (top) */}
           <line 
-            x1="300" y1="300" 
-            x2="300" y2="100" 
+            x1="350" y1="350" 
+            x2="350" y2="120" 
             stroke="#3B82F6" 
             strokeWidth="3" 
             opacity="0.4"
-            strokeDasharray="5,5"
-            className={cn("transition-all duration-300", hoveredSegment === 'scale' && "opacity-80 stroke-[4]")}
+            strokeDasharray="8,8"
+            className={cn("transition-all duration-300", hoveredSegment === 'scale' && "opacity-80")}
           />
-          {/* Line to INVEST (bottom right) */}
+          {/* Line to INVEST (right) */}
           <line 
-            x1="300" y1="300" 
-            x2="450" y2="450" 
+            x1="350" y1="350" 
+            x2="580" y2="350" 
             stroke="#10B981" 
             strokeWidth="3" 
             opacity="0.4"
-            strokeDasharray="5,5"
-            className={cn("transition-all duration-300", hoveredSegment === 'invest' && "opacity-80 stroke-[4]")}
+            strokeDasharray="8,8"
+            className={cn("transition-all duration-300", hoveredSegment === 'invest' && "opacity-80")}
           />
         </svg>
 
-        {/* LAUNCH - Bottom Left */}
-        <div className="absolute bottom-16 left-16">
+        {/* LAUNCH - Left */}
+        <div className="absolute left-8 top-1/2 transform -translate-y-1/2">
           <div 
-            className="w-48 p-5 rounded-2xl bg-white border-2 border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+            className="w-44 p-4 rounded-2xl bg-white border-2 border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
             onMouseEnter={() => setHoveredSegment('launch')}
             onMouseLeave={() => setHoveredSegment(null)}
           >
@@ -136,10 +135,10 @@ export default function MindMapWidget() {
           </div>
         </div>
 
-        {/* SCALE - Top Center */}
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2">
+        {/* SCALE - Top */}
+        <div className="absolute top-8 left-1/2 transform -translate-x-1/2">
           <div 
-            className="w-48 p-5 rounded-2xl bg-white border-2 border-blue-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+            className="w-44 p-4 rounded-2xl bg-white border-2 border-blue-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
             onMouseEnter={() => setHoveredSegment('scale')}
             onMouseLeave={() => setHoveredSegment(null)}
           >
@@ -161,10 +160,10 @@ export default function MindMapWidget() {
           </div>
         </div>
 
-        {/* INVEST - Bottom Right */}
-        <div className="absolute bottom-16 right-16">
+        {/* INVEST - Right */}
+        <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
           <div 
-            className="w-48 p-5 rounded-2xl bg-white border-2 border-green-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+            className="w-44 p-4 rounded-2xl bg-white border-2 border-green-100 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
             onMouseEnter={() => setHoveredSegment('invest')}
             onMouseLeave={() => setHoveredSegment(null)}
           >
@@ -194,8 +193,8 @@ export default function MindMapWidget() {
         </div>
       </div>
 
-      {/* Mobile Version */}
-      <div className="block md:hidden bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-2xl border border-gray-200 p-6">
+      {/* Mobile/Tablet Version */}
+      <div className="block lg:hidden bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-2xl border border-gray-200 p-6">
         {/* Central Hub */}
         <div className="text-center mb-8">
           <Link href="/dealbridge">
