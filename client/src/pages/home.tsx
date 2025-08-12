@@ -147,7 +147,7 @@ export default function HomePage() {
                 EraEnvision Ekosistemi
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
-                3 ana segment ve DealBridge ile birleşen kapsamlı AI çözümlerimizi keşfedin
+                Tüm segmentlerimiz DealBridge'de birleşerek güçlü bir iş birliği ekosistemi oluşturur
               </p>
             </FadeIn>
           </div>

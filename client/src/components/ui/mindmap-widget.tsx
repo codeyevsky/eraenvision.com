@@ -28,9 +28,9 @@ const segments: Segment[] = [
     description: 'AI destekli iş planlama ve strateji geliştirme',
     icon: Target,
     color: 'text-[#E1182E]',
-    bgColor: 'bg-[#E1182E]/10 hover:bg-[#E1182E]/20',
+    bgColor: 'bg-gradient-to-br from-red-50 to-red-100 hover:from-red-100 hover:to-red-200',
     link: '/launch',
-    position: { x: '-translate-x-48 sm:-translate-x-60 -translate-y-20 sm:-translate-y-32', y: 'top-1/4 left-1/2' },
+    position: { x: '-translate-x-56 sm:-translate-x-80 -translate-y-4', y: 'top-1/2 left-1/2' },
     benefits: ['İş fikri geliştirme', 'MVP stratejisi', 'Yatırımcı hazırlığı']
   },
   {
@@ -40,9 +40,9 @@ const segments: Segment[] = [
     description: 'Operasyonel optimizasyon ve sürdürülebilir büyüme',
     icon: TrendingUp,
     color: 'text-blue-600',
-    bgColor: 'bg-blue-50 hover:bg-blue-100',
+    bgColor: 'bg-gradient-to-br from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200',
     link: '/scale',
-    position: { x: 'translate-x-48 sm:translate-x-60 -translate-y-20 sm:-translate-y-32', y: 'top-1/4 right-1/2' },
+    position: { x: '-translate-x-4 -translate-y-56 sm:-translate-y-80', y: 'top-1/2 left-1/2' },
     benefits: ['Süreç optimizasyonu', 'Satış artışı', 'Takım verimliliği']
   },
   {
@@ -52,22 +52,10 @@ const segments: Segment[] = [
     description: 'AI destekli yatırım analizi ve portföy yönetimi',
     icon: BarChart,
     color: 'text-green-600',
-    bgColor: 'bg-green-50 hover:bg-green-100',
+    bgColor: 'bg-gradient-to-br from-green-50 to-green-100 hover:from-green-100 hover:to-green-200',
     link: '/invest',
-    position: { x: '-translate-x-48 sm:-translate-x-60 translate-y-20 sm:translate-y-32', y: 'bottom-1/4 left-1/2' },
+    position: { x: 'translate-x-52 sm:translate-x-80 -translate-y-4', y: 'top-1/2 left-1/2' },
     benefits: ['Startup analizi', 'Risk değerlendirmesi', 'Portföy takibi']
-  },
-  {
-    id: 'dealbridge',
-    name: 'DealBridge',
-    subtitle: 'İş Birliği Merkezi',
-    description: 'Yatırım ve B2B fırsatlarının buluşma noktası',
-    icon: Link2,
-    color: 'text-purple-600',
-    bgColor: 'bg-purple-50 hover:bg-purple-100',
-    link: '/dealbridge',
-    position: { x: 'translate-x-48 sm:translate-x-60 translate-y-20 sm:translate-y-32', y: 'bottom-1/4 right-1/2' },
-    benefits: ['Yatırımcı eşleştirmesi', 'B2B ortaklıklar', 'Fırsat keşfi']
   }
 ];
 
@@ -75,29 +63,34 @@ export default function MindMapWidget() {
   const [hoveredSegment, setHoveredSegment] = useState<string | null>(null);
   const [selectedSegment, setSelectedSegment] = useState<string | null>(null);
 
-  const renderConnectionLine = (segment: Segment) => {
-    const isLeft = segment.position.x.includes('-translate-x');
-    const isTop = segment.position.x.includes('-translate-y');
+  const renderConnectionLine = (segment: Segment, index: number) => {
+    const angles = [-120, -30, 60]; // Sol, üst, sağ pozisyonlar için açılar
+    const angle = angles[index];
+    const length = 60;
     
     return (
       <div
         className={cn(
-          "absolute w-20 h-0.5 bg-gradient-to-r opacity-40 transition-all duration-500",
-          isLeft ? "from-gray-300 to-transparent" : "from-transparent to-gray-300",
-          hoveredSegment === segment.id && "opacity-80 scale-y-2",
-          segment.color.replace('text-', 'from-').replace('text-', 'to-')
+          "absolute h-0.5 bg-gradient-to-r opacity-30 transition-all duration-700 rounded-full",
+          "from-gray-400 to-transparent",
+          hoveredSegment === segment.id && "opacity-70 shadow-lg",
+          segment.color === 'text-[#E1182E]' && "from-red-400",
+          segment.color === 'text-blue-600' && "from-blue-400", 
+          segment.color === 'text-green-600' && "from-green-400"
         )}
         style={{
+          width: `${length}px`,
           top: '50%',
-          left: isLeft ? 'calc(50% - 80px)' : '50%',
-          transform: isTop ? 'translateY(-50%) rotate(-30deg)' : 'translateY(-50%) rotate(30deg)'
+          left: '50%',
+          transformOrigin: '0 50%',
+          transform: `translateY(-50%) rotate(${angle}deg)`
         }}
       />
     );
   };
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto h-[500px] sm:h-[600px] bg-gradient-to-br from-gray-50 to-white rounded-3xl overflow-hidden border border-gray-100">
+    <div className="relative w-full max-w-5xl mx-auto h-[500px] sm:h-[600px] bg-gradient-to-br from-slate-50 via-gray-50 to-purple-50 rounded-3xl overflow-hidden border border-gray-200 shadow-lg">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -111,22 +104,26 @@ export default function MindMapWidget() {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
         <div className="relative">
           {/* Connection Lines */}
-          {segments.map((segment) => (
+          {segments.map((segment, index) => (
             <div key={`line-${segment.id}`}>
-              {renderConnectionLine(segment)}
+              {renderConnectionLine(segment, index)}
             </div>
           ))}
           
-          {/* Central Circle */}
-          <div className={cn(
-            "w-24 sm:w-32 h-24 sm:h-32 rounded-full bg-white border-4 border-gray-200 flex flex-col items-center justify-center shadow-lg transition-all duration-500",
-            hoveredSegment && "border-gray-300 shadow-xl scale-110"
-          )}>
-            <div className="text-center">
-              <div className="text-sm sm:text-lg font-bold text-gray-900 mb-1">EraEnvision</div>
-              <div className="text-xs text-gray-500">AI Ecosystem</div>
+          {/* Central Hub - DealBridge */}
+          <Link href="/dealbridge">
+            <div className={cn(
+              "w-32 sm:w-40 h-32 sm:h-40 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex flex-col items-center justify-center shadow-2xl transition-all duration-700 border-4 border-white cursor-pointer group",
+              "hover:shadow-3xl hover:scale-110 hover:from-purple-600 hover:to-purple-700",
+              hoveredSegment && "shadow-3xl scale-105"
+            )}>
+              <div className="text-center text-white">
+                <Link2 className="w-6 sm:w-8 h-6 sm:h-8 mx-auto mb-2 group-hover:rotate-12 transition-transform duration-300" />
+                <div className="text-sm sm:text-lg font-bold mb-1">DealBridge</div>
+                <div className="text-xs opacity-90">İş Birliği Merkezi</div>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 
@@ -147,9 +144,9 @@ export default function MindMapWidget() {
             onClick={() => setSelectedSegment(selectedSegment === segment.id ? null : segment.id)}
           >
             <div className={cn(
-              "w-36 sm:w-48 p-4 sm:p-6 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300",
+              "w-40 sm:w-52 p-5 sm:p-7 rounded-3xl border-2 border-white shadow-lg transition-all duration-500 backdrop-blur-sm",
               segment.bgColor,
-              "group-hover:shadow-lg group-hover:border-gray-300"
+              "group-hover:shadow-xl group-hover:scale-105 group-hover:border-gray-100"
             )}>
               <div className="flex items-center gap-3 mb-3">
                 <div className={cn(
@@ -198,15 +195,24 @@ export default function MindMapWidget() {
 
       {/* Floating Info */}
       {hoveredSegment && (
-        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-gray-200 transition-all duration-300 ease-in-out opacity-100">
-          <div className="text-sm font-medium text-gray-900 mb-1">
+        <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md rounded-xl p-4 shadow-xl border border-gray-100 transition-all duration-300 ease-in-out opacity-100">
+          <div className="text-sm font-semibold text-gray-900 mb-1">
             {segments.find(s => s.id === hoveredSegment)?.name}
           </div>
           <div className="text-xs text-gray-600">
-            Detaylar için tıklayın veya kartı ziyaret edin
+            Kartı ziyaret edin veya detaylar için tıklayın
           </div>
         </div>
       )}
+
+      {/* Central Description */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="text-center bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-gray-200 shadow-sm">
+          <div className="text-xs font-medium text-gray-700">
+            💡 DealBridge merkezi hub - tüm segmentler burada buluşur
+          </div>
+        </div>
+      </div>
 
       {/* Legend */}
       <div className="absolute bottom-4 left-4 text-xs text-gray-500">
