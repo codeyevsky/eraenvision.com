@@ -72,8 +72,9 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Yasal</h3>
             <ul className="space-y-3 text-gray-400">
-              <li><Link href="#" className="hover:text-white transition-colors">Gizlilik Politikası</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Kullanım Şartları</Link></li>
+              <li><Link href="/legal/privacy-policy" className="hover:text-white transition-colors">Gizlilik Politikası</Link></li>
+              <li><Link href="/legal/distance-sales-contract" className="hover:text-white transition-colors">Kullanım Şartları</Link></li>
+              <li><Link href="/legal/delivery-and-refund-policy" className="hover:text-white transition-colors">Teslimat ve İade Politikası</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Çerez Politikası</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">AI Sorumluluk Reddi</Link></li>
             </ul>

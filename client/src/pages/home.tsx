@@ -90,7 +90,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-semibold text-xl mb-4 text-gray-900">SCALE</h3>
               <p className="text-gray-600 mb-6">
-                Büyüyen şirketler için AI ile operasyonel optimizasyon
+                Büyüyen ve büyümekte olan şirketler için AI ile operasyonel optimizasyon 
               </p>
               <Link href="/scale">
                 <Button variant="outline" className="w-full">
@@ -120,7 +120,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-semibold text-xl mb-4 text-gray-900">DealBridge</h3>
               <p className="text-gray-600 mb-6">
-                İş birliği, yatırım ve B2B fırsatlarının merkezi
+                İş birliği, Yatırım, Networking, B2B ve dahası için fırsatlarının merkezi
               </p>
               <Link href="/dealbridge">
                 <Button variant="outline" className="w-full">

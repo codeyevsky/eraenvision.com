@@ -154,7 +154,7 @@ export default function ProductsPage() {
                 <Link href={activeProduct.link}>
                   <Button 
                     size="lg" 
-                    className={cn("font-semibold text-white", activeProduct.color)}
+                    className={cn("font-semibold text-white", activeProduct.color, `hover:${activeProduct.color}`)}
                   >
                     {activeProduct.cta} <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -223,7 +223,7 @@ export default function ProductsPage() {
                 
                 <Link href={product.link}>
                   <Button 
-                    className={cn("w-full font-semibold text-white", product.color)}
+                    className={cn("w-full font-semibold text-white", product.color, `hover:${product.color}`)}
                   >
                     {product.cta}
                   </Button>

@@ -18,6 +18,9 @@ import AboutPage from "@/pages/about";
 import ContactPage from "@/pages/contact";
 import BlogPage from "@/pages/blog";
 import BlogPostPage from "@/pages/blog-post";
+import PrivacyPolicyPage from "@/pages/privacy-policy";
+import DeliveryAndRefundPolicyPage from "@/pages/delivery-and-refund-policy";
+import DistanceSalesContractPage from "@/pages/distance-sales-contract";
 import NotFound from "@/pages/not-found";
 import { MessageCircle } from "lucide-react";
 
@@ -35,6 +38,9 @@ function Router() {
       <Route path="/contact" component={ContactPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/blog/:slug" component={BlogPostPage} />
+      <Route path="/legal/privacy-policy" component={PrivacyPolicyPage} />
+      <Route path="/legal/delivery-and-refund-policy" component={DeliveryAndRefundPolicyPage} />
+      <Route path="/legal/distance-sales-contract" component={DistanceSalesContractPage} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -192,7 +192,7 @@ export default function InvestPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
-                Erken Erişim Listesine Katıl <ArrowRight className="ml-2 h-5 w-5" />
+                Erken Erişim'e Katıl <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg font-semibold">
                 Daha Fazla Bilgi
