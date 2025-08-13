@@ -103,6 +103,10 @@ export default {
           "50%": { "background-position": "100% 50%" },
           "100%": { "background-position": "0% 50%" },
         },
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -112,6 +116,7 @@ export default {
         "scale-in": "scaleIn 0.4s ease-out forwards",
         marquee: "marquee 30s linear infinite",
         "gradient-flow": "gradient-flow 15s ease infinite",
+        blink: "blink 1s step-end infinite",
       },
       boxShadow: {
         "era-sm": "0 2px 8px hsl(347, 83%, 49%, 0.10)",

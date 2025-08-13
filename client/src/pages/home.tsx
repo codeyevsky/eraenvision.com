@@ -5,6 +5,8 @@ import { PageTransition, FadeIn, SlideIn, StaggeredFadeIn } from '@/components/u
 import MindMapWidget from '@/components/ui/mindmap-widget';
 import { Link } from 'wouter';
 
+import { AnimatedText } from '@/components/ui/animated-text';
+
 import trustedCompanies1 from "../../../dist/public/assets/trustedCompanies1.png";
 import trustedCompanies2 from "../../../dist/public/assets/trustedCompanies2.png";
 import trustedCompanies3 from "../../../dist/public/assets/trustedCompanies3.png";
@@ -42,9 +44,11 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
             <FadeIn delay={100}>
               <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8 text-gray-900 leading-tight">
-                AI ile iş büyütün,{' '}
-                <span className="bg-gradient-to-r from-[#E1182E] to-[#FF4757] bg-clip-text text-transparent">
-                  gelecek kurun
+                <span className="whitespace-nowrap">
+                  AI ile iş büyütün,{' '}
+                  <span className="bg-gradient-to-r from-[#E1182E] to-[#FF4757] bg-clip-text text-transparent">
+                    <AnimatedText />
+                  </span>
                 </span>
               </h1>
             </FadeIn>
