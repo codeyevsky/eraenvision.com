@@ -697,6 +697,9 @@ export const translations = {
     proPrice: "₺299/ay",
     businessPrice: "₺599/ay",
   
+    
+
+
   },
   en: {
     // Navigation

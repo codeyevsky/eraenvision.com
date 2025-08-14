@@ -5,10 +5,10 @@ import { Eye, Users, Target, Zap, Award, TrendingUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Link } from 'wouter';
 
-import heroImage from '../../../dist/public/assets/images/aboutUs/just-an-idea.png';
-import cinarAvatar from '../../../dist/public/assets/images/aboutUs/cinar.png';
-import emirhanAvatar from '../../../dist/public/assets/images/aboutUs/emirhan.png';
-import izelAvatar from '../../../dist/public/assets/images/aboutUs/izel.png';
+import heroImage from '../../../dist/public/assets/just-an-idea-BZpfYRRl.png';
+import cinarAvatar from '../../../dist/public/assets/cinar-Bj7DbCJz.png';
+import emirhanAvatar from '../../../dist/public/assets/emirhan-0VvVLUqS.png';
+import izelAvatar from '../../../dist/public/assets/izel-KLXDxZDo.png';
 
 export default function AboutPage() {
   const { t } = useLanguage();

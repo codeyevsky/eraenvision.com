@@ -8,15 +8,15 @@ import { Link } from 'wouter';
 
 import { AnimatedText } from '@/components/ui/animated-text';
 
-import bdbAkademi from "../../../dist/public/assets/images/root/bdb-akademi.png";
-import bilgiyiTicaretlestirmeMerkezi from "../../../dist/public/assets/images/root/bilgiyi-ticaretlestirme-merkezi.png";
-import clario from "../../../dist/public/assets/images/root/clario.png";
-import demirlerKuyumculuk from "../../../dist/public/assets/images/root/demirler-kuyumculuk.png";
-import fcsTekno from "../../../dist/public/assets/images/root/fcs-tekno.png";
-import healyt from "../../../dist/public/assets/images/root/healyt.png";
-import igneDolusuTasarim from "../../../dist/public/assets/images/root/igne-dolusu-tasarim.png";
-import touristiy from "../../../dist/public/assets/images/root/touristiy.png";
-import zumrutGumus from "../../../dist/public/assets/images/root/zumrut-gumus.png";
+import bdbAkademi from "../../../dist/public/assets/bdb-akademi-Ckb24dQw.png";
+import bilgiyiTicaretlestirmeMerkezi from "../../../dist/public/assets/bilgiyi-ticaretlestirme-merkezi-CEHe0ljd.png";
+import clario from "../../../dist/public/assets/clario-jSEEsDrL.png";
+import demirlerKuyumculuk from "../../../dist/public/assets/demirler-kuyumculuk-ADmwm2gR.png";
+import fcsTekno from "../../../dist/public/assets/fcs-tekno-BungFEUR.png";
+import healyt from "../../../dist/public/assets/healyt-drnB05Nh.png";
+import igneDolusuTasarim from "../../../dist/public/assets/igne-dolusu-tasarim-DQzdEby8.png";
+import touristiy from "../../../dist/public/assets/touristiy-ChVkMFI.png";
+import zumrutGumus from "../../../dist/public/assets/zumrut-gumus-DsgtCUhd.png";
 import { FAQSection } from '@/components/sections/faq';
 
 export default function HomePage() {
