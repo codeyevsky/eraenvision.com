@@ -25,14 +25,11 @@ export default function LaunchPage() {
   ];
 
   const benefits = [
-    'AI ile iş fikri analizi ve geliştirme',
-    'Pazar araştırması ve rakip analizi',
-    'MVP yol haritası oluşturma',
-    'Finansal projeksiyon ve planlama',
-    'Yatırımcı pitch deck hazırlama',
-    'İlk müşteri bulma stratejileri',
-    'Risk değerlendirme ve mitigation',
-    'Go-to-market stratejisi'
+        'AI ile dijital dönüşüm geliştirme',
+        'Satış funnel optimizasyonu',
+        'SEO ve reklam stratejileri',
+        'Müşteri deneyimi iyileştirme',
+        'DealBridge ile B2B ortaklık fırsatları'
   ];
 
   return (

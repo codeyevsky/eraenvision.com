@@ -22,7 +22,6 @@ export default function BlogPostPage() {
   const params = useParams();
   const slug = params.slug;
 
-  // Mock blog post data - in real app this would come from API/CMS
   const blogPosts: Record<string, BlogPost> = {
     'ai-ile-girisimcilik-2025-stratejileri': {
       id: '1',
@@ -64,7 +63,7 @@ export default function BlogPostPage() {
         <h2>Sonuç</h2>
         <p>2025 yılında AI ile girişimcilik yapmak, teknoloji odaklı olmaktan çok, teknoloji destekli insan odaklı çözümler üretmek anlamına gelir. Başarının anahtarı, AI'ı bir araç olarak görüp, gerçek değeri müşteri problemlerine odaklanarak yaratmakta yatar.</p>
       `,
-      author: 'Emirhan Akdeniz',
+      author: 'Emirhan Demir',
       date: '2025-01-10',
       readTime: 8,
       category: 'AI & Girişimcilik',
@@ -108,13 +107,71 @@ export default function BlogPostPage() {
         <h2>Sonuç</h2>
         <p>E-ticaret büyütme sürecinde veri, pusulanızdır. Doğru metrikleri takip ederek ve veri odaklı kararlar alarak sürdürülebilir büyüme sağlayabilirsiniz.</p>
       `,
-      author: 'EraEnvision AI',
+      author: 'Emirhan Demir',
       date: '2025-01-08',
       readTime: 6,
       category: 'E-ticaret',
       tags: ['E-ticaret', 'Veri Analizi', 'Büyüme', 'Metrikler'],
       slug: 'e-ticaret-buyutme-veri-odakli-yaklasimlar'
-    }
+    },
+    'yatirim-kararlarinda-ai-gelecegin-fon-yoneticileri': {
+      id: '3',
+      title: 'Yatırım Kararlarında AI: Geleceğin Fon Yöneticileri',
+      excerpt: 'Yapay zekanın yatırım dünyasındaki rolü ve akıllı yatırım kararları almak için AI araçlarını nasıl kullanabileceğiniz.',
+      content: `
+        <p>Geleneksel yatırım analizi yöntemleri, günümüzün hızla değişen piyasa koşullarında yetersiz kalabiliyor. Yapay zeka, bu boşluğu doldurarak yatırımcılara daha derin, daha hızlı ve daha isabetli analizler sunuyor. AI destekli yatırım araçları, büyük veri setlerini saniyeler içinde işleyerek insan gözünden kaçabilecek fırsatları ve riskleri ortaya çıkarıyor.</p>
+
+        <h2>1. AI ile Pazar Trendlerini Öngörme</h2>
+        <p>AI modelleri, makroekonomik verilerden sosyal medya trendlerine kadar milyonlarca veriyi analiz ederek pazar hareketlerini öngörebilir. Bu sayede yatırımcılar, potansiyel büyüme sektörlerini ve düşüş eğilimi gösteren varlıkları önceden tespit edebilir.</p>
+
+        <h2>2. Portföy Optimizasyonu ve Risk Yönetimi</h2>
+        <p>Yatırım portföyünün getirisini maksimize etmek ve riski minimize etmek karmaşık bir denge işidir. AI algoritmaları, portföyünüzdeki varlıkların korelasyonlarını ve oynaklıklarını gerçek zamanlı olarak izleyerek, optimal varlık dağılımı için öneriler sunar. Bu, daha dengeli ve dirençli bir portföy oluşturmanıza yardımcı olur.</p>
+
+        <h2>3. Algoritmik Ticaret ve Otomatik Emir İletimi</h2>
+        <p>AI'ın en etkili kullanım alanlarından biri de algoritmik ticarettir. Önceden tanımlanmış kurallara göre çalışan bu sistemler, saniyeler içinde binlerce işlem yaparak insan hızının çok ötesinde kararlar alır. Bu, özellikle yüksek frekanslı ticaret stratejileri için vazgeçilmezdir.</p>
+
+        <h2>4. Girişim Değerlendirmesi ve Deal Sourcing</h2>
+        <p>Erken aşama yatırımcıları için doğru girişimi bulmak zaman alıcı ve zorlu bir süreçtir. AI, girişimlerin iş modellerini, pazar potansiyellerini ve finansal projeksiyonlarını analiz ederek bir "skor kartı" oluşturabilir. Bu sayede yatırımcılar, potansiyel fırsatları daha hızlı ve objektif bir şekilde değerlendirebilir.</p>
+
+        <h2>Sonuç</h2>
+        <p>AI, yatırım dünyasını kökten değiştiriyor. Bu teknolojiyi benimseyen yatırımcılar, veri odaklı ve rekabetçi bir avantaja sahip oluyor. Geleceğin fon yöneticileri, insan sezgisi ile AI'ın analitik gücünü birleştiren hibrit bir modelle çalışacak.</p>
+      `,
+      author: 'Emirhan Demir',
+      date: '2025-01-05',
+      readTime: 10,
+      category: 'Yatırım & Finans',
+      tags: ['AI', 'Yatırım', 'Fintech', 'Analiz'],
+      slug: 'yatirim-kararlarinda-ai-gelecegin-fon-yoneticileri'
+    },
+    'startup-mvp-gelistirme-hizli-etkili-yontemler': {
+      id: '4',
+      title: 'Startup MVP Geliştirme: Hızlı ve Etkili Yöntemler',
+      excerpt: 'Minimum Viable Product (MVP) geliştirme sürecini hızlandıran modern yaklaşımlar ve araçlar.',
+      content: `
+        <p>Bir startup için en kritik aşamalardan biri, pazara en kısa sürede çıkabilmektir. Minimum Viable Product (MVP), bu amaca hizmet eden temel bir stratejidir. MVP, bir ürünün temel özelliklerini içeren ve hedef kitleden geri bildirim almayı sağlayan en basit versiyonudur.</p>
+
+        <h2>1. Hızlı Prototipleme: Fikirden Eyleme Geçiş</h2>
+        <p>MVP geliştirme sürecinin ilk adımı, fikri somutlaştırmaktır. Figma veya Sketch gibi araçlarla hızlı prototipler oluşturarak, ürünün ana işlevlerini ve kullanıcı akışını görselleştirebilirsiniz. Bu prototipler, hem potansiyel müşterilere hem de yatırımcılara sunularak erken geri bildirim alınmasını sağlar.</p>
+
+        <h2>2. No-Code/Low-Code Platformlarının Gücü</h2>
+        <p>Artık her MVP için sıfırdan kod yazmak zorunda değilsiniz. Bubble, Adalo veya Webflow gibi no-code/low-code platformları sayesinde, kodlama bilgisi olmadan fonksiyonel web siteleri ve mobil uygulamalar geliştirebilirsiniz. Bu platformlar, geliştirme süresini ve maliyetini önemli ölçüde düşürerek pazara daha hızlı girmenize olanak tanır.</p>
+
+        <h2>3. Özellikleri Önceliklendirme</h2>
+        <p>Bir MVP'nin en büyük hatası, gereksiz özelliklerle şişirilmesidir. "MoSCoW Metodu" (Must-Have, Should-Have, Could-Have, Won't-Have) gibi tekniklerle hangi özelliklerin MVP için gerçekten "olmazsa olmaz" olduğunu belirleyin. İlk versiyonda sadece temel sorunu çözen özelliklere odaklanın.</p>
+
+        <h2>4. Geri Bildirim Döngüsü Oluşturma</h2>
+        <p>MVP'nin amacı sadece ürünü çıkarmak değil, aynı zamanda kullanıcıdan öğrenmektir. Kullanıcı testi, anketler ve analiz araçları (Google Analytics, Hotjar vb.) ile düzenli olarak geri bildirim toplayın. Bu geri bildirimleri kullanarak MVP'nizi sürekli olarak geliştirin ve pazara en uygun hale getirin.</p>
+
+        <h2>Sonuç</h2>
+        <p>Başarılı bir MVP, bir startup'ın hayatta kalmasını ve büyümesini belirleyen ana faktörlerden biridir. Hızlı prototipleme, no-code araçları ve kullanıcı geri bildirimini merkeze alan bir yaklaşımla, fikrinizi hızla test edebilir ve başarılı bir ürüne dönüştürebilirsiniz.</p>
+      `,
+      author: 'Emirhan Demir',
+      date: '2025-01-03',
+      readTime: 7,
+      category: 'Startup',
+      tags: ['MVP', 'Startup', 'Ürün Geliştirme', 'Agile'],
+      slug: 'startup-mvp-gelistirme-hizli-etkili-yontemler'
+    },
   };
 
   const post = blogPosts[slug || ''];
@@ -231,7 +288,7 @@ export default function BlogPostPage() {
               <div className="flex-1">
                 <h3 className="font-semibold text-xl mb-2">{post.author}</h3>
                 <p className="text-muted-foreground mb-4">
-                  {post.author === 'Emirhan Akdeniz' 
+                  {post.author === 'Emirhan Demir' 
                     ? 'EraEnvision kurucusu ve CEO\'su. 10+ yıl teknoloji ve iş geliştirme deneyimi ile girişimcilere rehberlik ediyor.'
                     : 'EraEnvision AI takımı, en güncel yapay zeka trendlerini ve iş dünyasındaki uygulamalarını analiz ediyor.'
                   }

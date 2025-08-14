@@ -1,3 +1,4 @@
+// src/pages/HomePage.jsx
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
 import { BarChart, TrendingUp, Target, ArrowRight, CheckCircle, Link2 } from 'lucide-react';
@@ -17,6 +18,7 @@ import trustedCompanies7 from "../../../dist/public/assets/trustedCompanies7.png
 import trustedCompanies8 from "../../../dist/public/assets/trustedCompanies8.png";
 import trustedCompanies9 from "../../../dist/public/assets/trustedCompanies9.png";
 import trustedCompanies10 from "../../../dist/public/assets/trustedCompanies10.png";
+import { FAQSection } from '@/components/sections/faq';
 
 export default function HomePage() {
   const { t } = useLanguage();
@@ -38,9 +40,14 @@ export default function HomePage() {
     <PageTransition>
       <div className="min-h-screen bg-white">
         <section className="pt-20 pb-16 bg-white relative overflow-hidden group">
-          <div
-            className="absolute inset-0 bg-hero-pattern bg-[length:400%_400%] opacity-50 animate-gradient-flow group-hover:animate-none group-hover:bg-[length:200%_200%] transition-all duration-1000"
-          ></div>
+          <div className="absolute inset-0 z-0">
+            {/* Mevcut hero deseni, daha az opaklıkla */}
+            <div
+              className="absolute inset-0 bg-hero-pattern bg-[length:400%_400%] opacity-30 animate-gradient-flow group-hover:animate-none group-hover:bg-[length:200%_200%] transition-all duration-1000"
+            ></div>
+            {/* Dinamik ve etkileşimli geometrik şekiller */}
+          </div>
+          
           <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
             <FadeIn delay={100}>
               <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8 text-gray-900 leading-tight">
@@ -208,22 +215,22 @@ export default function HomePage() {
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-[#E1182E] flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg text-gray-900 mb-2">Gerçek zamanlı veri senkronizasyonu</h3>
-                      <p className="text-gray-600">Elektronik tablolardan, CRM'lerden ve ERP'lerden verileri içe aktarın.</p>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">Tamamen size özel veri işlenimi</h3>
+                      <p className="text-gray-600">Verilerinizle İşlenen Tablolardan, Yol Haritalarından ve Analizlerden Faydalanın.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg text-gray-900 mb-2">Trendleri görselleştirin ve takip edin</h3>
-                      <p className="text-gray-600">Özelleştirilebilir grafikler ve gelişmiş hesaplamalarla verilerinizi derinlemesine inceleyin.</p>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">Süreçlerinizin AI ile kolaylaştırılması</h3>
+                      <p className="text-gray-600">Tamamen sizi Tanıyan AI ile süreçlerinizi kolaylaştırın.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg text-gray-900 mb-2">Farklı ekipler için kişiselleştirilmiş görünümler</h3>
-                      <p className="text-gray-600">Kimin neyi görüntüleyebileceğini, düzenleyebileceğini ve yönetebileceğini kontrol edin.</p>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">Herşey sizin elinizde</h3>
+                      <p className="text-gray-600">Çözdüğünüz test aracılığıyla tüm sistemi size özel kişiselleştirin.</p>
                     </div>
                   </div>
                 </StaggeredFadeIn>
@@ -241,41 +248,7 @@ export default function HomePage() {
         </section>
 
         {/* Use Cases */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-16">
-              <FadeIn>
-                <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
-                  İşinizin her yanını hızlandırın
-                </h2>
-                <p className="text-lg sm:text-xl text-gray-600 px-4 sm:px-0">
-                  AI destekli uygulamalar oluşturun - takım, süreç veya karmaşıklık ne olursa olsun.
-                </p>
-              </FadeIn>
-            </div>
-
-            <StaggeredFadeIn className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { title: "Portallar", desc: "İhtiyacınız olan her şey tek yerde. Müşteriler, çalışanlar veya yatırımcılar için merkezi hub görevi gören özel portallar oluşturun." },
-                { title: "Dashboardlar", desc: "İş verilerinize görünürlük kazandırın. Paydaşları şirketinizin temel metriklerini görselleştiren sezgisel dashboard ile uyumlu tutun." },
-                { title: "CRM", desc: "CRM'iniz, karmaşadan arındırılmış. Gerçekte nasıl satış yaptığınıza göre oluşturulmuş uygulamayla potansiyel müşterileri takip edin, ardışık düzenleri yönetin ve anlaşmaları kapatın." },
-                { title: "Envanter", desc: "Envanter, aydınlatılmış. Neyin içeride, neyin az ve bir sonrakinin ne olduğunu bilin - her SKU'yu takip eden ve rafları otomatik olarak stoklu tutan sistemle." },
-                { title: "Saha Satışı", desc: "Hareket halindeki ekipler için yapılmış. Temsilcilerinize sahada toplantıları yönetmek, anlaşmaları takip etmek ve etkinlikleri kaydetmek için güçlü mobil uygulama sağlayın." },
-                { title: "Özel Çözümler", desc: "İhtiyaçlarınıza özel tasarlanmış AI çözümleri. Sektörünüze ve iş modelinize özel yapay zeka araçları geliştiriyoruz." }
-              ].map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover-lift">
-                  <h3 className="font-semibold text-xl mb-4 text-gray-900">{item.title}</h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                  <Link href={`/${item.title.toLowerCase().replace(/\s/g, '-')}`}>
-                    <Button variant="outline" className="w-full">
-                      Keşfet <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </div>
-              ))}
-            </StaggeredFadeIn>
-          </div>
-        </section>
+        <FAQSection />
 
         {/* CTA Section */}
         <section className="py-20 bg-white">

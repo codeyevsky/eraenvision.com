@@ -25,14 +25,11 @@ export default function ScalePage() {
   ];
 
   const benefits = [
-    'Satış funnel optimizasyonu',
-    'SEO ve reklam stratejileri',
-    'Süreç otomasyonu ve entegrasyonu',
-    'Müşteri deneyimi iyileştirme',
-    'Takım performans analitiği',
-    'Büyüme metrik takibi',
-    'Operasyonel verimlilik artışı',
-    'Maliyet optimizasyonu'
+        'AI ile dijital dönüşüm geliştirme',
+        'Satış funnel optimizasyonu',
+        'SEO ve reklam stratejileri',
+        'Müşteri deneyimi iyileştirme',
+        'DealBridge ile B2B ortaklık fırsatları'
   ];
 
   return (

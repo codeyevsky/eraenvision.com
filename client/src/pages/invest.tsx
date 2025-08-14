@@ -25,14 +25,11 @@ export default function InvestPage() {
   ];
 
   const benefits = [
-    'Startup profil analizi ve puanlama',
-    'Yatırım tezi eşleştirme',
-    'Risk değerlendirme modelleri',
-    'Portföy izleme ve raporlama',
-    'Exit stratejisi planlama',
-    'Pazar trend analitiği',
-    'Due diligence desteği',
-    'ROI projeksiyon modellemesi'
+        'Startup profil analizi ve puanlama',
+        'Yatırım tezi eşleştirme',
+        'Exit stratejisi planlama',
+        'Pazar trend analizi',
+        'DealBridge ile girişim keşfi'
   ];
 
   return (

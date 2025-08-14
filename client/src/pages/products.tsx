@@ -20,13 +20,13 @@ export default function ProductsPage() {
       textColor: 'text-[#E1182E]',
       description: 'AI destekli iş planlama ve strateji geliştirme çözümleri ile fikrini gerçeğe dönüştür.',
       features: [
-        'AI ile iş fikri analizi ve geliştirme',
+        'AI ile iş fikri analizi ve geliştirme',  
         'Pazar araştırması ve rakip analizi',
         'MVP yol haritası oluşturma',
-        'Finansal projeksiyon ve planlama',
-        'Yatırımcı pitch deck hazırlama',
         'İlk müşteri bulma stratejileri',
+        'AI ile iş fikri Üretimi',
         'DealBridge ile yatırımcı eşleştirmesi'
+        
       ],
       cta: 'Detayları Gör',
       link: '/launch'
@@ -41,12 +41,10 @@ export default function ProductsPage() {
       textColor: 'text-blue-600',
       description: 'Operasyonel verimliliği artırın ve sürdürülebilir büyüme sağlayın.',
       features: [
+        'AI ile dijital dönüşüm geliştirme',
         'Satış funnel optimizasyonu',
         'SEO ve reklam stratejileri',
-        'Süreç otomasyonu ve entegrasyonu',
         'Müşteri deneyimi iyileştirme',
-        'Takım performans analitiği',
-        'Büyüme metrik takibi',
         'DealBridge ile B2B ortaklık fırsatları'
       ],
       cta: 'Detayları Gör',
@@ -64,10 +62,8 @@ export default function ProductsPage() {
       features: [
         'Startup profil analizi ve puanlama',
         'Yatırım tezi eşleştirme',
-        'Risk değerlendirme modelleri',
-        'Portföy izleme ve raporlama',
         'Exit stratejisi planlama',
-        'Pazar trend analitiği',
+        'Pazar trend analizi',
         'DealBridge ile girişim keşfi'
       ],
       cta: 'Detayları Gör',
