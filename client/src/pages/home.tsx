@@ -8,32 +8,30 @@ import { Link } from 'wouter';
 
 import { AnimatedText } from '@/components/ui/animated-text';
 
-import trustedCompanies1 from "../../../dist/public/assets/trustedCompanies1.png";
-import trustedCompanies2 from "../../../dist/public/assets/trustedCompanies2.png";
-import trustedCompanies3 from "../../../dist/public/assets/trustedCompanies3.png";
-import trustedCompanies4 from "../../../dist/public/assets/trustedCompanies4.png";
-import trustedCompanies5 from "../../../dist/public/assets/trustedCompanies5.png";
-import trustedCompanies6 from "../../../dist/public/assets/trustedCompanies6.png";
-import trustedCompanies7 from "../../../dist/public/assets/trustedCompanies7.png";
-import trustedCompanies8 from "../../../dist/public/assets/trustedCompanies8.png";
-import trustedCompanies9 from "../../../dist/public/assets/trustedCompanies9.png";
-import trustedCompanies10 from "../../../dist/public/assets/trustedCompanies10.png";
+import bdbAkademi from "../../../dist/public/assets/images/root/bdb-akademi.png";
+import bilgiyiTicaretlestirmeMerkezi from "../../../dist/public/assets/images/root/bilgiyi-ticaretlestirme-merkezi.png";
+import clario from "../../../dist/public/assets/images/root/clario.png";
+import demirlerKuyumculuk from "../../../dist/public/assets/images/root/demirler-kuyumculuk.png";
+import fcsTekno from "../../../dist/public/assets/images/root/fcs-tekno.png";
+import healyt from "../../../dist/public/assets/images/root/healyt.png";
+import igneDolusuTasarim from "../../../dist/public/assets/images/root/igne-dolusu-tasarim.png";
+import touristiy from "../../../dist/public/assets/images/root/touristiy.png";
+import zumrutGumus from "../../../dist/public/assets/images/root/zumrut-gumus.png";
 import { FAQSection } from '@/components/sections/faq';
 
 export default function HomePage() {
   const { t } = useLanguage();
 
   const trustedCompanies = [
-    trustedCompanies1,
-    trustedCompanies2,
-    trustedCompanies3,
-    trustedCompanies4,
-    trustedCompanies5,
-    trustedCompanies6,
-    trustedCompanies7,
-    trustedCompanies8,
-    trustedCompanies9,
-    trustedCompanies10,
+    bdbAkademi,
+    bilgiyiTicaretlestirmeMerkezi,
+    clario,
+    demirlerKuyumculuk,
+    fcsTekno,
+    healyt,
+    igneDolusuTasarim,
+    touristiy,
+    zumrutGumus
   ];
 
   return (
@@ -52,7 +50,7 @@ export default function HomePage() {
             <FadeIn delay={100}>
               <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8 text-gray-900 leading-tight">
                 <span className="whitespace-nowrap">
-                  AI ile iş büyütün,{' '}
+                  {t("heroTitle")}
                   <span className="bg-gradient-to-r from-[#E1182E] to-[#FF4757] bg-clip-text text-transparent">
                     <AnimatedText />
                   </span>
@@ -61,23 +59,23 @@ export default function HomePage() {
             </FadeIn>
             <FadeIn delay={200}>
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto px-4 sm:px-0">
-                EraEnvision ile işinizi AI destekli çözümlerle büyütün. Girişimciler, büyüyen şirketler ve yatırımcılar için özel yapay zeka danışmanlığı.
+                {t("heroSubtitle")}
               </p>
             </FadeIn>
             <FadeIn delay={300}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <Button size="lg" className="bg-[#E1182E] hover:bg-[#C51628] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover-lift w-full sm:w-auto">
-                  Ücretsiz Başlayın
+                  {t("startFree")}
                 </Button>
                 <Button variant="outline" size="lg" className="border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover-lift w-full sm:w-auto">
-                  Demo İzleyin
+                  {t("watchDemo")}
                 </Button>
               </div>
             </FadeIn>
 
             {/* Trust Indicators */}
             <FadeIn delay={400}>
-              <p className="text-sm text-gray-500 mb-8">20+ şirket tarafından güveniliyor</p>
+              <p className="text-sm text-gray-500 mb-8">20+ {t("trustedCompanies")}</p>
               <div className="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-[200px] before:bg-gradient-to-r before:from-white before:z-10 after:absolute after:right-0 after:top-0 after:h-full after:w-[200px] after:bg-gradient-to-l after:from-white after:z-10">
                 <div className="flex w-fit items-center animate-marquee">
                   {trustedCompanies.map((imgSrc, index) => (
@@ -108,10 +106,10 @@ export default function HomePage() {
             <div className="text-center mb-16">
               <FadeIn>
                 <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
-                  İşinizi büyüten AI çözümleri
+                  {t("featuresTitle")}
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
-                  Her büyüklükteki işletme için özel tasarlanmış yapay zeka araçları
+                  {t("featuresSubtitle")}
                 </p>
               </FadeIn>
             </div>
@@ -123,11 +121,11 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-semibold text-xl mb-4 text-gray-900">LAUNCH</h3>
                 <p className="text-gray-600 mb-6">
-                  Girişimciler için AI destekli iş planlama ve strateji geliştirme
+                  {t("launchDesc")}
                 </p>
                 <Link href="/launch">
                   <Button variant="outline" className="w-full">
-                    Keşfet <ArrowRight className="ml-2 h-4 w-4" />
+                    {t("discover")} <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
@@ -138,11 +136,11 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-semibold text-xl mb-4 text-gray-900">SCALE</h3>
                 <p className="text-gray-600 mb-6">
-                  Büyüyen ve büyümekte olan şirketler için AI ile operasyonel optimizasyon
+                  {t("scaleDesc")}
                 </p>
                 <Link href="/scale">
                   <Button variant="outline" className="w-full">
-                    Keşfet <ArrowRight className="ml-2 h-4 w-4" />
+                    {t("discover")} <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
@@ -153,11 +151,11 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-semibold text-xl mb-4 text-gray-900">INVEST</h3>
                 <p className="text-gray-600 mb-6">
-                  Yatırımcılar için AI destekli pazar analizi ve değerlendirme
+                  {t("investDesc")}
                 </p>
                 <Link href="/invest">
                   <Button variant="outline" className="w-full">
-                    Keşfet <ArrowRight className="ml-2 h-4 w-4" />
+                    {t("discover")} <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
@@ -168,11 +166,11 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-semibold text-xl mb-4 text-gray-900">DealBridge</h3>
                 <p className="text-gray-600 mb-6">
-                  İş birliği, Yatırım, Networking, B2B ve dahası için fırsatlarının merkezi
+                  {t("dealBridgeDesc")}
                 </p>
                 <Link href="/dealbridge">
                   <Button variant="outline" className="w-full">
-                    Keşfet <ArrowRight className="ml-2 h-4 w-4" />
+                    {t("discover")} <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
@@ -186,10 +184,10 @@ export default function HomePage() {
             <div className="text-center mb-16">
               <FadeIn>
                 <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
-                  EraEnvision Ekosistemi
+                  {t("ecosystemTitle")}
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
-                  Tüm segmentlerimiz DealBridge'de birleşerek güçlü bir iş birliği ekosistemi oluşturur
+                  {t("ecosystemSubtitle")}
                 </p>
               </FadeIn>
             </div>
@@ -206,31 +204,31 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <SlideIn direction="left">
                 <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
-                  Verileriniz, nihayet sizin için çalışıyor
+                  {t("dataWorksTitle")}
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-600 mb-8">
-                  Dağınık verileri birleştirin, öngörüler elde edin ve ekibinizi aynı hedef etrafında toplayın.
+                  {t("dataWorksSubtitle")}
                 </p>
                 <StaggeredFadeIn className="space-y-6">
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-[#E1182E] flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg text-gray-900 mb-2">Tamamen size özel veri işlenimi</h3>
-                      <p className="text-gray-600">Verilerinizle İşlenen Tablolardan, Yol Haritalarından ve Analizlerden Faydalanın.</p>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">{t("customDataProcessingTitle")}</h3>
+                      <p className="text-gray-600">{t("customDataProcessingDesc")}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg text-gray-900 mb-2">Süreçlerinizin AI ile kolaylaştırılması</h3>
-                      <p className="text-gray-600">Tamamen sizi Tanıyan AI ile süreçlerinizi kolaylaştırın.</p>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">{t("aiProcessOptimizationTitle")}</h3>
+                      <p className="text-gray-600">{t("aiProcessOptimizationDesc")}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg text-gray-900 mb-2">Herşey sizin elinizde</h3>
-                      <p className="text-gray-600">Çözdüğünüz test aracılığıyla tüm sistemi size özel kişiselleştirin.</p>
+                      <h3 className="font-semibold text-lg text-gray-900 mb-2">{t("everythingInYourHandsTitle")}</h3>
+                      <p className="text-gray-600">{t("everythingInYourHandsDesc")}</p>
                     </div>
                   </div>
                 </StaggeredFadeIn>
@@ -239,7 +237,7 @@ export default function HomePage() {
                 <div className="bg-gray-100 rounded-2xl p-8 h-96 flex items-center justify-center">
                   <div className="text-center">
                     <BarChart className="h-24 w-24 text-gray-400 mx-auto mb-4" />
-                    <p className="text-gray-500">Dashboard Önizlemesi</p>
+                    <p className="text-gray-500">{t("dashboardPreview")}</p>
                   </div>
                 </div>
               </SlideIn>
@@ -255,16 +253,16 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <FadeIn>
               <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
-                Bugün başlayın, yarın büyüyün
+                {t("ctaTitle")}
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 mb-8 px-4 sm:px-0">
-                İşinizi bir sonraki seviyeye taşımak için gereken tüm AI araçları burada.
+                {t("ctaSubtitle")}
               </p>
             </FadeIn>
             <FadeIn delay={200}>
               <Link href="/pricing">
                 <Button size="lg" className="bg-[#E1182E] hover:bg-[#C51628] text-white px-8 py-4 text-lg font-semibold hover-lift">
-                  Hemen Başlayın <ArrowRight className="ml-2 h-5 w-5" />
+                  {t("startNow")} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </FadeIn>

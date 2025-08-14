@@ -1,8 +1,16 @@
 import { useEffect, useState } from 'react';
-
-const texts = ["gelecek kurun", "işinizi dönüştürün", "başarıya ulaşın"];
+import { useLanguage } from '@/hooks/use-language';
 
 export function AnimatedText() {
+  const { t } = useLanguage();
+  
+  // Metinleri çeviri dosyasından alıyoruz
+  const texts = [
+    t("animatedTextBuildFuture"),
+    t("animatedTextTransformBusiness"),
+    t("animatedTextAchieveSuccess")
+  ];
+
   const [displayedText, setDisplayedText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -38,7 +46,7 @@ export function AnimatedText() {
 
     // Bileşen kaldırıldığında temizlik yap
     return () => clearTimeout(timeoutId);
-  }, [displayedText, isDeleting, textIndex]);
+  }, [displayedText, isDeleting, textIndex, texts]); // 'texts' bağımlılık dizisine eklendi
 
   return (
     <>

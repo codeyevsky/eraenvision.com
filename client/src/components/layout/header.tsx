@@ -8,21 +8,17 @@ import { Eye, ChevronDown, Menu, X, Target, TrendingUp, BarChart3 } from 'lucide
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
-  // useRef'in hem zamanlayıcıyı (Timeout) hem de null'u tutabileceğini belirtiyoruz.
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { t } = useLanguage();
 
   const handleMouseEnter = () => {
-    // Eğer önceden ayarlanmış bir zamanlayıcı varsa, onu iptal et.
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
     }
-    // Açılır menüyü hemen göster.
     setIsProductsOpen(true);
   };
 
   const handleMouseLeave = () => {
-    // Menüyü kapatmak için 0.5 saniyelik bir gecikme ayarla.
     hoverTimeoutRef.current = setTimeout(() => {
       setIsProductsOpen(false);
     }, 100);
@@ -48,7 +44,7 @@ export function Header() {
               onMouseLeave={handleMouseLeave}
             >
               <Link href="/products" className="flex items-center text-gray-600 hover:text-gray-900 transition-colors font-medium">
-                Ürünler <ChevronDown className="ml-1 h-4 w-4" />
+                {t('products')} <ChevronDown className="ml-1 h-4 w-4" />
               </Link>
               
               {isProductsOpen && (
@@ -60,7 +56,7 @@ export function Header() {
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900">LAUNCH</div>
-                        <div className="text-sm text-gray-500">Girişimciler için</div>
+                        <div className="text-sm text-gray-500">{t('forEntrepreneurs')}</div>
                       </div>
                     </Link>
                     
@@ -70,7 +66,7 @@ export function Header() {
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900">SCALE</div>
-                        <div className="text-sm text-gray-500">Büyüyen şirketler için</div>
+                        <div className="text-sm text-gray-500">{t('forBusinesses')}</div>
                       </div>
                     </Link>
                     
@@ -80,8 +76,8 @@ export function Header() {
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900">INVEST</div>
-                        <div className="text-sm text-gray-500">Yatırımcılar için</div>
-                    </div>
+                        <div className="text-sm text-gray-500">{t('forInvestors')}</div>
+                      </div>
                     </Link>
                   </div>
                 </div>
@@ -92,16 +88,16 @@ export function Header() {
               DealBridge
             </Link>
             <Link href="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
-              Fiyatlandırma
+              {t('pricing')}
             </Link>
             <Link href="/blog" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
-              Blog
+              {t('blog')}
             </Link>
             <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
-              Hakkımızda
+              {t('about')}
             </Link>
             <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
-              İletişim
+              {t('contact')}
             </Link>
           </div>
 
@@ -111,7 +107,7 @@ export function Header() {
               <LanguageSwitcher />
             </div>
             <Button className="bg-[#E1182E] hover:bg-[#C51628] text-white font-semibold hidden sm:block">
-              Ücretsiz Başla
+              {t('startFree')}
             </Button>
             <Button
               variant="ghost"
@@ -131,7 +127,7 @@ export function Header() {
               
               {/* Mobile Products Section */}
               <div>
-                <div className="text-sm font-semibold text-gray-900 mb-4">Ürünler</div>
+                <div className="text-sm font-semibold text-gray-900 mb-4">{t('products')}</div>
                 <div className="space-y-3">
                   <Link 
                     href="/launch" 
@@ -140,10 +136,10 @@ export function Header() {
                   >
                     <div className="w-8 h-8 bg-red-50 text-[#E1182E] rounded-lg flex items-center justify-center">
                       <Target className="h-4 w-4" />
-                  </div>
+                    </div>
                     <div>
                       <div className="font-medium">LAUNCH</div>
-                      <div className="text-xs text-gray-500">Girişimciler için</div>
+                      <div className="text-xs text-gray-500">{t('forEntrepreneurs')}</div>
                     </div>
                   </Link>
                   
@@ -157,7 +153,7 @@ export function Header() {
                     </div>
                     <div>
                       <div className="font-medium">SCALE</div>
-                      <div className="text-xs text-gray-500">Büyüyen şirketler için</div>
+                      <div className="text-xs text-gray-500">{t('forBusinesses')}</div>
                     </div>
                   </Link>
                   
@@ -171,7 +167,7 @@ export function Header() {
                     </div>
                     <div>
                       <div className="font-medium">INVEST</div>
-                      <div className="text-xs text-gray-500">Yatırımcılar için</div>
+                      <div className="text-xs text-gray-500">{t('forInvestors')}</div>
                     </div>
                   </Link>
                 </div>
@@ -190,29 +186,29 @@ export function Header() {
                   href="/pricing" 
                   className="block text-gray-600 hover:text-gray-900 transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
-              >
-                  Fiyatlandırma
+                >
+                  {t('pricing')}
                 </Link>
                 <Link 
                   href="/blog" 
                   className="block text-gray-600 hover:text-gray-900 transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
-              >
-                  Blog
+                >
+                  {t('blog')}
                 </Link>
                 <Link 
                   href="/about" 
                   className="block text-gray-600 hover:text-gray-900 transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
-              >
-                  Hakkımızda
+                >
+                  {t('about')}
                 </Link>
                 <Link 
                   href="/contact" 
                   className="block text-gray-600 hover:text-gray-900 transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
-              >
-                  İletişim
+                >
+                  {t('contact')}
                 </Link>
               </div>
               
@@ -223,7 +219,7 @@ export function Header() {
                   className="w-full bg-[#E1182E] hover:bg-[#C51628] text-white font-semibold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Ücretsiz Başla
+                  {t('startFree')}
                 </Button>
               </div>
             </div>

@@ -46,77 +46,77 @@ export default function PricingPage() {
 
   const plans: Plan[] = [
     {
-      name: 'Başlangıç',
+      name: t('planStarter'),
       icon: Star,
-      description: "Platformu keşfetmek için ideal.",
+      description: t('planDescriptionStarter'),
       prices: {
         try: 0,
         usd: 0,
         eur: 0,
       },
       features: [
-        { text: 'AI Analiz Hakkı (ücretsiz)', included: true },
-        { text: 'Kişiselleştirilmiş test Hakkı (ücretsiz)', included: true },
-        { text: 'Dashboard verilerini görüntüleme (ücretsiz)', included: true },
-        { text: '100 Adet AI ile Konuşma Hakkı', included: true },
-        { text: 'Yol Haritası Oluşturma Hakkı (ücretsiz)', included: true },
-        { text: 'Birçok AI Özelliği', included: true },
+        { text: t('featureAiAnalysis'), included: true },
+        { text: t('featurePersonalizedTest'), included: true },
+        { text: t('featureDashboardData'), included: true },
+        { text: '100 ' + t('featureAiTalks'), included: true },
+        { text: t('featureRoadmapCreation'), included: true },
+        { text: t('featureAiFeatures'), included: true },
       ],
-      buttonText: 'Hemen Deneyin',
+      buttonText: t('tryNow'),
       buttonVariant: 'outline',
     },
     {
-      name: 'Profesyonel',
+      name: t('planPro'),
       icon: Zap,
       popular: true,
-      description: "Büyüyen işletmeler için güçlü destek.",
-      highlight: "En Popüler",
+      description: t('planDescriptionPro'),
+      highlight: t('popularHighlight'),
       prices: {
         try: 299,
         usd: 19.99,
         eur: 18.99,
       },
       features: [
-        { text: 'AI Analiz Hakkı (ücretsiz)', included: true },
-        { text: 'Kişiselleştirilmiş Test Hakkı (ücretsiz)', included: true },
-        { text: 'Dashboard verilerini görüntüleme (ücretsiz)', included: true },
-        { text: '1000 Adet AI ile Konuşma Hakkı', included: true },
-        { text: 'Yol Haritası Oluşturma (ücretsiz)', included: true },
-        { text: 'Birçok AI Özelliği', included: true },
+        { text: t('featureAiAnalysis'), included: true },
+        { text: t('featurePersonalizedTest'), included: true },
+        { text: t('featureDashboardData'), included: true },
+        { text: '1000 ' + t('featureAiTalks'), included: true },
+        { text: t('featureRoadmapCreation'), included: true },
+        { text: t('featureAiFeatures'), included: true },
       ],
-      buttonText: 'Satın Al',
+      buttonText: t('buyNow'),
       buttonVariant: 'outline',
     },
     {
-      name: 'Kurumsal',
+      name: t('planEnterprise'),
       icon: Crown,
       enterprise: true,
-      description: "Büyük organizasyonlar için özel çözümler.",
+      description: t('planDescriptionEnterprise'),
       prices: {
         try: 0,
         usd: 0,
         eur: 0,
       },
       features: [
-        { text: 'AI Analiz (free)', included: true },
-        { text: 'Kişiselleştirilmiş test (Ücretsiz)', included: true },
-        { text: 'Dashboard verilerini görüntüleme (ücretsiz)', included: true },
-        { text: '5000 Adet AI ile Konuşma Hakkı', included: true },
-        { text: 'Yol Haritası Oluşturma (ücretsiz)', included: true },
-        { text: 'Birçok AI Özelliği', included: true },
+        { text: t('featureAiAnalysis'), included: true },
+        { text: t('featurePersonalizedTest'), included: true },
+        { text: t('featureDashboardData'), included: true },
+        { text: '5000 ' + t('featureAiTalks'), included: true },
+        { text: t('featureRoadmapCreation'), included: true },
+        { text: t('featureAiFeatures'), included: true },
       ],
-      buttonText: 'İletişime Geçin',
+      buttonText: t('contactUs'),
       buttonVariant: 'outline',
     },
   ];
 
   const formatPrice = (plan: Plan) => {
     if (plan.enterprise) {
-      return 'İletişime Geçin';
+      return t('contactUs');
     }
     
-    if (plan.name === 'Başlangıç') {
-      return 'Ücretsiz';
+    if (plan.name === t('planStarter')) {
+      return t('free');
     }
 
     const price = plan.prices['usd'];
@@ -128,28 +128,28 @@ export default function PricingPage() {
 
   const faqs = [
     {
-      question: "Plan değişikliği nasıl yapılır?",
-      answer: "İstediğiniz zaman dashboard'tan planınızı değiştirebilirsiniz. Upgrade durumunda anında geçiş yapılır, downgrade ise sonraki faturalandırma döneminde devreye girer."
+      question: t('faqPlanChangeQuestion'),
+      answer: t('faqPlanChangeAnswer')
     },
     {
-      question: "Kur dönüşümü nasıl?",
-      answer: "Ödeme sayfasında, sadece USD ile ödeme kabul edilmektedir."
+      question: t('faqCurrencyQuestion'),
+      answer: t('faqCurrencyAnswer')
     },
     {
-      question: "İptal politikası nedir?",
-      answer: "İstediğiniz zaman aboneliğinizi iptal edebilirsiniz. İptal sonrası mevcut dönem sonuna kadar hizmet almaya devam edersiniz. Para iade garantimiz 30 gündür."
+      question: t('faqCancellationQuestion'),
+      answer: t('faqCancellationAnswer')
     },
     {
-      question: "Faturalandırma nasıl yapılır?",
-      answer: "Aylık olarak otomatik faturalandırma yapılır. Tüm ödemeler güvenli SSL ile korunmaktadır."
+      question: t('faqBillingQuestion'),
+      answer: t('faqBillingAnswer')
     },
     {
-      question: "Kurumsal indirim var mı?",
-      answer: "50+ kullanıcı için özel indirimler mevcuttur. Satış ekibimizle görüşün."
+      question: t('faqEnterpriseDiscountQuestion'),
+      answer: t('faqEnterpriseDiscountAnswer')
     },
     {
-      question: "Veri güvenliği nasıl sağlanıyor?",
-      answer: "Tüm veriler KVKK ve GDPR uyumlu olarak şifrelenerek saklanır ve işlenir."
+      question: t('faqDataSecurityQuestion'),
+      answer: t('faqDataSecurityAnswer')
     },
   ];
 
@@ -159,10 +159,10 @@ export default function PricingPage() {
       <section className="pt-24 pb-16 bg-gradient-to-br from-soft-paper to-background">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="font-heading font-bold text-4xl lg:text-6xl mb-6 tracking-wide">
-            Herkes İçin Uygun Fiyatlandırma
+            {t('pricingTitlePage')}
           </h1>
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-            İhtiyacınıza göre seçebileceğiniz esnek planlarla dijital dönüşüm yolculuğunuza başlayın. Ücretsiz planla teste başlayın, işletmeniz büyüdükçe planlara geçin.
+            {t('pricingSubtitlePage')}
           </p>
         </div>
       </section>
@@ -172,12 +172,12 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={cn(
                   "relative rounded-3xl p-8 transition-all duration-300",
-                  plan.popular 
-                    ? "border-2 border-primary bg-gradient-to-b from-primary/5 to-background shadow-xl" 
+                  plan.popular
+                    ? "border-2 border-primary bg-gradient-to-b from-primary/5 to-background shadow-xl"
                     : "border border-border bg-background shadow-lg hover:border-primary/20 hover:shadow-xl"
                 )}
               >
@@ -204,13 +204,13 @@ export default function PricingPage() {
                     <div className="text-4xl font-bold text-primary mb-1">
                       {formatPrice(plan)}
                     </div>
-                    {plan.name === 'Başlangıç' ? (
+                    {plan.name === t('planStarter') ? (
                       <div className="text-muted-foreground text-sm">
-                        /3 gün deneme süresi
+                        {t('trialDays')}
                       </div>
                     ) : (
                       <div className="text-muted-foreground text-sm">
-                        /ay
+                        {t('perMonth')}
                       </div>
                     )}
                   </div>
@@ -221,8 +221,8 @@ export default function PricingPage() {
                     <div key={featureIndex} className="flex items-start space-x-3">
                       <div className={cn(
                         "w-5 h-5 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0",
-                        feature.included 
-                          ? "bg-accent-mint text-white" 
+                        feature.included
+                          ? "bg-accent-mint text-white"
                           : "bg-muted text-muted-foreground"
                       )}>
                         <Check className="h-3 w-3" />
@@ -237,7 +237,7 @@ export default function PricingPage() {
                   ))}
                 </div>
                 
-                <Button 
+                <Button
                   variant={plan.buttonVariant}
                   className={cn(
                     "w-full py-4 text-lg font-semibold",
@@ -259,10 +259,10 @@ export default function PricingPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-3xl lg:text-4xl mb-4">
-              Fiyatlandırma Hakkında SSS
+              {t('pricingFaqTitle')}
             </h2>
             <p className="text-xl text-muted-foreground">
-              Fiyatlandırma ile ilgili merak ettikleriniz
+              {t('pricingFaqSubtitle')}
             </p>
           </div>
           
@@ -285,32 +285,32 @@ export default function PricingPage() {
       <section className="py-24 bg-gradient-to-r from-primary to-primary/90 text-primary-foreground">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-heading font-bold text-3xl lg:text-4xl mb-4">
-            Hemen Başlayın
+            {t('ctaPricingTitle')}
           </h2>
           <p className="text-xl opacity-90 mb-8">
-            3 gün ücretsiz deneme ile risk almadan deneyin
+            {t('ctaPricingSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-background text-primary hover:bg-background/90 px-8 py-4 text-lg font-semibold hover-lift"
             >
-              Ücretsiz Başla
+              {t('ctaStartFree')}
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
+            <Button
+              variant="outline"
+              size="lg"
               className="border-2 border-background text-background hover:bg-background hover:text-primary px-8 py-4 text-lg font-semibold hover-lift"
             >
-              Satışla Görüş
+              {t('contactSalesBtn')}
             </Button>
           </div>
           
           <div className="mt-8 text-sm opacity-75">
-            Tüm planlar 3 gün ücretsiz deneme ile gelir. İstediğin zaman iptal edebilirsin.
+            {t('pricingDisclaimerCta')}
           </div>
         </div>
       </section>
     </div>
   );
-} 
+}
