@@ -7,7 +7,7 @@ import { LanguageProvider } from "@/hooks/use-language";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CookieConsent } from "@/components/ui/cookie-consent";
-import HomePage from "@/pages/home";
+import  HomePage  from "@/pages/home";
 import ProductsPage from "@/pages/products";
 import LaunchPage from "@/pages/launch";
 import ScalePage from "@/pages/scale";

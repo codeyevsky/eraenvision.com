@@ -1,22 +1,20 @@
-// src/pages/HomePage.jsx
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
 import { BarChart, TrendingUp, Target, ArrowRight, CheckCircle, Link2 } from 'lucide-react';
 import { PageTransition, FadeIn, SlideIn, StaggeredFadeIn } from '@/components/ui/page-transition';
 import MindMapWidget from '@/components/ui/mindmap-widget';
 import { Link } from 'wouter';
-
 import { AnimatedText } from '@/components/ui/animated-text';
 
 import bdbAkademi from "../../../dist/public/assets/bdb-akademi-Ckb24dQw.png";
 import bilgiyiTicaretlestirmeMerkezi from "../../../dist/public/assets/bilgiyi-ticaretlestirme-merkezi-CEHe0ljd.png";
-import clario from "../../../dist/public/assets/clario-jSEEsDrL.png";
+import clario from "../../../dist/public/assets/cetele-tr.png";
 import demirlerKuyumculuk from "../../../dist/public/assets/demirler-kuyumculuk-ADmwm2gR.png";
 import fcsTekno from "../../../dist/public/assets/fcs-tekno-BungFEUR.png";
-import healyt from "../../../dist/public/assets/healyt-drnB05Nh.png";
 import igneDolusuTasarim from "../../../dist/public/assets/igne-dolusu-tasarim-DQzdEby8.png";
 import touristiy from "../../../dist/public/assets/touristiy-ChVkMFI.png";
 import zumrutGumus from "../../../dist/public/assets/zumrut-gumus-DsgtCUhd.png";
+import eraEnvisionPreview from '../../../dist/public/assets/EraEnvision-AI-Powered-Business-Advisor.png';
 import { FAQSection } from '@/components/sections/faq';
 
 export default function HomePage() {
@@ -27,8 +25,7 @@ export default function HomePage() {
     bilgiyiTicaretlestirmeMerkezi,
     clario,
     demirlerKuyumculuk,
-    fcsTekno,
-    healyt,
+    fcsTekno, 
     igneDolusuTasarim,
     touristiy,
     zumrutGumus
@@ -48,12 +45,12 @@ export default function HomePage() {
           
           <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
             <FadeIn delay={100}>
-              <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8 text-gray-900 leading-tight">
-                <span className="whitespace-nowrap">
+              <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8 text-gray-900 leading-tight flex flex-col items-center">
+                <span className="mb-2">
                   {t("heroTitle")}
-                  <span className="bg-gradient-to-r from-[#E1182E] to-[#FF4757] bg-clip-text text-transparent">
-                    <AnimatedText />
-                  </span>
+                </span>
+                <span className="block bg-gradient-to-r from-[#E1182E] to-[#FF4757] bg-clip-text text-transparent">
+                  <AnimatedText />
                 </span>
               </h1>
             </FadeIn>
@@ -234,11 +231,12 @@ export default function HomePage() {
                 </StaggeredFadeIn>
               </SlideIn>
               <SlideIn direction="right">
-                <div className="bg-gray-100 rounded-2xl p-8 h-96 flex items-center justify-center">
-                  <div className="text-center">
-                    <BarChart className="h-24 w-24 text-gray-400 mx-auto mb-4" />
-                    <p className="text-gray-500">{t("dashboardPreview")}</p>
-                  </div>
+                <div className="bg-gray-100 rounded-2xl h-96 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={eraEnvisionPreview} 
+                    alt={t("dashboardPreview")} 
+                    className="object-cover h-full w-full"
+                  />
                 </div>
               </SlideIn>
             </div>

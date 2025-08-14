@@ -1,59 +1,61 @@
-import { useEffect, useState } from 'react';
-import { useLanguage } from '@/hooks/use-language';
+  // animated-text.tsx
 
-export function AnimatedText() {
-  const { t } = useLanguage();
-  
-  // Metinleri çeviri dosyasından alıyoruz
-  const texts = [
-    t("animatedTextBuildFuture"),
-    t("animatedTextTransformBusiness"),
-    t("animatedTextAchieveSuccess")
-  ];
+  import { useEffect, useState } from 'react';
+  import { useLanguage } from '@/hooks/use-language';
 
-  const [displayedText, setDisplayedText] = useState("");
-  const [textIndex, setTextIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  export function AnimatedText() {
+    const { t } = useLanguage();
+    
+    // Metinleri çeviri dosyasından alıyoruz
+    const texts = [
+      t("animatedTextBuildFuture"),
+      t("animatedTextTransformBusiness"),
+      t("animatedTextAchieveSuccess")
+    ];
 
-  useEffect(() => {
-    const currentText = texts[textIndex];
-    let timeoutId: NodeJS.Timeout;
+    const [displayedText, setDisplayedText] = useState("");
+    const [textIndex, setTextIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
 
-    if (isDeleting) {
-      // Harf harf silme işlemi
-      if (displayedText.length > 0) {
-        timeoutId = setTimeout(() => {
-          setDisplayedText(currentText.substring(0, displayedText.length - 1));
-        }, 75); // Silme hızı (milisaniye)
-      } else {
-        // Silme işlemi bitti, bir sonraki metne geç
-        setIsDeleting(false);
-        setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-      }
-    } else {
-      // Harf harf yazma işlemi
-      if (displayedText.length < currentText.length) {
-        timeoutId = setTimeout(() => {
-          setDisplayedText(currentText.substring(0, displayedText.length + 1));
-        }, 150); // Yazma hızı (milisaniye)
-      } else {
-        // Yazma işlemi bitti, silmeden önce bekle
-        timeoutId = setTimeout(() => {
-          setIsDeleting(true);
-        }, 1500); // Yazma bittikten sonra bekleme süresi (milisaniye)
-      }
-    }
+    useEffect(() => {
+      const currentText = texts[textIndex];
+      let timeoutId: NodeJS.Timeout;
 
-    // Bileşen kaldırıldığında temizlik yap
-    return () => clearTimeout(timeoutId);
-  }, [displayedText, isDeleting, textIndex, texts]); // 'texts' bağımlılık dizisine eklendi
+      if (isDeleting) {
+        // Harf harf silme işlemi
+        if (displayedText.length > 0) {
+          timeoutId = setTimeout(() => {
+            setDisplayedText(currentText.substring(0, displayedText.length - 1));
+          }, 75); // Silme hızı (milisaniye)
+        } else {
+          // Silme işlemi bitti, bir sonraki metne geç
+          setIsDeleting(false);
+          setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+        }
+      } else {
+        // Harf harf yazma işlemi
+        if (displayedText.length < currentText.length) {
+          timeoutId = setTimeout(() => {
+            setDisplayedText(currentText.substring(0, displayedText.length + 1));
+          }, 150); // Yazma hızı (milisaniye)
+        } else {
+          // Yazma işlemi bitti, silmeden önce bekle
+          timeoutId = setTimeout(() => {
+            setIsDeleting(true);
+          }, 1500); // Yazma bittikten sonra bekleme süresi (milisaniye)
+        }
+      }
 
-  return (
-    <>
-      <span className="whitespace-nowrap">
-        {displayedText}
-      </span>
-      <span className="blinking-cursor">|</span>
-    </>
-  );
-}
+      // Bileşen kaldırıldığında temizlik yap
+      return () => clearTimeout(timeoutId);
+    }, [displayedText, isDeleting, textIndex, texts]);
+
+    return (
+      <>
+        <span>
+          {displayedText}
+        </span>
+        <span className="blinking-cursor">|</span>
+      </>
+    );
+  }
