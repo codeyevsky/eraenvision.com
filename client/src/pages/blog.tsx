@@ -5,94 +5,95 @@ import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/hooks/use-language';
 import { Search, Calendar, ArrowRight, Clock, User, Tag } from 'lucide-react';
 import { Link } from 'wouter';
+import { TranslationKey } from '@/lib/translations';
 
 interface BlogPost {
   id: string;
-  title: string;
-  excerpt: string;
+  title: TranslationKey;
+  excerpt: TranslationKey;
   content: string;
   author: string;
   date: string;
   readTime: number;
-  category: string;
-  tags: string[];
+  category: TranslationKey;
+  tags: TranslationKey[];
   slug: string;
   featured?: boolean;
 }
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('allCategories');
   const { t } = useLanguage();
 
   const blogPosts: BlogPost[] = [
     {
       id: '1',
-      title: 'AI ile Girişimcilik: 2025\'te Başarılı Olmak İçin 10 Strateji',
-      excerpt: 'Yapay zekanın girişimcilik dünyasını nasıl dönüştürdüğünü ve bu değişimde öne geçmek için neler yapmanız gerektiğini keşfedin.',
+      title: 'blogPost1Title',
+      excerpt: 'blogPost1Excerpt',
       content: '',
       author: 'Emirhan Demir',
       date: '2025-01-10',
       readTime: 8,
-      category: 'AI & Girişimcilik',
-      tags: ['AI', 'Girişimcilik', 'Strateji', 'İnovasyon'],
+      category: 'categoryAiEntrepreneurship',
+      tags: ['ai', 'entrepreneurship', 'strategy', 'innovation'],
       slug: 'ai-ile-girisimcilik-2025-stratejileri',
       featured: true
     },
     {
       id: '2',
-      title: 'E-ticaret Büyütme: Veri Odaklı Yaklaşımlar',
-      excerpt: 'E-ticaret işletmenizi büyütürken veriyi nasıl kullanacağınızı, hangi metrikleri takip edeceğinizi öğrenin.',
+      title: 'blogPost2Title',
+      excerpt: 'blogPost2Excerpt',
       content: '',
       author: 'Emirhan Demir',
       date: '2025-01-08',
       readTime: 6,
-      category: 'E-ticaret',
-      tags: ['E-ticaret', 'Veri Analizi', 'Büyüme', 'Metrikler'],
+      category: 'categoryEcommerce',
+      tags: ['ecommerce', 'data_analysis', 'growth', 'metrics'],
       slug: 'e-ticaret-buyutme-veri-odakli-yaklasimlar'
     },
     {
       id: '3',
-      title: 'Yatırım Kararlarında AI: Geleceğin Fon Yöneticileri',
-      excerpt: 'Yapay zekanın yatırım dünyasındaki rolü ve akıllı yatırım kararları almak için AI araçlarını nasıl kullanabileceğiniz.',
+      title: 'blogPost3Title',
+      excerpt: 'blogPost3Excerpt',
       content: '',
       author: 'Emirhan Demir',
       date: '2025-01-05',
       readTime: 10,
-      category: 'Yatırım & Finans',
-      tags: ['AI', 'Yatırım', 'Fintech', 'Analiz'],
+      category: 'categoryInvestmentFinance',
+      tags: ['ai', 'investment', 'fintech', 'analysis'],
       slug: 'yatirim-kararlarinda-ai-gelecegin-fon-yoneticileri'
     },
     {
       id: '4',
-      title: 'Startup MVP Geliştirme: Hızlı ve Etkili Yöntemler',
-      excerpt: 'Minimum Viable Product (MVP) geliştirme sürecini hızlandıran modern yaklaşımlar ve araçlar.',
+      title: 'blogPost4Title',
+      excerpt: 'blogPost4Excerpt',
       content: '',
       author: 'Emirhan Demir',
       date: '2025-01-03',
       readTime: 7,
-      category: 'Startup',
-      tags: ['MVP', 'Startup', 'Ürün Geliştirme', 'Agile'],
+      category: 'categoryStartup',
+      tags: ['mvp', 'product_development', 'agile'],
       slug: 'startup-mvp-gelistirme-hizli-etkili-yontemler'
     }
   ];
 
-  const categories = [
-    'all',
-    'AI & Girişimcilik',
-    'E-ticaret',
-    'Yatırım & Finans',
-    'Startup',
-    'Pazarlama',
-    'SaaS'
+  const categories: TranslationKey[] = [
+    'allCategories',
+    'categoryAiEntrepreneurship',
+    'categoryEcommerce',
+    'categoryInvestmentFinance',
+    'categoryStartup',
+    'categoryMarketing',
+    'categorySaaS'
   ];
 
   const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesSearch = t(post.title).toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          t(post.excerpt).toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          post.tags.some(tag => t(tag).toLowerCase().includes(searchTerm.toLowerCase()));
     
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'allCategories' || post.category === selectedCategory;
     
     return matchesSearch && matchesCategory;
   });
@@ -102,22 +103,22 @@ export default function BlogPage() {
 
   return (
     <>
-      <title>Blog - EraEnvision | AI ve İş Büyütme İçerikleri</title>
-      <meta name="description" content="EraEnvision blog sayfası. AI, girişimcilik, iş büyütme ve dijital dönüşüm konularında uzman içerikler ve stratejiler." />
-      <meta property="og:title" content="EraEnvision Blog | AI ve İş Büyütme İçerikleri" />
-      <meta property="og:description" content="AI, girişimcilik, iş büyütme ve dijital dönüşüm konularında uzman içerikler." />
+      <title>{t('blogPageTitle')}</title>
+      <meta name="description" content={t('blogPageMetaDesc')} />
+      <meta property="og:title" content={t('blogPageOGTitle')} />
+      <meta property="og:description" content={t('blogPageOGDesc')} />
       <meta property="og:type" content="website" />
-      <meta name="keywords" content="blog, AI blog, iş büyütme, girişimcilik, startup rehberi, dijital pazarlama, EraEnvision" />
+      <meta name="keywords" content={t('blogPageKeywords')} />
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <h1 className="font-heading font-bold text-3xl sm:text-4xl lg:text-6xl mb-6 tracking-wide">
-              AI ve İş Dünyası Blog
+              {t('blogHeroTitle')}
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 mb-12 leading-relaxed px-4 sm:px-0">
-              Yapay zeka, girişimcilik ve büyüme stratejileri hakkında güncel içerikler
+              {t('blogHeroSubtitle')}
             </p>
           </div>
         </section>
@@ -130,7 +131,7 @@ export default function BlogPage() {
             <div className="relative flex-1 max-w-md w-full">
               <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
               <Input
-                placeholder="Blog yazılarında ara..."
+                placeholder={t('searchBlogPlaceholder')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 w-full"
@@ -147,7 +148,7 @@ export default function BlogPage() {
                   onClick={() => setSelectedCategory(category)}
                   className="rounded-full text-xs sm:text-sm px-3 sm:px-4"
                 >
-                  {category === 'all' ? 'Tümü' : category}
+                  {t(category)}
                 </Button>
               ))}
             </div>
@@ -156,20 +157,20 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Post */}
-      {featuredPost && selectedCategory === 'all' && !searchTerm && (
+      {featuredPost && selectedCategory === 'allCategories' && !searchTerm && (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="bg-gradient-to-r from-[#E1182E]/5 to-[#E1182E]/10 rounded-3xl p-6 sm:p-8 lg:p-12">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <Badge className="mb-4 bg-[#E1182E] text-white">
-                    Öne Çıkan Makale
+                    {t('featuredArticle')}
                   </Badge>
                   <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mb-4 leading-tight">
-                    {featuredPost.title}
+                    {t(featuredPost.title)}
                   </h2>
                   <p className="text-gray-600 text-base sm:text-lg mb-6 leading-relaxed">
-                    {featuredPost.excerpt}
+                    {t(featuredPost.excerpt)}
                   </p>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-gray-500 mb-6">
                     <div className="flex items-center gap-2">
@@ -178,16 +179,16 @@ export default function BlogPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4" />
-                      <span>{new Date(featuredPost.date).toLocaleDateString('tr-TR')}</span>
+                      <span>{new Date(featuredPost.date).toLocaleDateString(t('langCode') === 'tr' ? 'tr-TR' : 'en-US')}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="h-4 w-4" />
-                      <span>{featuredPost.readTime} dk okuma</span>
+                      <span>{featuredPost.readTime} {t('minRead')}</span>
                     </div>
                   </div>
                   <Link href={`/blog/${featuredPost.slug}`}>
                     <Button size="lg" className="hover-lift bg-[#E1182E] hover:bg-[#C51628] text-white">
-                      Makaleyi Oku <ArrowRight className="ml-2 h-4 w-4" />
+                      {t('readArticle')} <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
                 </div>
@@ -210,7 +211,7 @@ export default function BlogPage() {
           {filteredPosts.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-gray-600 text-lg">
-                Aradığınız kriterlere uygun makale bulunamadı.
+                {t('noPostsFound')}
               </p>
             </div>
           ) : (
@@ -219,15 +220,15 @@ export default function BlogPage() {
                 <article key={post.id} className="bg-white border border-gray-200 rounded-3xl p-6 hover:shadow-lg transition-all hover-lift">
                   <div className="mb-4">
                     <Badge variant="outline" className="mb-3">
-                      {post.category}
+                      {t(post.category)}
                     </Badge>
                     <h3 className="font-heading font-semibold text-xl mb-3 leading-tight">
                       <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
-                        {post.title}
+                        {t(post.title)}
                       </Link>
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                      {post.excerpt}
+                      {t(post.excerpt)}
                     </p>
                   </div>
 
@@ -238,21 +239,21 @@ export default function BlogPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="h-4 w-4" />
-                      {post.readTime} dk
+                      {post.readTime} {t('minRead')}
                     </div>
                   </div>
 
                   <div className="flex items-center gap-2 mb-4">
                     {post.tags.slice(0, 3).map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
-                        {tag}
+                        {t(tag)}
                       </Badge>
                     ))}
                   </div>
 
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-muted-foreground">
-                      {new Date(post.date).toLocaleDateString('tr-TR')}
+                      {new Date(post.date).toLocaleDateString(t('langCode') === 'tr' ? 'tr-TR' : 'en-US')}
                     </span>
                     <Link href={`/blog/${post.slug}`}>
                       <Button variant="ghost" size="sm" className="p-2">
@@ -271,22 +272,22 @@ export default function BlogPage() {
       <section className="py-16 bg-soft-paper">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-heading font-bold text-3xl mb-4">
-            Yeni Makaleleri Kaçırmayın
+            {t('newsletterTitle')}
           </h2>
           <p className="text-muted-foreground text-lg mb-8">
-            AI, girişimcilik ve büyüme stratejileri hakkında en güncel içerikleri e-posta kutunuzda alın.
+            {t('newsletterSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input 
-              placeholder="E-posta adresiniz" 
+              placeholder={t('emailPlaceholder')} 
               className="flex-1"
             />
             <Button className="hover-lift">
-              Abone Ol
+              {t('subscribe')}
             </Button>
           </div>
           <p className="text-sm text-muted-foreground mt-4">
-            İstediğiniz zaman aboneliğinizi iptal edebilirsiniz. Spam yapmayız.
+            {t('cancelAnytime')}
           </p>
         </div>
       </section>

@@ -21,8 +21,8 @@ export default function ContactPage() {
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     toast({
-      title: "Mesajınız gönderildi!",
-      description: "En kısa sürede size dönüş yapacağız.",
+      title: t("messageSentToastTitle"),
+      description: t("messageSentToastDesc"),
     });
 
     setIsSubmitting(false);
@@ -31,27 +31,27 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: Mail,
-      title: "E-posta",
+      title: t('contactEmail'),
       content: "hello@eraenvision.com",
-      description: "7/24 e-posta desteği"
+      description: t('emailSupportDesc')
     },
     {
       icon: Phone,
-      title: "Telefon",
+      title: t('contactPhone'),
       content: "+90 (555) 123-4567",
-      description: "Mesai saatleri içinde"
+      description: t('phoneHoursDesc')
     },
     {
       icon: MapPin,
-      title: "Adres",
-      content: "İstanbul, Türkiye",
-      description: "Uzaktan ekip"
+      title: t('contactAddress'),
+      content: t('contactAddress'),
+      description: t('addressDesc')
     },
     {
       icon: Clock,
-      title: "Çalışma Saatleri",
-      content: "Pzt-Cum 09:00-18:00",
-      description: "GMT+3 saat dilimi"
+      title: t('contactHours'),
+      content: t('contactHours'),
+      description: t('hoursDesc')
     }
   ];
 
@@ -69,23 +69,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Info Cards */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="bg-soft-paper p-6 rounded-2xl border border-border hover-lift text-center">
-                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <info.icon className="h-6 w-6" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">{info.title}</h3>
-                <p className="font-medium text-primary mb-1">{info.content}</p>
-                <p className="text-sm text-muted-foreground">{info.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Main Contact Form */}
       <section className="py-24 bg-soft-paper">
@@ -95,10 +78,10 @@ export default function ContactPage() {
             <div className="bg-background rounded-3xl shadow-xl p-8 border border-border">
               <div className="mb-8">
                 <h2 className="font-heading font-bold text-2xl lg:text-3xl mb-4">
-                  Mesaj Gönderin
+                  {t('quickContactTitle')}
                 </h2>
                 <p className="text-muted-foreground">
-                  Formu doldurun, size en kısa sürede dönüş yapalım.
+                  {t('quickContactSubtitle')}
                 </p>
               </div>
 
@@ -184,10 +167,10 @@ export default function ContactPage() {
                         <SelectValue placeholder={t('budgetRange')} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="starter">Starter (Ücretsiz)</SelectItem>
-                        <SelectItem value="pro">Pro (₺299/ay)</SelectItem>
-                        <SelectItem value="business">Business (₺599/ay)</SelectItem>
-                        <SelectItem value="enterprise">Enterprise (Özel)</SelectItem>
+                        <SelectItem value="starter">Starter ({t('free')})</SelectItem>
+                        <SelectItem value="pro">Pro ({t('proPrice')})</SelectItem>
+                        <SelectItem value="business">Business ({t('businessPrice')})</SelectItem>
+                        <SelectItem value="enterprise">Enterprise ({t('custom')})</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -228,7 +211,7 @@ export default function ContactPage() {
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Gönderiliyor...
+                      {t('submitting')}
                     </>
                   ) : (
                     <>
@@ -245,7 +228,7 @@ export default function ContactPage() {
               {/* Quick Contact */}
               <div className="bg-background rounded-3xl shadow-xl p-8 border border-border">
                 <h3 className="font-heading font-bold text-xl mb-6">
-                  Hızlı İletişim
+                  {t('contactInfoTitle')}
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4 p-4 bg-soft-paper rounded-xl">
@@ -253,7 +236,7 @@ export default function ContactPage() {
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
-                      <div className="font-medium">Satış Ekibi</div>
+                      <div className="font-medium">{t('salesTeam')}</div>
                       <div className="text-sm text-muted-foreground">sales@eraenvision.com</div>
                     </div>
                   </div>
@@ -262,7 +245,7 @@ export default function ContactPage() {
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
-                      <div className="font-medium">Teknik Destek</div>
+                      <div className="font-medium">{t('techSupport')}</div>
                       <div className="text-sm text-muted-foreground">support@eraenvision.com</div>
                     </div>
                   </div>
@@ -271,7 +254,7 @@ export default function ContactPage() {
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
-                      <div className="font-medium">Genel Sorular</div>
+                      <div className="font-medium">{t('generalInquiries')}</div>
                       <div className="text-sm text-muted-foreground">hello@eraenvision.com</div>
                     </div>
                   </div>
@@ -281,20 +264,20 @@ export default function ContactPage() {
               {/* FAQ Preview */}
               <div className="bg-background rounded-3xl shadow-xl p-8 border border-border">
                 <h3 className="font-heading font-bold text-xl mb-6">
-                  Sık Sorulan Sorular
+                  {t('faqTitle')}
                 </h3>
                 <div className="space-y-4">
                   <div className="border-b border-border pb-4">
-                    <h4 className="font-medium mb-2">Ücretsiz deneme var mı?</h4>
-                    <p className="text-sm text-muted-foreground">Evet, 14 gün ücretsiz deneme sunuyoruz.</p>
+                    <h4 className="font-medium mb-2">{t('freeTrialAvailable')}</h4>
+                    <p className="text-sm text-muted-foreground">{t('freeTrialAvailableAnswer')}</p>
                   </div>
                   <div className="border-b border-border pb-4">
-                    <h4 className="font-medium mb-2">Hangi sektörlere hizmet veriyorsunuz?</h4>
-                    <p className="text-sm text-muted-foreground">Tüm sektörlerden işletmelere hizmet veriyoruz.</p>
+                    <h4 className="font-medium mb-2">{t('whichSegments')}</h4>
+                    <p className="text-sm text-muted-foreground">{t('whichSegmentsAnswer')}</p>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-2">Kurulum süresi ne kadar?</h4>
-                    <p className="text-sm text-muted-foreground">Ortalama 24 saat içinde aktif hale gelir.</p>
+                    <h4 className="font-medium mb-2">{t('howDoesItWork')}</h4>
+                    <p className="text-sm text-muted-foreground">{t('howDoesItWorkAnswer')}</p>
                   </div>
                 </div>
               </div>
@@ -302,15 +285,15 @@ export default function ContactPage() {
               {/* Calendar Booking */}
               <div className="bg-gradient-to-r from-primary to-primary/90 rounded-3xl p-8 text-primary-foreground">
                 <h3 className="font-heading font-bold text-xl mb-4">
-                  Online Toplantı Planlayın
+                  {t('bookMeetingTitle')}
                 </h3>
                 <p className="mb-6 opacity-90">
-                  Uzmanlarımızla birebir görüşme yapmak ister misiniz?
+                  {t('bookMeetingSubtitle')}
                 </p>
                 <Button 
                   className="bg-background text-primary hover:bg-background/90 w-full"
                 >
-                  Takvim Görüntüle
+                  {t('viewCalendar')}
                 </Button>
               </div>
             </div>
@@ -323,10 +306,10 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="font-heading font-bold text-3xl lg:text-4xl mb-4">
-              Konumumuz
+              {t('locationTitle')}
             </h2>
             <p className="text-xl text-muted-foreground">
-              Uzaktan çalışan global ekibimiz
+              {t('locationSubtitle')}
             </p>
           </div>
           
@@ -334,12 +317,10 @@ export default function ContactPage() {
             <div className="max-w-2xl mx-auto">
               <MapPin className="h-12 w-12 text-primary mx-auto mb-6" />
               <h3 className="font-heading font-bold text-2xl mb-4">
-                İstanbul, Türkiye
+                {t('contactAddress')}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Ana merkezimiz İstanbul'da bulunmakla birlikte, ekibimiz farklı şehirlerden 
-                uzaktan çalışmaktadır. Bu sayede size 7/24 destek sağlayabilir ve 
-                global perspektif sunabiliriz.
+                {t('locationDescription')}
               </p>
             </div>
           </div>

@@ -10,6 +10,10 @@ export const translations = {
     startFree: "Ücretsiz Başlayın",
     watchDemo: "Demo İzleyin",
 
+    langCode: 'tr',
+    messageSentToastTitle: "Mesaj Gönderildi!",
+    messageSentToastDesc: "En kısa sürede size geri dönüş yapacağız.",
+
     // Hero Section
     heroTitle: "AI ile iş büyütün,",
     heroSubtitle: "EraEnvision ile işinizi AI destekli çözümlerle büyütün. Girişimciler, büyüyen şirketler ve yatırımcılar için özel yapay zeka danışmanlığı.",
@@ -585,8 +589,114 @@ export const translations = {
     aboutCtaTitle: "Bize Katılın",
     aboutCtaSubtitle: "Büyümenizi hızlandırmaya hazır mısınız? Hemen başlayın.",
     aboutCtaContact: "İletişime Geç",
+    
+       blogHeroTitle: "AI ve İş Dünyası Blog",
+    blogHeroSubtitle: "Yapay zeka, girişimcilik ve büyüme stratejileri hakkında güncel içerikler",
+    searchBlogPlaceholder: "Blog yazılarında ara...",
+    allCategories: "Tümü",
+    featuredArticle: "Öne Çıkan Makale",
+    readArticle: "Makaleyi Oku",
+    minRead: "dk okuma",
+    noPostsFound: "Aradığınız kriterlere uygun makale bulunamadı.",
+    newsletterTitle: "Yeni Makaleleri Kaçırmayın",
+    newsletterSubtitle: "AI, girişimcilik ve büyüme stratejileri hakkında en güncel içerikleri e-posta kutunuzda alın.",
+    subscribe: "Abone Ol",
+    cancelAnytime: "İstediğiniz zaman aboneliğinizi iptal edebilirsiniz. Spam yapmayız.",
+    
+    // Blog Post Page
+    backToBlog: "Blog'a Dön",
+    article: "Makale",
+    share: "Paylaş",
+    articleNotFound: "Makale bulunamadı",
+    articleNotFoundDesc: "Aradığınız blog yazısı mevcut değil.",
+    authorProfile: "EraEnvision kurucusu ve CEO'su. 10+ yıl teknoloji ve iş geliştirme deneyimi ile girişimcilere rehberlik ediyor.",
+    aiTeamProfile: "EraEnvision AI takımı, en güncel yapay zeka trendlerini ve iş dünyasındaki uygulamalarını analiz ediyor.",
+    otherArticles: "Diğer Yazılar",
+    relatedArticles: "İlginizi Çekebilecek Diğer Makaleler",
+    
+    // Contact Page
+    contactInfoTitle: "Hızlı İletişim",
+    salesTeam: "Satış Ekibi",
+    techSupport: "Teknik Destek",
+    generalInquiries: "Genel Sorular",
+    quickContactTitle: "Mesaj Gönderin",
+    quickContactSubtitle: "Formu doldurun, size en kısa sürede dönüş yapalım.",
 
+    submitting: "Gönderiliyor...",
+    
+    // Contact Info
+    contactEmail: "hello@eraenvision.com",
+    contactPhone: "+90 (555) 123-4567",
+    contactAddress: "İstanbul, Türkiye",
+    contactHours: "Pzt-Cum 09:00-18:00",
+    emailSupportDesc: "7/24 e-posta desteği",
+    phoneHoursDesc: "Mesai saatleri içinde",
+    addressDesc: "Uzaktan ekip",
+    hoursDesc: "GMT+3 saat dilimi",
+    
+    // Contact Right Panel
+    bookMeetingTitle: "Online Toplantı Planlayın",
+    bookMeetingSubtitle: "Uzmanlarımızla birebir görüşme yapmak ister misiniz?",
+    viewCalendar: "Takvim Görüntüle",
+    locationTitle: "Konumumuz",
+    locationSubtitle: "Uzaktan çalışan global ekibimiz",
+    locationDescription: "Ana merkezimiz İstanbul'da bulunmakla birlikte, ekibimiz farklı şehirlerden uzaktan çalışmaktadır. Bu sayede size 7/24 destek sağlayabilir ve global perspektif sunabiliriz.",
+    
+    // Blog Categories
+    categoryAiEntrepreneurship: "AI & Girişimcilik",
+    categoryEcommerce: "E-ticaret",
+    categoryInvestmentFinance: "Yatırım & Finans",
+    categoryStartup: "Startup",
+    categoryMarketing: "Pazarlama",
+    categorySaaS: "SaaS",
 
+    blogPageTitle: "Blog - EraEnvision | AI ve İş Büyütme İçerikleri",
+    blogPageMetaDesc: "EraEnvision blog sayfası. AI, girişimcilik, iş büyütme ve dijital dönüşüm konularında uzman içerikler ve stratejiler.",
+    blogPageOGTitle: "EraEnvision Blog | AI ve İş Büyütme İçerikleri",
+    blogPageOGDesc: "AI, girişimcilik, iş büyütme ve dijital dönüşüm konularında uzman içerikler.",
+    blogPageKeywords: "blog, AI blog, iş büyütme, girişimcilik, startup rehberi, dijital pazarlama, EraEnvision",
+    
+    // Blog Post Contents
+    blogPost1Title: "AI ile Girişimcilik: 2025'te Başarılı Olmak İçin 10 Strateji",
+    blogPost1Excerpt: "Yapay zekanın girişimcilik dünyasını nasıl dönüştürdüğünü ve bu değişimde öne geçmek için neler yapmanız gerektiğini keşfedin.",
+    blogPost1Content: `<p>2025 yılı, yapay zekanın iş dünyasında tam anlamıyla yerleşik hale geldiği bir dönem olarak tarihe geçecek. Girişimciler için bu durum hem büyük fırsatlar hem de yeni zorluklar anlamına geliyor.</p><h2>1. AI-First Düşünce Yapısını Benimseyin</h2><p>Artık "bu işi AI ile nasıl yapabilirim?" sorusunu sormak yerine, "bu sorunu çözmek için AI'a nasıl ihtiyaç duymam?" sorusunu sormalıyız. Bu paradigma değişimi, işinizin temellerinden başlayarak her süreci yeniden düşünmenizi gerektirir.</p><h2>2. Veri Toplama Stratejinizi Güçlendirin</h2><p>AI'ın gücü, beslenen verinin kalitesi ile doğru orantılıdır. Müşteri davranışlarından operasyonel süreçlere kadar her alanda sistematik veri toplama alışkanlığı geliştirin.</p><h2>3. Küçük Başlayın, Hızlı Ölçeklendirin</h2><p>AI implementasyonunda "büyük patlama" yaklaşımı yerine, küçük pilot projelerle başlayıp başarıları hızlıca ölçeklendirme stratejisi benimseyin.</p><h2>4. İnsan-AI İş Birliğini Optimize Edin</h2><p>AI'ın insanları değiştirmediği, onları güçlendirdiği alanları belirleyin. En büyük değer, insan yaratıcılığı ile AI verimliliğinin birleştiği noktalarda ortaya çıkar.</p><h2>5. Sürekli Öğrenme Kültürü Oluşturun</h2><p>AI teknolojileri hızla gelişiyor. Hem siz hem de ekibiniz için sürekli öğrenme ve adaptasyon kültürü oluşturmak kritik.</p><h2>6. Etik AI Kullanımını Öncelik Yapın</h2><p>Uzun vadeli başarı için AI kullanımında etik ilkeleri baştan tanımlayın ve sürekli denetleyin.</p><h2>7. Rakip Analizini AI ile Derinleştirin</h2><p>Geleneksel rakip analizi yöntemlerini AI destekli araçlarla geliştirerek pazar dinamiklerini daha iyi anlayın.</p><h2>8. Müşteri Deneyimini Kişiselleştirin</h2><p>AI ile her müşteriye özgü deneyimler yaratarak sadakat ve gelir artışı sağlayın.</p><h2>9. Operasyonel Verimliliği Artırın</h2><p>Rutin işlemleri AI ile otomatikleştirerek ekibinizi daha değer yaratan işlere odaklayın.</p><h2>10. Gelecek Senaryolarını Planlayın</h2><p>AI'ın sektörünüzü nasıl değiştireceğini öngörerek proaktif stratejiler geliştirin.</p><h2>Sonuç</h2><p>2025 yılında AI ile girişimcilik yapmak, teknoloji odaklı olmaktan çok, teknoloji destekli insan odaklı çözümler üretmek anlamına gelir. Başarının anahtarı, AI'ı bir araç olarak görüp, gerçek değeri müşteri problemlerine odaklanarak yaratmakta yatar.</p>`,
+    blogPost2Title: "E-ticaret Büyütme: Veri Odaklı Yaklaşımlar",
+    blogPost2Excerpt: "E-ticaret işletmenizi büyütürken veriyi nasıl kullanacağınızı, hangi metrikleri takip edeceğinizi öğrenin.",
+    blogPost2Content: `<p>E-ticaret dünyasında sürdürülebilir büyüme için veri odaklı karar verme artık zorunluluk haline geldi. Bu makalede, e-ticaret işletmenizi büyütmek için hangi verileri nasıl kullanmanız gerektiğini detaylıca inceliyoruz.</p><h2>Temel E-ticaret Metrikleri</h2><p>E-ticaret başarısını ölçmek için takip etmeniz gereken temel metrikler:</p><ul><li><strong>Dönüşüm Oranı (Conversion Rate):</strong> Ziyaretçilerin ne kadarı alışveriş yapıyor?</li><li><strong>Ortalama Sipariş Değeri (AOV):</strong> Müşteri başına ortalama harcama</li><li><strong>Müşteri Yaşam Boyu Değeri (CLV):</strong> Bir müşterinin toplam getirisi</li><li><strong>Müşteri Edinim Maliyeti (CAC):</strong> Yeni müşteri kazanma maliyeti</li></ul><h2>Veri Toplama Stratejileri</h2><p>Doğru veriyi toplamak için:</p><ul><li>Google Analytics 4 ve e-ticaret takibi kurulumu</li><li>Heat map ve kullanıcı davranış analizi araçları</li><li>A/B test altyapısı oluşturma</li><li>Müşteri geri bildirim sistemleri</li></ul><h2>Büyüme Hack'leri</h2><p>Veri destekli büyüme stratejileri:</p><ul><li>Sepet terk oranını azaltma taktikleri</li><li>Upsell ve cross-sell optimizasyonu</li><li>Retargeting kampanyaları</li><li>Personalizasyon stratejileri</li></ul><h2>Sonuç</h2><p>E-ticaret büyütme sürecinde veri, pusulanızdır. Doğru metrikleri takip ederek ve veri odaklı kararlar alarak sürdürülebilir büyüme sağlayabilirsiniz.</p>`,
+    blogPost3Title: "Yatırım Kararlarında AI: Geleceğin Fon Yöneticileri",
+    blogPost3Excerpt: "Yapay zekanın yatırım dünyasındaki rolü ve akıllı yatırım kararları almak için AI araçlarını nasıl kullanabileceğiniz.",
+    blogPost3Content: `<p>Geleneksel yatırım analizi yöntemleri, günümüzün hızla değişen piyasa koşullarında yetersiz kalabiliyor. Yapay zeka, bu boşluğu doldurarak yatırımcılara daha derin, daha hızlı ve daha isabetli analizler sunuyor. AI destekli yatırım araçları, büyük veri setlerini saniyeler içinde işleyerek insan gözünden kaçabilecek fırsatları ve riskleri ortaya çıkarıyor.</p><h2>1. AI ile Pazar Trendlerini Öngörme</h2><p>AI modelleri, makroekonomik verilerden sosyal medya trendlerine kadar milyonlarca veriyi analiz ederek pazar hareketlerini öngörebilir. Bu sayede yatırımcılar, potansiyel büyüme sektörlerini ve düşüş eğilimi gösteren varlıkları önceden tespit edebilir.</p><h2>2. Portföy Optimizasyonu ve Risk Yönetimi</h2><p>Yatırım portföyünün getirisini maksimize etmek ve riski minimize etmek karmaşık bir denge işidir. AI algoritmaları, portföyünüzdeki varlıkların korelasyonlarını ve oynaklıklarını gerçek zamanlı olarak izleyerek, optimal varlık dağılımı için öneriler sunar. Bu, daha dengeli ve dirençli bir portföy oluşturmanıza yardımcı olur.</p><h2>3. Algoritmik Ticaret ve Otomatik Emir İletimi</h2><p>AI'ın en etkili kullanım alanlarından biri de algoritmik ticarettir. Önceden tanımlanmış kurallara göre çalışan bu sistemler, saniyeler içinde binlerce işlem yaparak insan hızının çok ötesinde kararlar alır. Bu, özellikle yüksek frekanslı ticaret stratejileri için vazgeçilmezdir.</p><h2>4. Girişim Değerlendirmesi ve Deal Sourcing</h2><p>Erken aşama yatırımcıları için doğru girişimi bulmak zaman alıcı ve zorlu bir süreçtir. AI, girişimlerin iş modellerini, pazar potansiyellerini ve finansal projeksiyonlarını analiz ederek bir "skor kartı" oluşturabilir. Bu sayede yatırımcılar, potansiyel fırsatları daha hızlı ve objektif bir şekilde değerlendirebilir.</p><h2>Sonuç</h2><p>AI, yatırım dünyasını kökten değiştiriyor. Bu teknolojiyi benimseyen yatırımcılar, veri odaklı ve rekabetçi bir avantaja sahip oluyor. Geleceğin fon yöneticileri, insan sezgisi ile AI'ın analitik gücünü birleştiren hibrit bir modelle çalışacak.</p>`,
+    blogPost4Title: "Startup MVP Geliştirme: Hızlı ve Etkili Yöntemler",
+    blogPost4Excerpt: "Minimum Viable Product (MVP) geliştirme sürecini hızlandıran modern yaklaşımlar ve araçlar.",
+    blogPost4Content: `<p>Bir startup için en kritik aşamalardan biri, pazara en kısa sürede çıkabilmektir. Minimum Viable Product (MVP), bu amaca hizmet eden temel bir stratejidir. MVP, bir ürünün temel özelliklerini içeren ve hedef kitleden geri bildirim almayı sağlayan en basit versiyonudur.</p><h2>1. Hızlı Prototipleme: Fikirden Eyleme Geçiş</h2><p>MVP geliştirme sürecinin ilk adımı, fikri somutlaştırmaktır. Figma veya Sketch gibi araçlarla hızlı prototipler oluşturarak, ürünün ana işlevlerini ve kullanıcı akışını görselleştirebilirsiniz. Bu prototipler, hem potansiyel müşterilere hem de yatırımcılara sunularak erken geri bildirim alınmasını sağlar.</p><h2>2. No-Code/Low-Code Platformlarının Gücü</h2><p>Artık her MVP için sıfırdan kod yazmak zorunda değilsiniz. Bubble, Adalo veya Webflow gibi no-code/low-code platformları sayesinde, kodlama bilgisi olmadan fonksiyonel web siteleri ve mobil uygulamalar geliştirebilirsiniz. Bu platformlar, geliştirme süresini ve maliyetini önemli ölçüde düşürerek pazara daha hızlı girmenize olanak tanır.</p><h2>3. Özellikleri Önceliklendirme</h2><p>Bir MVP'nin en büyük hatası, gereksiz özelliklerle şişirilmesidir. "MoSCoW Metodu" (Must-Have, Should-Have, Could-Have, Won't-Have) gibi tekniklerle hangi özelliklerin MVP için gerçekten "olmazsa olmaz" olduğunu belirleyin. İlk versiyonda sadece temel sorunu çözen özelliklere odaklanın.</p><h2>4. Geri Bildirim Döngüsü Oluşturma</h2><p>MVP'nin amacı sadece ürünü çıkarmak değil, aynı zamanda kullanıcıdan öğrenmektir. Kullanıcı testi, anketler ve analiz araçları (Google Analytics, Hotjar vb.) ile düzenli olarak geri bildirim toplayın. Bu geri bildirimleri kullanarak MVP'nizi sürekli olarak geliştirin ve pazara en uygun hale getirin.</p><h2>Sonuç</h2><p>Başarılı bir MVP, bir startup'ın hayatta kalmasını ve büyümesini belirleyen ana faktörlerden biridir. Hızlı prototipleme, no-code araçları ve kullanıcı geri bildirimini merkeze alan bir yaklaşımla, fikrinizi hızla test edebilir ve başarılı bir ürüne dönüştürebilirsiniz.</p>`,
+    blogPost5Title: "Pazarlama Otomasyonu: ROI'yi 3 Katına Çıkaran Taktikler",
+    blogPost5Excerpt: "Pazarlama süreçlerinizi otomatikleştirerek ROI'nizi nasıl maksimize edeceğinizi...",
+    blogPost5Content: `<p>Pazarlama dünyasında her geçen gün daha fazla veri üretiliyor. Bu verileri doğru analiz etmek ve aksiyon almak, manuel süreçlerle neredeyse imkansız. İşte tam bu noktada pazarlama otomasyonu devreye giriyor. Pazarlama otomasyonu, tekrar eden görevleri (e-posta gönderme, sosyal medya paylaşımı, kampanya raporlama) otomatikleştiren yazılımlardır.</p><h2>1. Müşteri Segmentasyonu ve Hedefleme</h2><p>Pazarlama otomasyonu, müşterileri demografik özelliklerine, davranışlarına ve ilgi alanlarına göre otomatik olarak segmentlemenizi sağlar. Bu sayede, her gruba özel, kişiselleştirilmiş mesajlar göndererek dönüşüm oranlarını artırabilirsiniz.</p><h2>2. Otomatik E-posta Akışları</h2><p>Müşteri yolculuğunun her adımında otomatik e-posta akışları oluşturun. Örneğin, yeni üyelere hoş geldin e-postası, sepetini terk edenlere hatırlatma, ürün alanlara ise ek ürün önerileri gönderin. Bu, hem müşteri sadakatini artırır hem de satışları tetikler.</p><h2>3. A/B Testi ve Optimizasyon</h2><p>Pazarlama otomasyonu araçları, farklı e-posta başlıklarını, içerikleri veya reklam görsellerini otomatik olarak test edebilir. En iyi performansı gösteren versiyonu belirleyerek, kampanyalarınızın etkinliğini sürekli olarak artırabilirsiniz.</p><h2>4. Raporlama ve Öngörüler</h2><p>Otomasyon sistemleri, kampanyalarınızın performansını anlık olarak izler ve detaylı raporlar sunar. Hangi kanalların en iyi ROI'yi sağladığını, hangi mesajların daha çok etkileşim aldığını kolayca görebilirsiniz. Bu verilerle stratejilerinizi optimize edebilir ve daha bilinçli kararlar alabilirsiniz.</p><h2>Sonuç</h2><p>Pazarlama otomasyonu, sadece iş yükünü azaltmakla kalmaz, aynı zamanda pazarlama stratejilerinizi veri odaklı hale getirerek gerçek büyüme sağlar. Bu teknolojiyi benimseyen işletmeler, rekabet avantajı elde eder ve pazarlama yatırımlarından daha yüksek getiri (ROI) elde eder.</p>`,
+    
+
+    ai: "AI",
+    entrepreneurship: "Girişimcilik",
+    strategy: "Strateji",
+    innovation: "İnovasyon",
+    ecommerce: "E-ticaret",
+    data_analysis: "Veri Analizi",
+    growth: "Büyüme",
+    metrics: "Metrikler",
+    investment: "Yatırım",
+    fintech: "Fintech",
+    analysis: "Analiz",
+    mvp: "MVP",
+    product_development: "Ürün Geliştirme",
+    agile: "Agile",
+    marketing: "Pazarlama",
+    automation: "Otomasyon",
+    roi: "ROI",
+    tactics: "Taktikler",
+    
+    // Pricing
+    proPrice: "₺299/ay",
+    businessPrice: "₺599/ay",
+  
   },
   en: {
     // Navigation
@@ -733,7 +843,7 @@ export const translations = {
     startPro: "Start Pro",
     startBusiness: "Start Business",
     
-    pricingDisclaimer: "All plans come with a 14-day free trial. Cancel anytime.",
+    pricingDisclaimer: "All plans come with a 3-day free trial. Cancel anytime.",
 
     // Testimonials
     testimonialsTitle: "What Our Customers Say?",
@@ -752,7 +862,7 @@ export const translations = {
     isDataSafeAnswer: "Yes, all your data is protected in accordance with KVKK and GDPR standards. We do not share your data with any third parties and apply the highest security standards.",
     
     freeTrialAvailable: "Is there a free trial?",
-    freeTrialAvailableAnswer: "Yes, all our paid plans come with a 14-day free trial. Our Starter plan is completely free and includes basic features.",
+    freeTrialAvailableAnswer: "Yes, all our paid plans come with a 3-day free trial. Our Starter plan is completely free and includes basic features.",
     
     aiReliability: "How reliable are AI recommendations?",
     aiReliabilityAnswer: "Our AI recommendations are trained on extensive datasets and successful examples. However, all decisions are yours and it is important to evaluate recommendations according to your own situation.",
@@ -1172,6 +1282,114 @@ export const translations = {
     aboutCtaTitle: "Join Us",
     aboutCtaSubtitle: "Ready to accelerate your growth? Get started now.",
     aboutCtaContact: "Get in Touch",
+
+        // Blog Page
+    blogHeroTitle: "AI and Business Blog",
+    blogHeroSubtitle: "Up-to-date content on artificial intelligence, entrepreneurship, and growth strategies",
+    searchBlogPlaceholder: "Search blog posts...",
+    allCategories: "All",
+    featuredArticle: "Featured Article",
+    readArticle: "Read Article",
+    minRead: "min read",
+    noPostsFound: "No articles found matching your criteria.",
+    newsletterTitle: "Don't Miss New Articles",
+    newsletterSubtitle: "Get the latest content on AI, entrepreneurship, and growth strategies directly in your inbox.",
+    subscribe: "Subscribe",
+    cancelAnytime: "You can cancel your subscription at any time. We don't spam.",
+    blogPageTitle: "Blog - EraEnvision | AI and Business Growth Content",
+    blogPageMetaDesc: "EraEnvision blog page. Expert content and strategies on AI, entrepreneurship, business growth, and digital transformation.",
+    blogPageOGTitle: "EraEnvision Blog | AI and Business Growth Content",
+    blogPageOGDesc: "Expert content on AI, entrepreneurship, business growth, and digital transformation.",
+    blogPageKeywords: "blog, AI blog, business growth, entrepreneurship, startup guide, digital marketing, EraEnvision",
+
+    // Blog Post Page
+    backToBlog: "Back to Blog",
+    article: "Article",
+    share: "Share",
+    articleNotFound: "Article not found",
+    articleNotFoundDesc: "The blog post you are looking for does not exist.",
+    authorProfile: "Founder and CEO of EraEnvision. Guides entrepreneurs with 10+ years of experience in technology and business development.",
+    aiTeamProfile: "The EraEnvision AI team analyzes the latest artificial intelligence trends and their applications in the business world.",
+    otherArticles: "Other Articles",
+    relatedArticles: "Other Articles You Might Like",
+    
+    // Blog Post Contents
+    blogPost1Title: "Entrepreneurship with AI: 10 Strategies for Success in 2025",
+    blogPost1Excerpt: "Discover how artificial intelligence is transforming the world of entrepreneurship and what you need to do to get ahead in this change.",
+    blogPost1Content: `<p>The year 2025 will go down in history as a period when artificial intelligence became fully established in the business world. For entrepreneurs, this situation means both great opportunities and new challenges.</p><h2>1. Embrace an AI-First Mindset</h2><p>Instead of asking "how can I do this with AI?", we should now be asking "how do I need AI to solve this problem?". This paradigm shift requires you to rethink every process, starting from the foundations of your business.</p><h2>2. Strengthen Your Data Collection Strategy</h2><p>The power of AI is directly proportional to the quality of the data it is fed. Develop a systematic data collection habit in every area, from customer behavior to operational processes.</p><h2>3. Start Small, Scale Fast</h2><p>Instead of a "big bang" approach to AI implementation, adopt a strategy of starting with small pilot projects and quickly scaling successes.</p><h2>4. Optimize Human-AI Collaboration</h2><p>Identify areas where AI doesn't replace people, but empowers them. The greatest value arises at the intersection of human creativity and AI efficiency.</p><h2>5. Create a Culture of Continuous Learning</h2><p>AI technologies are evolving rapidly. It's critical to create a culture of continuous learning and adaptation for both you and your team.</p><h2>6. Prioritize Ethical AI Use</h2><p>For long-term success, define ethical principles for AI use from the outset and monitor them continuously.</p><h2>7. Deepen Competitor Analysis with AI</h2><p>Improve traditional competitor analysis methods with AI-powered tools to better understand market dynamics.</p><h2>8. Personalize the Customer Experience</h2><p>Create unique experiences for each customer with AI to increase loyalty and revenue.</p><h2>9. Increase Operational Efficiency</h2><p>Automate routine tasks with AI to allow your team to focus on more value-creating work.</p><h2>10. Plan for Future Scenarios</h2><p>Develop proactive strategies by anticipating how AI will change your industry.</p><h2>Conclusion</h2><p>Doing business with AI in 2025 means creating human-centric solutions supported by technology, rather than being technology-centric. The key to success lies in seeing AI as a tool and creating real value by focusing on customer problems.</p>`,
+    blogPost2Title: "E-commerce Growth: Data-Driven Approaches",
+    blogPost2Excerpt: "Learn how to use data and which metrics to track to grow your e-commerce business.",
+    blogPost2Content: `<p>In the world of e-commerce, data-driven decision-making has become a necessity for sustainable growth. In this article, we'll take a detailed look at what data to use and how to use it to grow your e-commerce business.</p><h2>Key E-commerce Metrics</h2><p>Key metrics you should track to measure e-commerce success:</p><ul><li><strong>Conversion Rate:</strong> What percentage of visitors make a purchase?</li><li><strong>Average Order Value (AOV):</strong> The average spend per customer.</li><li><strong>Customer Lifetime Value (CLV):</strong> The total revenue from a single customer over their lifetime.</li><li><strong>Customer Acquisition Cost (CAC):</strong> The cost of acquiring a new customer.</li></ul><h2>Data Collection Strategies</h2><p>To collect the right data:</p><ul><li>Install Google Analytics 4 and e-commerce tracking.</li><li>Use heat map and user behavior analysis tools.</li><li>Set up an A/B testing infrastructure.</li><li>Implement customer feedback systems.</li></ul><h2>Growth Hacks</h2><p>Data-backed growth strategies:</p><ul><li>Tactics to reduce cart abandonment rates.</li><li>Upsell and cross-sell optimization.</li><li>Retargeting campaigns.</li><li>Personalization strategies.</li></ul><h2>Conclusion</h2><p>In the e-commerce growth process, data is your compass. By tracking the right metrics and making data-driven decisions, you can achieve sustainable growth.</p>`,
+    blogPost3Title: "AI in Investment Decisions: Future Fund Managers",
+    blogPost3Excerpt: "The role of artificial intelligence in the investment world and how you can use AI tools to make smart investment decisions.",
+    blogPost3Content: `<p>Traditional investment analysis methods can fall short in today's rapidly changing market conditions. Artificial intelligence fills this gap by offering investors deeper, faster, and more accurate analyses. AI-powered investment tools process large datasets in seconds, uncovering opportunities and risks that might be missed by the human eye.</p><h2>1. Forecasting Market Trends with AI</h2><p>AI models can analyze millions of data points, from macroeconomic data to social media trends, to predict market movements. This allows investors to identify potential growth sectors and assets with a downward trend in advance.</p><h2>2. Portfolio Optimization and Risk Management</h2><p>Maximizing the return and minimizing the risk of an investment portfolio is a complex balancing act. AI algorithms can monitor the correlations and volatility of assets in your portfolio in real time, providing recommendations for an optimal asset allocation. This helps you build a more balanced and resilient portfolio.</p><h2>3. Algorithmic Trading and Automated Order Execution</h2><p>One of the most effective uses of AI is algorithmic trading. These systems, which operate according to predefined rules, make thousands of transactions in seconds, far exceeding human speed. This is indispensable, especially for high-frequency trading strategies.</p><h2>4. Startup Valuation and Deal Sourcing</h2><p>For early-stage investors, finding the right startup is a time-consuming and challenging process. AI can analyze startups' business models, market potential, and financial projections to create a "scorecard." This allows investors to evaluate potential opportunities more quickly and objectively.</p><h2>Conclusion</h2><p>AI is fundamentally changing the investment world. Investors who embrace this technology gain a data-driven and competitive advantage. Future fund managers will work with a hybrid model that combines human intuition with the analytical power of AI.</p>`,
+    blogPost4Title: "Startup MVP Development: Fast and Effective Methods",
+    blogPost4Excerpt: "Modern approaches and tools that accelerate the Minimum Viable Product (MVP) development process.",
+    blogPost4Content: `<p>One of the most critical stages for a startup is getting to market as quickly as possible. The Minimum Viable Product (MVP) is a key strategy that serves this purpose. An MVP is the simplest version of a product that includes core features and allows for feedback from the target audience.</p><h2>1. Rapid Prototyping: From Idea to Action</h2><p>The first step of the MVP development process is to materialize the idea. You can create quick prototypes with tools like Figma or Sketch to visualize the product's main functionalities and user flow. These prototypes can be presented to potential customers and investors to get early feedback.</p><h2>2. The Power of No-Code/Low-Code Platforms</h2><p>You no longer have to write code from scratch for every MVP. With no-code/low-code platforms like Bubble, Adalo, or Webflow, you can develop functional websites and mobile applications without any coding knowledge. These platforms significantly reduce development time and cost, allowing you to enter the market faster.</p><h2>3. Prioritizing Features</h2><p>The biggest mistake in an MVP is bloating it with unnecessary features. Use techniques like the "MoSCoW Method" (Must-Have, Should-Have, Could-Have, Won't-Have) to determine which features are truly "must-haves" for the MVP. Focus only on the core problem-solving features in the first version.</p><h2>4. Creating a Feedback Loop</h2><p>The purpose of an MVP is not just to launch a product, but also to learn from users. Collect regular feedback through user testing, surveys, and analysis tools (Google Analytics, Hotjar, etc.). Use this feedback to continuously improve your MVP and make it the most suitable for the market.</p><h2>Conclusion</h2><p>A successful MVP is one of the main factors that determines a startup's survival and growth. With a approach centered on rapid prototyping, no-code tools, and user feedback, you can quickly test your idea and turn it into a successful product.</p>`,
+    blogPost5Title: "Marketing Automation: Tactics to 3x Your ROI",
+    blogPost5Excerpt: "How to automate your marketing processes to maximize your ROI...",
+    blogPost5Content: `<p>More and more data is generated every day in the marketing world. It's almost impossible to properly analyze this data and take action with manual processes. This is where marketing automation comes in. Marketing automation is software that automates repetitive tasks (sending emails, social media sharing, campaign reporting).</p><h2>1. Customer Segmentation and Targeting</h2><p>Marketing automation allows you to automatically segment customers based on their demographics, behaviors, and interests. This way, you can send personalized messages to each group, increasing conversion rates.</p><h2>2. Automated Email Flows</h2><p>Create automated email flows at every step of the customer journey. For example, send a welcome email to new members, a reminder to those who abandoned their cart, and additional product suggestions to those who have made a purchase. This both increases customer loyalty and triggers sales.</p><h2>3. A/B Testing and Optimization</h2><p>Marketing automation tools can automatically test different email subject lines, content, or ad creatives. By identifying the best-performing version, you can continuously improve the effectiveness of your campaigns.</p><h2>4. Reporting and Insights</h2><p>Automation systems instantly monitor the performance of your campaigns and provide detailed reports. You can easily see which channels provide the best ROI and which messages get more engagement. With this data, you can optimize your strategies and make more informed decisions.</p><h2>Conclusion</h2><p>Marketing automation not only reduces your workload but also makes your marketing strategies data-driven, leading to real growth. Businesses that embrace this technology gain a competitive advantage and achieve higher returns on their marketing investments (ROI).</p>`,
+    
+    // Contact Page
+    contactInfoTitle: "Quick Contact",
+    salesTeam: "Sales Team",
+    techSupport: "Technical Support",
+    generalInquiries: "General Inquiries",
+    quickContactTitle: "Send a Message",
+    quickContactSubtitle: "Fill out the form and we will get back to you as soon as possible.",
+    submitting: "Submitting...",
+    messageSentToastTitle: "Message Sent!",
+    messageSentToastDesc: "We will get back to you as soon as possible.",
+    
+    // Contact Info
+    contactEmail: "hello@eraenvision.com",
+    contactPhone: "+90 (555) 123-4567",
+    contactAddress: "Istanbul, Turkey",
+    contactHours: "Mon-Fri 09:00-18:00",
+    emailSupportDesc: "24/7 email support",
+    phoneHoursDesc: "During business hours",
+    addressDesc: "Remote team",
+    hoursDesc: "GMT+3 time zone",
+    
+    // Contact Right Panel
+    bookMeetingTitle: "Schedule an Online Meeting",
+    bookMeetingSubtitle: "Would you like to have a one-on-one meeting with our experts?",
+    viewCalendar: "View Calendar",
+    locationTitle: "Our Location",
+    locationSubtitle: "Our global remote team",
+    locationDescription: "Although our main office is in Istanbul, our team works remotely from different cities. This allows us to provide you with 24/7 support and offer a global perspective.",
+    
+    // Blog Categories & Tags (New)
+    categoryAiEntrepreneurship: "AI & Entrepreneurship",
+    categoryEcommerce: "E-commerce",
+    categoryInvestmentFinance: "Investment & Finance",
+    categoryStartup: "Startup",
+    categoryMarketing: "Marketing",
+    categorySaaS: "SaaS",
+    ai: "AI",
+    entrepreneurship: "Entrepreneurship",
+    strategy: "Strategy",
+    innovation: "Innovation",
+    ecommerce: "E-commerce",
+    data_analysis: "Data Analysis",
+    growth: "Growth",
+    metrics: "Metrics",
+    investment: "Investment",
+    fintech: "Fintech",
+    analysis: "Analysis",
+    mvp: "MVP",
+    product_development: "Product Development",
+    agile: "Agile",
+    marketing: "Marketing",
+    automation: "Automation",
+    roi: "ROI",
+    tactics: "Tactics",
+    
+    // Pricing
+    proPrice: "₺299/month",
+    businessPrice: "₺599/month",
+    
+
 
   },
 };
