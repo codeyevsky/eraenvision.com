@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/hooks/use-language";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CookieConsent } from "@/components/ui/cookie-consent";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 import  HomePage  from "@/pages/home";
 import ProductsPage from "@/pages/products";
 import LaunchPage from "@/pages/launch";
@@ -53,6 +54,7 @@ function App() {
         <TooltipProvider>
           <div className="min-h-screen bg-white text-gray-900">
             <Header />
+            <ScrollToTop />  {/* Bu satırı ekle */}
             <Router />
             <Footer />
             
