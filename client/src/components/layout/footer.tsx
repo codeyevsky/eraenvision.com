@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { useLanguage } from '@/hooks/use-language';
-import { Linkedin, Twitter, Github } from 'lucide-react';
+import { Instagram } from 'lucide-react'; // Değişiklik burada!
 import logo from '../../../../dist/eraenvision.png';
 
 export function Footer() {
@@ -25,25 +25,13 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.instagram.com/eraenvision/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="LinkedIn"
+                aria-label="Instagram"
               >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>

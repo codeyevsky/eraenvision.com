@@ -1,3 +1,4 @@
+// tailwind.config.js
 import type { Config } from "tailwindcss";
 
 export default {
@@ -114,7 +115,7 @@ export default {
         float: "float 6s ease-in-out infinite",
         "fade-in-up": "fadeInUp 0.6s ease-out forwards",
         "scale-in": "scaleIn 0.4s ease-out forwards",
-        marquee: "marquee 30s linear infinite",
+        marquee: "marquee 80s linear infinite", 
         "gradient-flow": "gradient-flow 15s ease infinite",
         blink: "blink 1s step-end infinite",
       },

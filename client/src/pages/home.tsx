@@ -75,17 +75,9 @@ export default function HomePage() {
               <p className="text-sm text-gray-500 mb-8">20+ {t("trustedCompanies")}</p>
               <div className="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-[200px] before:bg-gradient-to-r before:from-white before:z-10 after:absolute after:right-0 after:top-0 after:h-full after:w-[200px] after:bg-gradient-to-l after:from-white after:z-10">
                 <div className="flex w-fit items-center animate-marquee">
-                  {trustedCompanies.map((imgSrc, index) => (
+                  {[...trustedCompanies, ...trustedCompanies, ...trustedCompanies, ...trustedCompanies, ...trustedCompanies].map((imgSrc, index) => (
                     <img
                       key={index}
-                      src={imgSrc}
-                      alt={`Trusted Company ${index + 1}`}
-                      className="mx-8 h-10 sm:h-12 w-auto object-contain flex-shrink-0 grayscale transition-all duration-300 hover:grayscale-0 hover:scale-125"
-                    />
-                  ))}
-                  {trustedCompanies.map((imgSrc, index) => (
-                    <img
-                      key={`duplicate-${index}`}
                       src={imgSrc}
                       alt={`Trusted Company ${index + 1}`}
                       className="mx-8 h-10 sm:h-12 w-auto object-contain flex-shrink-0 grayscale transition-all duration-300 hover:grayscale-0 hover:scale-125"
